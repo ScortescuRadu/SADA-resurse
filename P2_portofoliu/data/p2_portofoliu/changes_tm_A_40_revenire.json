@@ -1,0 +1,23 @@
+{
+ "instance": "tm_A_40",
+ "changes": [
+  {
+   "generation": 100,
+   "type": "budget_scale",
+   "factor": 0.7,
+   "motiv": "rectificare bugetară"
+  },
+  {
+   "generation": 200,
+   "type": "budget_scale",
+   "factor": 1.428571,
+   "motiv": "bugetul revine (fonduri europene aprobate)"
+  },
+  {
+   "generation": 300,
+   "type": "budget_scale",
+   "factor": 0.7,
+   "motiv": "a doua tăiere"
+  }
+ ]
+}

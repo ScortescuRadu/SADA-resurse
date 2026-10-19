@@ -1,0 +1,911 @@
+{
+ "name": "tm_A_40",
+ "kind": "binary",
+ "branch": "A",
+ "interactions": [
+  {
+   "i": "I01",
+   "j": "I03",
+   "benefit": 1.3,
+   "equity": 0.0
+  },
+  {
+   "i": "I01",
+   "j": "I10",
+   "benefit": 0.49,
+   "equity": 0.0
+  },
+  {
+   "i": "I01",
+   "j": "I20",
+   "benefit": 1.54,
+   "equity": 0.0
+  },
+  {
+   "i": "I01",
+   "j": "I26",
+   "benefit": 0.12,
+   "equity": 0.0
+  },
+  {
+   "i": "I02",
+   "j": "I05",
+   "benefit": 1.51,
+   "equity": 0.0
+  },
+  {
+   "i": "I02",
+   "j": "I32",
+   "benefit": 2.79,
+   "equity": 0.0
+  },
+  {
+   "i": "I03",
+   "j": "I10",
+   "benefit": 0.33,
+   "equity": 0.0
+  },
+  {
+   "i": "I03",
+   "j": "I18",
+   "benefit": 0.38,
+   "equity": 0.0
+  },
+  {
+   "i": "I03",
+   "j": "I19",
+   "benefit": 0.41,
+   "equity": 0.0
+  },
+  {
+   "i": "I03",
+   "j": "I20",
+   "benefit": 0.24,
+   "equity": 0.0
+  },
+  {
+   "i": "I03",
+   "j": "I26",
+   "benefit": 0.53,
+   "equity": 0.0
+  },
+  {
+   "i": "I03",
+   "j": "I29",
+   "benefit": 0.81,
+   "equity": 0.0
+  },
+  {
+   "i": "I04",
+   "j": "I05",
+   "benefit": 1.45,
+   "equity": 0.0
+  },
+  {
+   "i": "I04",
+   "j": "I07",
+   "benefit": 0.47,
+   "equity": 0.0
+  },
+  {
+   "i": "I04",
+   "j": "I16",
+   "benefit": 0.14,
+   "equity": 0.0
+  },
+  {
+   "i": "I04",
+   "j": "I29",
+   "benefit": 1.13,
+   "equity": 0.0
+  },
+  {
+   "i": "I04",
+   "j": "I32",
+   "benefit": 0.4,
+   "equity": 0.0
+  },
+  {
+   "i": "I05",
+   "j": "I32",
+   "benefit": 2.46,
+   "equity": 0.0
+  },
+  {
+   "i": "I06",
+   "j": "I10",
+   "benefit": 0.78,
+   "equity": 0.0
+  },
+  {
+   "i": "I06",
+   "j": "I20",
+   "benefit": 2.04,
+   "equity": 0.0
+  },
+  {
+   "i": "I07",
+   "j": "I25",
+   "benefit": 1.16,
+   "equity": 0.0
+  },
+  {
+   "i": "I07",
+   "j": "I29",
+   "benefit": 0.18,
+   "equity": 0.0
+  },
+  {
+   "i": "I07",
+   "j": "I30",
+   "benefit": 4.83,
+   "equity": 0.0
+  },
+  {
+   "i": "I07",
+   "j": "I34",
+   "benefit": 5.47,
+   "equity": 0.0
+  },
+  {
+   "i": "I08",
+   "j": "I24",
+   "benefit": 2.0,
+   "equity": 0.0
+  },
+  {
+   "i": "I09",
+   "j": "I19",
+   "benefit": 1.73,
+   "equity": 0.0
+  },
+  {
+   "i": "I09",
+   "j": "I32",
+   "benefit": 4.54,
+   "equity": 0.65
+  },
+  {
+   "i": "I09",
+   "j": "I33",
+   "benefit": 7.4,
+   "equity": 0.61
+  },
+  {
+   "i": "I10",
+   "j": "I18",
+   "benefit": 0.48,
+   "equity": 0.0
+  },
+  {
+   "i": "I10",
+   "j": "I20",
+   "benefit": 4.44,
+   "equity": 0.0
+  },
+  {
+   "i": "I13",
+   "j": "I18",
+   "benefit": 0.54,
+   "equity": 0.0
+  },
+  {
+   "i": "I13",
+   "j": "I19",
+   "benefit": 0.54,
+   "equity": 0.0
+  },
+  {
+   "i": "I15",
+   "j": "I38",
+   "benefit": 0.0,
+   "equity": 0.06
+  },
+  {
+   "i": "I16",
+   "j": "I32",
+   "benefit": 0.45,
+   "equity": 0.0
+  },
+  {
+   "i": "I18",
+   "j": "I19",
+   "benefit": 1.06,
+   "equity": 0.0
+  },
+  {
+   "i": "I19",
+   "j": "I32",
+   "benefit": 1.16,
+   "equity": 0.0
+  },
+  {
+   "i": "I19",
+   "j": "I33",
+   "benefit": 1.1,
+   "equity": 0.0
+  },
+  {
+   "i": "I23",
+   "j": "I36",
+   "benefit": 0.66,
+   "equity": 1.38
+  },
+  {
+   "i": "I23",
+   "j": "I40",
+   "benefit": 0.58,
+   "equity": 1.21
+  },
+  {
+   "i": "I25",
+   "j": "I30",
+   "benefit": 1.4,
+   "equity": 0.0
+  },
+  {
+   "i": "I25",
+   "j": "I34",
+   "benefit": 1.5,
+   "equity": 0.0
+  },
+  {
+   "i": "I26",
+   "j": "I29",
+   "benefit": 0.68,
+   "equity": 0.0
+  },
+  {
+   "i": "I27",
+   "j": "I37",
+   "benefit": 0.31,
+   "equity": 0.0
+  },
+  {
+   "i": "I28",
+   "j": "I36",
+   "benefit": 0.24,
+   "equity": 0.47
+  },
+  {
+   "i": "I28",
+   "j": "I37",
+   "benefit": 2.1,
+   "equity": 2.04
+  },
+  {
+   "i": "I29",
+   "j": "I30",
+   "benefit": 6.85,
+   "equity": 0.0
+  },
+  {
+   "i": "I29",
+   "j": "I31",
+   "benefit": 6.85,
+   "equity": 0.0
+  },
+  {
+   "i": "I29",
+   "j": "I34",
+   "benefit": 0.5,
+   "equity": 0.0
+  },
+  {
+   "i": "I30",
+   "j": "I31",
+   "benefit": 8.24,
+   "equity": 0.0
+  },
+  {
+   "i": "I30",
+   "j": "I34",
+   "benefit": 10.6,
+   "equity": 0.0
+  },
+  {
+   "i": "I31",
+   "j": "I34",
+   "benefit": 0.63,
+   "equity": 0.0
+  },
+  {
+   "i": "I32",
+   "j": "I33",
+   "benefit": 5.15,
+   "equity": 0.61
+  },
+  {
+   "i": "I36",
+   "j": "I37",
+   "benefit": 12.01,
+   "equity": 23.63
+  },
+  {
+   "i": "I36",
+   "j": "I40",
+   "benefit": 4.32,
+   "equity": 8.64
+  }
+ ],
+ "units": {
+  "cost": "EUR",
+  "benefit": "mii de ore-persoană echivalente pe an (model)",
+  "equity": "partea din beneficiu care ajunge la populația fără acces bun la transport public, dublată în cartierele cu acces slab (model)"
+ },
+ "source": "construit cu scripts/build_portfolio.py; vedeți data/DATA.md",
+ "note": "Beneficiile și echitatea sunt estimări de model, nu valori măsurate.",
+ "budget": 6110000.0,
+ "items": [
+  {
+   "id": "I01",
+   "type": "semafoare",
+   "label": "semaforizare adaptivă pe coridorul Gara de Nord",
+   "cost": 201000.0,
+   "benefit": 6.0,
+   "equity": 0.0,
+   "population": 4313,
+   "lon": 21.20776,
+   "lat": 45.75045,
+   "line": [
+    [
+     21.20006,
+     45.7502
+    ],
+    [
+     21.21546,
+     45.75071
+    ]
+   ]
+  },
+  {
+   "id": "I02",
+   "type": "semafoare",
+   "label": "semaforizare adaptivă pe coridorul Piața V. Economu (Calea Dorobanților)",
+   "cost": 325000.0,
+   "benefit": 13.0,
+   "equity": 0.0,
+   "population": 5687,
+   "lon": 21.26116,
+   "lat": 45.76571,
+   "line": [
+    [
+     21.25346,
+     45.76546
+    ],
+    [
+     21.26886,
+     45.76596
+    ]
+   ]
+  },
+  {
+   "id": "I03",
+   "type": "semafoare",
+   "label": "semaforizare adaptivă pe coridorul Catedrala Mitropolitană",
+   "cost": 300000.0,
+   "benefit": 10.2,
+   "equity": 0.0,
+   "population": 5269,
+   "lon": 21.2242,
+   "lat": 45.75092,
+   "line": [
+    [
+     21.2165,
+     45.75067
+    ],
+    [
+     21.2319,
+     45.75118
+    ]
+   ]
+  },
+  {
+   "id": "I04",
+   "type": "semafoare",
+   "label": "semaforizare adaptivă pe coridorul Aurel Popovici",
+   "cost": 214000.0,
+   "benefit": 11.3,
+   "equity": 0.0,
+   "population": 12232,
+   "lon": 21.23639,
+   "lat": 45.75905,
+   "line": [
+    [
+     21.22869,
+     45.7588
+    ],
+    [
+     21.24409,
+     45.7593
+    ]
+   ]
+  },
+  {
+   "id": "I05",
+   "type": "semafoare",
+   "label": "semaforizare adaptivă pe coridorul Piața Badea Cârțan (Simion Bărnuțiu)",
+   "cost": 156000.0,
+   "benefit": 9.1,
+   "equity": 0.0,
+   "population": 10666,
+   "lon": 21.24824,
+   "lat": 45.76265,
+   "line": [
+    [
+     21.24054,
+     45.7624
+    ],
+    [
+     21.25594,
+     45.7629
+    ]
+   ]
+  },
+  {
+   "id": "I06",
+   "type": "semafoare",
+   "label": "semaforizare adaptivă pe coridorul Piața Iuliu Maniu (16 Decembrie 1989)",
+   "cost": 219000.0,
+   "benefit": 7.4,
+   "equity": 0.7,
+   "population": 5853,
+   "lon": 21.21043,
+   "lat": 45.73965,
+   "line": [
+    [
+     21.20273,
+     45.73939
+    ],
+    [
+     21.21813,
+     45.73991
+    ]
+   ]
+  },
+  {
+   "id": "I07",
+   "type": "intersectie",
+   "label": "reorganizarea intersecției Piața Consiliul Europei (Poligrafie)",
+   "cost": 648000.0,
+   "benefit": 19.3,
+   "equity": 0.0,
+   "population": 10083,
+   "lon": 21.22574,
+   "lat": 45.76317
+  },
+  {
+   "id": "I08",
+   "type": "intersectie",
+   "label": "reorganizarea intersecției Calea Șagului (Bd. L. Rebreanu)",
+   "cost": 877000.0,
+   "benefit": 19.1,
+   "equity": 0.0,
+   "population": 15443,
+   "lon": 21.20907,
+   "lat": 45.73301
+  },
+  {
+   "id": "I09",
+   "type": "intersectie",
+   "label": "reorganizarea intersecției Sala C. Jude (Ripensia)",
+   "cost": 743000.0,
+   "benefit": 30.4,
+   "equity": 2.4,
+   "population": 11044,
+   "lon": 21.24081,
+   "lat": 45.74615
+  },
+  {
+   "id": "I10",
+   "type": "intersectie",
+   "label": "reorganizarea intersecției Piața A. Mocioni (Sinaia - 16 Decembrie 1989)",
+   "cost": 939000.0,
+   "benefit": 8.5,
+   "equity": 0.0,
+   "population": 7433,
+   "lon": 21.21503,
+   "lat": 45.7454
+  },
+  {
+   "id": "I11",
+   "type": "trecere",
+   "label": "trecere de pietoni semaforizată la Liceul Auto (N. Andreescu)",
+   "cost": 55000.0,
+   "benefit": 2.7,
+   "equity": 0.0,
+   "population": 773,
+   "lon": 21.18115,
+   "lat": 45.72715
+  },
+  {
+   "id": "I12",
+   "type": "trecere",
+   "label": "trecere de pietoni semaforizată la Grădinița Calea Urseni",
+   "cost": 61000.0,
+   "benefit": 1.2,
+   "equity": 1.2,
+   "population": 428,
+   "lon": 21.26761,
+   "lat": 45.7186
+  },
+  {
+   "id": "I13",
+   "type": "trecere",
+   "label": "trecere de pietoni semaforizată la Facultatea de Electrotehnică",
+   "cost": 100000.0,
+   "benefit": 0.9,
+   "equity": 0.0,
+   "population": 916,
+   "lon": 21.22628,
+   "lat": 45.74772
+  },
+  {
+   "id": "I14",
+   "type": "trecere",
+   "label": "trecere de pietoni semaforizată la Liceul Electrotimiș",
+   "cost": 98000.0,
+   "benefit": 3.2,
+   "equity": 0.0,
+   "population": 1728,
+   "lon": 21.26488,
+   "lat": 45.73072
+  },
+  {
+   "id": "I15",
+   "type": "trecere",
+   "label": "trecere de pietoni semaforizată la Liceul Silvic",
+   "cost": 53000.0,
+   "benefit": 0.0,
+   "equity": 0.1,
+   "population": 27,
+   "lon": 21.26866,
+   "lat": 45.77651
+  },
+  {
+   "id": "I16",
+   "type": "trecere",
+   "label": "trecere de pietoni semaforizată la Liceul J. L. Calderon",
+   "cost": 81000.0,
+   "benefit": 2.0,
+   "equity": 0.0,
+   "population": 896,
+   "lon": 21.2432,
+   "lat": 45.75433
+  },
+  {
+   "id": "I17",
+   "type": "trecere",
+   "label": "trecere de pietoni semaforizată la Universitatea de Științele Vieții",
+   "cost": 78000.0,
+   "benefit": 1.0,
+   "equity": 0.0,
+   "population": 615,
+   "lon": 21.21911,
+   "lat": 45.78329
+  },
+  {
+   "id": "I18",
+   "type": "zona30",
+   "label": "zonă 30 în jurul Facultatea de Mecanică",
+   "cost": 344000.0,
+   "benefit": 6.7,
+   "equity": 0.0,
+   "population": 4251,
+   "lon": 21.22558,
+   "lat": 45.74497
+  },
+  {
+   "id": "I19",
+   "type": "zona30",
+   "label": "zonă 30 în jurul Universitatea de Vest",
+   "cost": 395000.0,
+   "benefit": 5.5,
+   "equity": 0.0,
+   "population": 4097,
+   "lon": 21.23113,
+   "lat": 45.74798
+  },
+  {
+   "id": "I20",
+   "type": "zona30",
+   "label": "zonă 30 în jurul Colegiul Național Bănățean",
+   "cost": 401000.0,
+   "benefit": 18.0,
+   "equity": 0.0,
+   "population": 9579,
+   "lon": 21.21203,
+   "lat": 45.74433
+  },
+  {
+   "id": "I21",
+   "type": "zona30",
+   "label": "zonă 30 în jurul Școala Generală Plopi",
+   "cost": 298000.0,
+   "benefit": 0.2,
+   "equity": 0.2,
+   "population": 147,
+   "lon": 21.27976,
+   "lat": 45.75008
+  },
+  {
+   "id": "I22",
+   "type": "statie",
+   "label": "stație accesibilă și informare în timp real: Fropin (Dumbrăvița) (Lipovei)",
+   "cost": 40000.0,
+   "benefit": 0.1,
+   "equity": 0.1,
+   "population": 123,
+   "lon": 21.23942,
+   "lat": 45.79269
+  },
+  {
+   "id": "I23",
+   "type": "statie",
+   "label": "stație accesibilă și informare în timp real: Gării - Penny (Giroc) (Planetelor)",
+   "cost": 43000.0,
+   "benefit": 1.1,
+   "equity": 2.3,
+   "population": 3806,
+   "lon": 21.23429,
+   "lat": 45.70722
+  },
+  {
+   "id": "I24",
+   "type": "statie",
+   "label": "stație accesibilă și informare în timp real: Gheorghe Ranetti (Liviu Rebreanu) (Șagului)",
+   "cost": 32000.0,
+   "benefit": 4.1,
+   "equity": 0.0,
+   "population": 7010,
+   "lon": 21.21304,
+   "lat": 45.7325
+  },
+  {
+   "id": "I25",
+   "type": "statie",
+   "label": "stație accesibilă și informare în timp real: Piața Consiliul Europei (Calea Aradului) (Dacia)",
+   "cost": 21000.0,
+   "benefit": 2.5,
+   "equity": 0.0,
+   "population": 7628,
+   "lon": 21.22538,
+   "lat": 45.76614
+  },
+  {
+   "id": "I26",
+   "type": "statie",
+   "label": "stație accesibilă și informare în timp real: Piața Regina Maria (Spitalul de copii) (Circumvalațiunii)",
+   "cost": 52000.0,
+   "benefit": 1.7,
+   "equity": 0.0,
+   "population": 4793,
+   "lon": 21.22073,
+   "lat": 45.75288
+  },
+  {
+   "id": "I27",
+   "type": "statie",
+   "label": "stație accesibilă și informare în timp real: Martir Ioan Stanciu (Girocului)",
+   "cost": 31000.0,
+   "benefit": 6.1,
+   "equity": 0.0,
+   "population": 10917,
+   "lon": 21.2377,
+   "lat": 45.73469
+  },
+  {
+   "id": "I28",
+   "type": "bicicleta",
+   "label": "bandă de biciclete protejată Braytim-Timișoara Sud – Soarelui",
+   "cost": 281000.0,
+   "benefit": 7.4,
+   "equity": 3.4,
+   "population": 9615,
+   "lon": 21.24691,
+   "lat": 45.72817,
+   "line": [
+    [
+     21.24367,
+     45.72294
+    ],
+    [
+     21.25016,
+     45.7334
+    ]
+   ]
+  },
+  {
+   "id": "I29",
+   "type": "bicicleta",
+   "label": "bandă de biciclete protejată Cetate – Circumvalațiunii",
+   "cost": 238000.0,
+   "benefit": 18.5,
+   "equity": 0.0,
+   "population": 21080,
+   "lon": 21.22059,
+   "lat": 45.75752,
+   "line": [
+    [
+     21.22663,
+     45.75511
+    ],
+    [
+     21.21456,
+     45.75993
+    ]
+   ]
+  },
+  {
+   "id": "I30",
+   "type": "bicicleta",
+   "label": "bandă de biciclete protejată Circumvalațiunii – Dacia",
+   "cost": 159000.0,
+   "benefit": 30.4,
+   "equity": 0.0,
+   "population": 28790,
+   "lon": 21.2175,
+   "lat": 45.76252,
+   "line": [
+    [
+     21.21456,
+     45.75993
+    ],
+    [
+     21.22045,
+     45.7651
+    ]
+   ]
+  },
+  {
+   "id": "I31",
+   "type": "bicicleta",
+   "label": "bandă de biciclete protejată Circumvalațiunii – Mehala",
+   "cost": 319000.0,
+   "benefit": 26.2,
+   "equity": 3.6,
+   "population": 23549,
+   "lon": 21.20965,
+   "lat": 45.76163,
+   "line": [
+    [
+     21.21456,
+     45.75993
+    ],
+    [
+     21.20474,
+     45.76333
+    ]
+   ]
+  },
+  {
+   "id": "I32",
+   "type": "bicicleta",
+   "label": "bandă de biciclete protejată Complexul Studențesc – Dorobanților",
+   "cost": 819000.0,
+   "benefit": 28.3,
+   "equity": 1.3,
+   "population": 22649,
+   "lon": 21.24931,
+   "lat": 45.75566,
+   "line": [
+    [
+     21.24041,
+     45.74807
+    ],
+    [
+     21.2582,
+     45.76325
+    ]
+   ]
+  },
+  {
+   "id": "I33",
+   "type": "bicicleta",
+   "label": "bandă de biciclete protejată Complexul Studențesc – Olimpia-Stadion",
+   "cost": 222000.0,
+   "benefit": 14.1,
+   "equity": 1.4,
+   "population": 11864,
+   "lon": 21.24207,
+   "lat": 45.74504,
+   "line": [
+    [
+     21.24041,
+     45.74807
+    ],
+    [
+     21.24373,
+     45.74201
+    ]
+   ]
+  },
+  {
+   "id": "I34",
+   "type": "bicicleta",
+   "label": "bandă de biciclete protejată Dacia – Lipovei",
+   "cost": 489000.0,
+   "benefit": 35.3,
+   "equity": 0.9,
+   "population": 31093,
+   "lon": 21.23018,
+   "lat": 45.77171,
+   "line": [
+    [
+     21.22045,
+     45.7651
+    ],
+    [
+     21.23991,
+     45.77832
+    ]
+   ]
+  },
+  {
+   "id": "I35",
+   "type": "microbuz",
+   "label": "linie de microbuz de cartier: Europa",
+   "cost": 755000.0,
+   "benefit": 6.1,
+   "equity": 12.1,
+   "population": 2117,
+   "lon": 21.30008,
+   "lat": 45.72645
+  },
+  {
+   "id": "I36",
+   "type": "microbuz",
+   "label": "linie de microbuz de cartier: Planetelor",
+   "cost": 844000.0,
+   "benefit": 120.9,
+   "equity": 237.2,
+   "population": 25413,
+   "lon": 21.23196,
+   "lat": 45.70562
+  },
+  {
+   "id": "I37",
+   "type": "microbuz",
+   "label": "linie de microbuz de cartier: Braytim-Timișoara Sud",
+   "cost": 768000.0,
+   "benefit": 55.1,
+   "equity": 68.3,
+   "population": 16285,
+   "lon": 21.24431,
+   "lat": 45.72381
+  },
+  {
+   "id": "I38",
+   "type": "microbuz",
+   "label": "linie de microbuz de cartier: Cvartal UMT",
+   "cost": 362000.0,
+   "benefit": 17.5,
+   "equity": 24.5,
+   "population": 2819,
+   "lon": 21.26085,
+   "lat": 45.77898
+  },
+  {
+   "id": "I39",
+   "type": "park_ride",
+   "label": "parcare de transfer (P+R) la Cimitir (Giarmata Vii)",
+   "cost": 2456000.0,
+   "benefit": 0.2,
+   "equity": 0.2,
+   "population": 477,
+   "lon": 21.30629,
+   "lat": 45.7982
+  },
+  {
+   "id": "I40",
+   "type": "park_ride",
+   "label": "parcare de transfer (P+R) la Goya (Giroc)",
+   "cost": 2941000.0,
+   "benefit": 7.2,
+   "equity": 14.4,
+   "population": 8907,
+   "lon": 21.24066,
+   "lat": 45.68696
+  }
+ ]
+}

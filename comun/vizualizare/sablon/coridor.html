@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="ro">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Șablon coridor P1</title>
+<style>
+/* Șablon pentru P1: coridorul văzut de sus și diagrama spațiu-timp. Citește coridor_date.js
+   (window.CORIDOR), scris de exemplu_coridor.py sau de simularea voastră. */
+:root {
+  color-scheme: dark;
+  --bg: #0d1117; --panel: #151b23; --rule: #263040; --ink: #e8edf3; --muted: #8b98a9;
+  --asphalt: #1b222c; --marking: #3a4656; --incident: #ff3b4e; --now: #ffffff;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--ink); font: 14px/1.5 system-ui, sans-serif; }
+header { padding: 16px 20px 8px; display: flex; flex-wrap: wrap; gap: 12px 24px; align-items: end; justify-content: space-between; }
+h1 { margin: 0; font-size: 22px; }
+header p { margin: 4px 0 0; color: var(--muted); max-width: 70ch; }
+.bar { display: flex; flex-wrap: wrap; gap: 8px 16px; align-items: center; }
+.bar label { color: var(--muted); font-size: 13px; display: flex; gap: 6px; align-items: center; }
+button, select { background: var(--panel); color: var(--ink); border: 1px solid var(--rule); border-radius: 7px; padding: 6px 12px; cursor: pointer; }
+main { display: grid; grid-template-columns: minmax(0, 1fr) 300px; gap: 12px; padding: 0 20px 20px; }
+@media (max-width: 900px) { main { grid-template-columns: 1fr; } }
+.col { display: grid; gap: 12px; align-content: start; min-width: 0; }
+.card { background: var(--panel); border: 1px solid var(--rule); border-radius: 10px; padding: 12px; min-width: 0; }
+.card h2 { margin: 0 0 6px; font-size: 14px; display: flex; justify-content: space-between; gap: 8px; }
+.card h2 span { color: var(--muted); font-weight: 400; font-size: 12px; }
+.sub { color: var(--muted); font-size: 12px; margin: 0 0 8px; }
+canvas { display: block; width: 100%; }
+#road { height: 120px; cursor: grab; touch-action: none; }
+#st { height: 380px; image-rendering: pixelated; }
+#seg { height: 150px; }
+#log { font: 12px/1.5 ui-monospace, monospace; color: var(--muted); max-height: 200px; overflow: auto; }
+.scale { display: flex; align-items: center; gap: 6px; font-size: 12px; color: var(--muted); }
+.scale i { width: 120px; height: 8px; border-radius: 4px; background: linear-gradient(90deg, hsl(0 80% 55%), hsl(45 90% 55%), hsl(130 60% 50%)); }
+</style>
+</head>
+<body>
+<header>
+  <div>
+    <h1>Coridor: șablon P1</h1>
+    <p id="desc"></p>
+  </div>
+  <div class="bar">
+    <button id="play">▶ Pornește</button>
+    <label>pas <input id="timp" type="range" min="0" value="0"></label>
+    <label>pași/s <input id="speed" type="range" min="1" max="120" value="30"></label>
+    <label>banda în diagramă <select id="banda"></select></label>
+  </div>
+</header>
+<main>
+  <div class="col">
+    <div class="card">
+      <h2>Coridorul, de sus <span id="clock"></span></h2>
+      <p class="sub">fiecare dreptunghi e un vehicul; rotița face zoom, tragerea mută. Liniile verticale despart tronsoanele.</p>
+      <canvas id="road"></canvas>
+    </div>
+    <div class="card">
+      <h2>Diagrama spațiu-timp <span class="scale">oprit <i></i> vmax</span></h2>
+      <p class="sub">orizontal: poziția pe coridor; vertical: timpul, în jos. Coada apare ca o pată roșie care crește înapoi, spre intrare; când se termină incidentul, se dizolvă. Linia albă e pasul curent.</p>
+      <canvas id="st"></canvas>
+    </div>
+  </div>
+  <aside class="col">
+    <div class="card">
+      <h2>Pe tronsoane</h2><p class="sub">ce măsoară controllerul la pasul curent: densitate (bare) și viteză medie (linie)</p>
+      <canvas id="seg"></canvas>
+    </div>
+    <div class="card">
+      <h2>Jurnal</h2><p class="sub">evenimentele și deciziile controllerului, până la pasul curent</p>
+      <div id="log"></div>
+    </div>
+  </aside>
+</main>
+
+<script src="coridor_date.js"></script>
+<script>
+"use strict";
+const D = window.CORIDOR, $ = s => document.querySelector(s);
+const NB = D.benzi, NC = D.celule, NT = D.pasi.length, NS = Math.ceil(NC / D.tronson_celule);
+const C = {};
+for (const n of ["asphalt", "marking", "incident", "now", "muted", "rule"]) C[n] = getComputedStyle(document.documentElement).getPropertyValue("--" + n).trim();
+/* culoarea după viteză: roșu = oprit, verde = vmax. Același cod și pe drum, și în diagramă. */
+const culoare = v => `hsl(${130 * v / D.vmax}, ${v ? 65 : 80}%, ${v ? 50 : 55}%)`;
+const rgb = Array.from({ length: D.vmax + 1 }, (_, v) => {
+  const c = document.createElement("canvas").getContext("2d"); c.fillStyle = culoare(v); c.fillRect(0, 0, 1, 1); return c.getImageData(0, 0, 1, 1).data;
+});
+const viteza = (t, b, c) => { const ch = D.pasi[t].charCodeAt(b * NC + c); return ch === 46 ? -1 : ch - 48; };   // 46 = '.'
+
+let t = 0, playing = false, dpr = 1;
+function scena(cv) { dpr = window.devicePixelRatio || 1; const w = cv.clientWidth, h = cv.clientHeight; cv.width = w * dpr; cv.height = h * dpr; const g = cv.getContext("2d"); g.setTransform(dpr, 0, 0, dpr, 0, 0); return [g, w, h]; }
+
+/* ------------------------------------------------------------------ drumul, de sus
+   Vederea arată celulele [c0, c0 + n). Zoom cu rotița, deplasare cu tragerea. */
+let c0 = 0, n = NC;
+function drum() {
+  const [g, w, h] = scena($("#road")), bh = Math.min(28, (h - 20) / NB), y0 = (h - bh * NB) / 2, cw = w / n;
+  g.fillStyle = C.asphalt; g.fillRect(0, y0, w, bh * NB);
+  g.strokeStyle = C.marking; g.setLineDash([6, 6]); g.lineWidth = 1;
+  for (let b = 1; b < NB; b++) { g.beginPath(); g.moveTo(0, y0 + b * bh); g.lineTo(w, y0 + b * bh); g.stroke(); }
+  g.setLineDash([]); g.strokeStyle = C.rule;
+  for (let s = 0; s <= NS; s++) { const x = (s * D.tronson_celule - c0) * cw; if (x < 0 || x > w) continue; g.beginPath(); g.moveTo(x, y0 - 6); g.lineTo(x, y0 + bh * NB + 6); g.stroke(); }
+  const inc = D.incident;
+  if (inc && t >= inc.de_la && t < inc.pana_la) { g.fillStyle = C.incident; g.fillRect((inc.celula - c0) * cw, y0 + inc.banda * bh, Math.max(3, cw), bh); }
+  for (let b = 0; b < NB; b++) for (let c = Math.floor(c0); c < Math.min(NC, c0 + n + 1); c++) {
+    const v = viteza(t, b, c); if (v < 0) continue;
+    g.fillStyle = culoare(v);
+    g.fillRect((c - c0) * cw + (cw > 4 ? 1 : 0), y0 + b * bh + bh * 0.2, Math.max(1.5, cw - (cw > 4 ? 2 : 0)), bh * 0.6);
+  }
+  g.fillStyle = C.muted; g.font = "11px system-ui";
+  g.fillText(`${(c0 * D.cell_m / 1000).toFixed(2)} km`, 4, h - 3); g.textAlign = "right"; g.fillText(`${((c0 + n) * D.cell_m / 1000).toFixed(2)} km`, w - 4, h - 3); g.textAlign = "left";
+}
+
+/* ------------------------------------------------------------------ diagrama spațiu-timp
+   Imaginea se face o singură dată (un pixel = o celulă la un pas), pe un canvas ascuns, cu
+   ImageData. La fiecare cadru doar o copiem scalată și desenăm linia pasului curent. */
+const img = document.createElement("canvas");
+function construiesteDiagrama(b) {
+  img.width = NC; img.height = NT;
+  const g = img.getContext("2d"), id = g.createImageData(NC, NT);
+  for (let tt = 0; tt < NT; tt++) for (let c = 0; c < NC; c++) {
+    const v = viteza(tt, b, c), k = 4 * (tt * NC + c);
+    if (v < 0) { id.data[k] = 13; id.data[k + 1] = 17; id.data[k + 2] = 23; } else { id.data.set(rgb[v].subarray(0, 3), k); }
+    id.data[k + 3] = 255;
+  }
+  g.putImageData(id, 0, 0);
+}
+function diagrama() {
+  const [g, w, h] = scena($("#st"));
+  g.imageSmoothingEnabled = false;
+  g.drawImage(img, c0, 0, n, NT, 0, 0, w, h);                // aceeași fereastră de celule ca drumul
+  const y = h * t / NT; g.strokeStyle = C.now; g.lineWidth = 1; g.beginPath(); g.moveTo(0, y); g.lineTo(w, y); g.stroke();
+}
+
+/* ------------------------------------------------------------------ măsurătorile pe tronsoane
+   Aici calculați ce vede controllerul. Densitate în veh/km pe bandă, viteză în km/h. */
+function tronsoane(tt) {
+  const r = [];
+  for (let s = 0; s < NS; s++) {
+    let nv = 0, sv = 0;
+    for (let b = 0; b < NB; b++) for (let c = s * D.tronson_celule; c < Math.min(NC, (s + 1) * D.tronson_celule); c++) { const v = viteza(tt, b, c); if (v >= 0) { nv++; sv += v; } }
+    const L = D.tronson_celule * D.cell_m / 1000 * NB;
+    r.push({ dens: nv / L, kmh: nv ? sv / nv * D.cell_m / D.dt_s * 3.6 : NaN });
+  }
+  return r;
+}
+function bare() {
+  const [g, w, h] = scena($("#seg")), r = tronsoane(t), bw = w / NS, dmax = 1000 / D.cell_m, vmax = D.vmax * D.cell_m / D.dt_s * 3.6;
+  r.forEach((s, k) => { const bh = (h - 40) * Math.min(1, s.dens / dmax); g.fillStyle = "#46607e"; g.fillRect(k * bw + 2, h - 16 - bh, bw - 4, bh); });
+  g.strokeStyle = "#ffb547"; g.lineWidth = 2; g.beginPath();
+  r.forEach((s, k) => { if (isNaN(s.kmh)) return; const x = (k + 0.5) * bw, y = h - 16 - (h - 40) * s.kmh / vmax; g.lineTo(x, y); });
+  g.stroke(); g.fillStyle = C.muted; g.font = "11px system-ui";
+  r.forEach((s, k) => g.fillText(String(k), k * bw + bw / 2 - 3, h - 3));
+  const tot = r.reduce((a, s) => a + s.dens, 0) / NS;
+  g.fillText(`densitate medie ${tot.toFixed(0)} veh/km/bandă`, 4, 11);
+}
+
+/* ------------------------------------------------------------------ jurnalul și bucla */
+const ev = (D.evenimente || []).slice().sort((a, b) => a.pas - b.pas);
+function jurnal() {
+  const log = $("#log"); log.textContent = "";
+  for (const e of ev) if (e.pas <= t) { const d = document.createElement("div"); d.textContent = `pas ${e.pas}: ${e.text}`; log.prepend(d); }
+}
+let last = 0, acc = 0, ultimJurnal = -1;
+function cadru(ts) {
+  const dt = Math.min(0.1, (ts - last) / 1000); last = ts;
+  if (playing) { acc += dt * +$("#speed").value; const k = Math.floor(acc); acc -= k; t = (t + k) % NT; $("#timp").value = t; }
+  drum(); diagrama(); bare();
+  const vizibile = ev.filter(e => e.pas <= t).length; if (vizibile !== ultimJurnal) { ultimJurnal = vizibile; jurnal(); }
+  $("#clock").textContent = `pasul ${t} · ${Math.floor(t * D.dt_s / 60)} min ${Math.round(t * D.dt_s % 60)} s`;
+  requestAnimationFrame(cadru);
+}
+
+/* ------------------------------------------------------------------ interacțiunea */
+const road = $("#road"); let drag = null;
+road.addEventListener("wheel", e => { e.preventDefault(); const r = road.getBoundingClientRect(), cm = c0 + n * (e.clientX - r.left) / r.width;
+  n = Math.max(30, Math.min(NC, n * Math.exp(e.deltaY * 0.0015))); c0 = Math.max(0, Math.min(NC - n, cm - n * (e.clientX - r.left) / r.width)); }, { passive: false });
+road.addEventListener("pointerdown", e => { drag = { x: e.clientX, c0 }; road.setPointerCapture(e.pointerId); });
+road.addEventListener("pointermove", e => { if (drag) c0 = Math.max(0, Math.min(NC - n, drag.c0 - (e.clientX - drag.x) / road.clientWidth * n)); });
+road.addEventListener("pointerup", () => drag = null);
+$("#play").onclick = () => { playing = !playing; $("#play").textContent = playing ? "❚❚ Pauză" : "▶ Pornește"; };
+$("#timp").max = NT - 1; $("#timp").oninput = e => { t = +e.target.value; };
+for (let b = 0; b < NB; b++) $("#banda").add(new Option(`banda ${b}`, b));
+$("#banda").onchange = e => construiesteDiagrama(+e.target.value);
+$("#desc").textContent = `${D.descriere || ""} · ${NB} benzi × ${NC} celule de ${D.cell_m} m (${(NC * D.cell_m / 1000).toFixed(1)} km), ${NT} pași de ${D.dt_s} s`;
+construiesteDiagrama(D.incident ? D.incident.banda : 0); $("#banda").value = D.incident ? D.incident.banda : 0;
+requestAnimationFrame(cadru);
+</script>
+</body>
+</html>

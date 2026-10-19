@@ -1,0 +1,24 @@
+{
+ "instance": "tm_A_20",
+ "changes": [
+  {
+   "generation": 100,
+   "type": "budget_scale",
+   "factor": 0.7,
+   "motiv": "rectificare bugetară"
+  },
+  {
+   "generation": 200,
+   "type": "remove_item",
+   "id": "I36",
+   "motiv": "aviz refuzat"
+  },
+  {
+   "generation": 300,
+   "type": "weights",
+   "w_benefit": 0.5,
+   "w_equity": 0.5,
+   "motiv": "consiliul local prioritizează echitatea"
+  }
+ ]
+}

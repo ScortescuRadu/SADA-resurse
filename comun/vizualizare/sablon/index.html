@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="ro">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Șablon hartă Timișoara</title>
+<style>
+/* Șablon de pornire pentru vizualizare. Totul e într-un singur fișier, fără biblioteci.
+   Culorile sunt variabile CSS: schimbați-le aici, nu prin cod. */
+:root {
+  color-scheme: dark;
+  --bg: #0d1117; --panel: #151b23; --rule: #263040; --ink: #e8edf3; --muted: #8b98a9;
+  --road: #2b3747; --road-major: #46607e; --car: #ffb547; --car-slow: #ff5d6c; --redir: #b48cff; --closed: #ff3b4e; --stop: #5ec8e5;
+  --hospital: #ff7aa8; --weak: #f2c14e;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--ink); font: 14px/1.5 system-ui, sans-serif; }
+header { padding: 16px 20px 8px; display: flex; flex-wrap: wrap; gap: 12px 24px; align-items: end; justify-content: space-between; }
+h1 { margin: 0; font-size: 22px; }
+header p { margin: 4px 0 0; color: var(--muted); max-width: 70ch; }
+.bar { display: flex; flex-wrap: wrap; gap: 8px 16px; align-items: center; }
+.bar label { color: var(--muted); font-size: 13px; display: flex; gap: 6px; align-items: center; }
+button { background: var(--panel); color: var(--ink); border: 1px solid var(--rule); border-radius: 7px; padding: 6px 12px; cursor: pointer; }
+main { display: grid; grid-template-columns: minmax(0, 1fr) 300px; gap: 12px; padding: 0 20px 20px; }
+@media (max-width: 900px) { main { grid-template-columns: 1fr; } }
+.stage { position: relative; border: 1px solid var(--rule); border-radius: 10px; overflow: hidden; background: #0a0e13; }
+#map { display: block; width: 100%; height: min(72vh, 680px); cursor: grab; touch-action: none; }
+#tip { position: absolute; display: none; pointer-events: none; background: #0d1117ee; border: 1px solid var(--rule); border-radius: 6px; padding: 4px 8px; font-size: 12px; }
+#clock { position: absolute; left: 12px; top: 10px; font: 600 20px ui-monospace, monospace; color: var(--car); pointer-events: none; }
+aside { display: grid; gap: 12px; align-content: start; }
+.card { background: var(--panel); border: 1px solid var(--rule); border-radius: 10px; padding: 12px; }
+.card h2 { margin: 0 0 6px; font-size: 14px; }
+.card .sub { color: var(--muted); font-size: 12px; margin: 0 0 8px; }
+#log { font: 12px/1.5 ui-monospace, monospace; color: var(--muted); max-height: 220px; overflow: auto; }
+.legend div { display: flex; gap: 8px; align-items: center; font-size: 12px; color: var(--muted); margin: 3px 0; }
+.legend i { display: inline-block; width: 18px; height: 4px; border-radius: 2px; }
+canvas.chart { width: 100%; height: 110px; display: block; }
+</style>
+</head>
+<body>
+<header>
+  <div>
+    <h1>Timișoara: șablon de hartă</h1>
+    <p id="desc">Străzile reale (OpenStreetMap), cartierele, stațiile STPT și mașinile din sim.js. Înlocuiți sim.js cu ce produce simularea voastră.</p>
+  </div>
+  <div class="bar">
+    <button id="play">▶ Pornește</button>
+    <label>timp <input id="timp" type="range" min="0" step="1" value="0"></label>
+    <label>viteză <input id="speed" type="range" min="1" max="300" value="30"></label>
+    <label><input type="checkbox" id="lCart" checked> cartiere</label>
+    <label><input type="checkbox" id="lStatii" checked> stații</label>
+    <label><input type="checkbox" id="lImp"> străzi după importanță</label>
+  </div>
+</header>
+<main>
+  <div class="stage">
+    <canvas id="map"></canvas>
+    <div id="clock">00:00</div>
+    <div id="tip"></div>
+  </div>
+  <aside>
+    <div class="card legend">
+      <h2>Legendă</h2>
+      <div><i style="background:var(--road-major)"></i>stradă (grosimea = importanța)</div>
+      <div><i style="background:var(--car);height:8px;width:8px;border-radius:50%"></i>mașină</div>
+      <div><i style="background:var(--car-slow);height:8px;width:8px;border-radius:50%"></i>sub 25 km/h sau blocată</div>
+      <div><i style="background:var(--redir);height:8px;width:8px;border-radius:50%"></i>și-a recalculat drumul</div>
+      <div><i style="background:var(--closed)"></i>stradă închisă</div>
+      <div><i style="background:var(--stop);height:6px;width:6px;border-radius:50%"></i>stație STPT (mărimea = nr. de linii)</div>
+      <div><i style="background:var(--weak)"></i>cartier cu acces slab la transport</div>
+    </div>
+    <div class="card">
+      <h2>Mașini pe drum</h2><p class="sub">se actualizează la fiecare minut simulat</p>
+      <canvas class="chart" id="chart"></canvas>
+    </div>
+    <div class="card">
+      <h2>Jurnal</h2><p class="sub">aici puneți deciziile controllerului (MAPE-K)</p>
+      <div id="log"></div>
+    </div>
+  </aside>
+</main>
+
+<script src="date_harta.js"></script>
+<!-- opțional: simularea voastră, scrisă din Python (vezi exemplu_sim.py). Dacă lipsește, pagina merge cu mașini de
+     exemplu. Alt fișier: index.html?sim=sim_adaptiv.js (util ca să comparați scenarii). -->
+<script>
+  const fisierSim = new URLSearchParams(location.search).get("sim") || "sim.js";
+  if (/^[\w.-]+\.js$/.test(fisierSim)) document.write(`<script src="${fisierSim}"><\/script>`);
+</script>
+<script>
+"use strict";
+const H = window.HARTA;
+const $ = s => document.querySelector(s);
+/* culorile se citesc o singură dată: getComputedStyle la fiecare cadru face animația sacadată */
+const C = {};
+for (const n of ["road", "car", "car-slow", "redir", "closed", "stop", "hospital", "muted"]) C[n] = getComputedStyle(document.documentElement).getPropertyValue("--" + n).trim();
+
+/* ------------------------------------------------------------------ 1. proiecția
+   lon/lat -> plan. La latitudinea Timișoarei, un grad de longitudine e mai scurt decât unul
+   de latitudine, cu factorul cos(45,75°) ≈ 0,70. Fără corecție, harta iese turtită.
+   Pentru o hartă de oraș, proiecția asta simplă e suficientă. */
+const COS = Math.cos(45.75 * Math.PI / 180);
+const P = H.noduri.map(([lo, la]) => [lo * COS, -la]);       // y negativ: nordul în sus
+const proj = ([lo, la]) => [lo * COS, -la];
+
+/* ------------------------------------------------------------------ 2. vederea (zoom, deplasare) */
+const cv = $("#map"), cx = cv.getContext("2d");
+let W, Ht, dpr, view = { s: 1, tx: 0, ty: 0 };
+function fit() {
+  dpr = window.devicePixelRatio || 1; W = cv.clientWidth; Ht = cv.clientHeight;
+  cv.width = W * dpr; cv.height = Ht * dpr;                   // canvas clar pe ecrane retina
+  const xs = P.map(p => p[0]), ys = P.map(p => p[1]);
+  const [x0, x1, y0, y1] = [Math.min(...xs), Math.max(...xs), Math.min(...ys), Math.max(...ys)];
+  const s = 0.94 * Math.min(W / (x1 - x0), Ht / (y1 - y0));
+  view = { s, tx: (W - s * (x1 - x0)) / 2 - s * x0, ty: (Ht - s * (y1 - y0)) / 2 - s * y0 };
+}
+const X = x => x * view.s + view.tx, Y = y => y * view.s + view.ty;
+
+/* ------------------------------------------------------------------ 3. vehiculele
+   Un vehicul e o listă de puncte [timp_s, nod]: la momentul acela se află în nodul acela.
+   Un punct poate fi și [timp_s, lon, lat], pentru vehicule care nu merg pe graful nostru
+   (de exemplu pe formele din shapes.txt, la P4). Între două puncte, poziția se interpolează
+   liniar după timp. Formatul e cel scris de
+   exemplu_sim.py. Dacă sim.js există (window.SIM), mașinile și evenimentele vin din el;
+   altfel pagina inventează câteva pe traseele de exemplu, ca să aveți ce vedea.
+   ÎN PROIECTUL VOSTRU: scrieți sim.js din simularea voastră, în același format. */
+const muchie = new Map();                                    // "i,j" -> [lungime_m, timp_s, nume]
+H.muchii.forEach(([i, j, l, t, , n]) => muchie.set(i + "," + j, [l, t, n]));
+const idx = new Map(H.ids.map((id, k) => [id, k]));          // id OSM -> index în H.noduri
+function demo() {
+  const vehicule = [];
+  for (let k = 0; k < 300; k++) {
+    const tr = H.trasee[k % H.trasee.length];
+    let t = Math.random() * 3000;
+    const puncte = [[t, H.ids[tr[0]]]];
+    for (let s = 1; s < tr.length; s++) { t += (muchie.get(tr[s - 1] + "," + tr[s]) || [0, 10])[1]; puncte.push([t, H.ids[tr[s]]]); }
+    vehicule.push({ id: "d" + k, puncte });
+  }
+  return { descriere: "mașini de exemplu pe drumuri minime (nu am găsit sim.js)", vehicule, evenimente: [] };
+}
+const S = window.SIM || demo();
+let lipsa = 0;
+const punct = p => p.length === 3 ? proj([p[1], p[2]]) : P[idx.get(String(p[1]))];
+const vehicule = S.vehicule.map(v => ({ id: v.id, stare: v.stare || "", culoare: v.culoare, t: v.puncte.map(p => p[0]),
+  xy: v.puncte.map(punct), k: 0 })).filter(v => v.xy.every(Boolean) || (lipsa++, false));
+const evenimente = (S.evenimente || []).slice().sort((a, b) => a.t_s - b.t_s);
+const DURATA = S.durata_s || Math.max(...vehicule.map(v => v.t[v.t.length - 1]));
+const inchise = new Set();                                   // "i,j" pentru muchiile închise acum
+let simT = 0, playing = false, urmEv = 0;
+
+/* unde e vehiculul v la momentul t (null dacă nu e pe drum). v.k ține minte segmentul curent,
+   ca să nu căutăm de la început la fiecare cadru. */
+function pozitie(v, t) {
+  const T = v.t, ultim = T.length - 1;
+  if (t < T[0] || T.length < 2) return null;
+  if (t > T[ultim]) return v.stare === "blocat" ? { x: v.xy[ultim][0], y: v.xy[ultim][1], kmh: 0 } : null;
+  if (T[v.k] > t) v.k = 0;                                   // timpul a fost dat înapoi
+  while (v.k < ultim - 1 && T[v.k + 1] < t) v.k++;
+  const dt = T[v.k + 1] - T[v.k] || 1, f = (t - T[v.k]) / dt, a = v.xy[v.k], b = v.xy[v.k + 1];
+  const metri = Math.hypot(b[0] - a[0], b[1] - a[1]) * 111320;   // după proiecție, 1 unitate = 1° de latitudine
+  return { x: a[0] + (b[0] - a[0]) * f, y: a[1] + (b[1] - a[1]) * f, kmh: metri / dt * 3.6 };
+}
+function aplicaEvenimente() {                                // tot ce s-a întâmplat până la simT
+  while (urmEv < evenimente.length && evenimente[urmEv].t_s <= simT) {
+    const e = evenimente[urmEv++];
+    for (const [u, v] of e.inchise || []) inchise.add(idx.get(String(u)) + "," + idx.get(String(v)));
+    for (const [u, v] of e.redeschise || []) inchise.delete(idx.get(String(u)) + "," + idx.get(String(v)));
+    jurnal(`${ceas(e.t_s)}  ${e.text || ""}`);
+  }
+}
+function saltLa(t) {                                         // pentru bara de timp: refacem starea de la zero
+  simT = t; urmEv = 0; inchise.clear(); $("#log").textContent = ""; aplicaEvenimente();
+}
+
+/* ------------------------------------------------------------------ 4. desenarea
+   Ordinea contează: fundal, cartiere, străzi, puncte, vehicule (deasupra). */
+function inel(ring) { cx.beginPath(); ring.forEach((c, k) => { const [x, y] = proj(c); k ? cx.lineTo(X(x), Y(y)) : cx.moveTo(X(x), Y(y)); }); cx.closePath(); }
+let stat = {};                                               // ce vede controllerul: numărat la desenare
+function deseneaza() {
+  cx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  cx.fillStyle = "#0a0e13"; cx.fillRect(0, 0, W, Ht);
+  if ($("#lCart").checked) H.cartiere.forEach(c => {
+    inel(c.inel); cx.fillStyle = c.acces_slab ? "#f2c14e22" : "#ffffff06"; cx.fill();
+    cx.strokeStyle = c.acces_slab ? "#f2c14e66" : "#ffffff14"; cx.lineWidth = 1; cx.stroke();
+  });
+  const imp = $("#lImp").checked;
+  cx.lineCap = "round";
+  for (const [i, j, , , w] of H.muchii) {                    // o stradă = două muchii (dus/întors)
+    cx.strokeStyle = imp ? `hsl(${210 - 200 * Math.min(1, w * 9)}, 60%, ${30 + 30 * Math.min(1, w * 9)}%)` : C.road;
+    cx.lineWidth = 0.6 + (imp ? 6 : 2.5) * Math.min(1, w * 9);
+    cx.beginPath(); cx.moveTo(X(P[i][0]), Y(P[i][1])); cx.lineTo(X(P[j][0]), Y(P[j][1])); cx.stroke();
+  }
+  cx.strokeStyle = C.closed; cx.lineWidth = 4;                // străzile închise, peste celelalte
+  for (const k of inchise) { const [i, j] = k.split(",").map(Number); cx.beginPath(); cx.moveTo(X(P[i][0]), Y(P[i][1])); cx.lineTo(X(P[j][0]), Y(P[j][1])); cx.stroke(); }
+  if ($("#lStatii").checked) { cx.fillStyle = C.stop; cx.globalAlpha = 0.55; H.statii.forEach(([lo, la, , k]) => { const [x, y] = proj([lo, la]); cx.beginPath(); cx.arc(X(x), Y(y), 1 + 0.6 * Math.sqrt(k), 0, 7); cx.fill(); }); cx.globalAlpha = 1; }
+  cx.fillStyle = C.hospital; H.spitale.forEach(([lo, la]) => { const [x, y] = proj([lo, la]); cx.fillRect(X(x) - 5, Y(y) - 1.5, 10, 3); cx.fillRect(X(x) - 1.5, Y(y) - 5, 3, 10); });
+  stat = { pe_drum: 0, lente: 0, redir: 0, blocate: 0 };
+  for (const v of vehicule) {
+    const p = pozitie(v, simT);
+    if (!p) continue;
+    stat.pe_drum++;
+    let c = v.culoare || C.car;                              // culoarea: cea din sim.js, apoi starea, apoi viteza
+    if (v.culoare) {}
+    else if (v.stare === "blocat" && p.kmh === 0) { c = C["car-slow"]; stat.blocate++; }
+    else if (v.stare === "redirecționat") { c = C.redir; stat.redir++; }
+    else if (p.kmh < 25) { c = C["car-slow"]; stat.lente++; }
+    cx.fillStyle = c; cx.beginPath(); cx.arc(X(p.x), Y(p.y), 3.5, 0, 7); cx.fill();
+    cx.strokeStyle = "#0a0e13"; cx.lineWidth = 1; cx.stroke();
+  }
+}
+
+/* ------------------------------------------------------------------ 5. un grafic live mic */
+const serie = [];
+function grafic() {
+  const c = $("#chart"), g = c.getContext("2d"), w = c.clientWidth, h = c.clientHeight;
+  c.width = w * dpr; c.height = h * dpr; g.setTransform(dpr, 0, 0, dpr, 0, 0); g.clearRect(0, 0, w, h);
+  serie.push(stat.pe_drum || 0); if (serie.length > 200) serie.shift();
+  const max = Math.max(1, ...serie);
+  g.strokeStyle = C.car; g.lineWidth = 2; g.beginPath();
+  serie.forEach((v, k) => { const x = w * k / 200, y = h - 6 - (h - 38) * v / max; k ? g.lineTo(x, y) : g.moveTo(x, y); });
+  g.stroke(); g.fillStyle = C.muted; g.font = "11px system-ui";
+  g.fillText(`pe drum: ${stat.pe_drum}`, 4, 12);
+  g.fillText(`lente ${stat.lente} · redirecționate ${stat.redir} · blocate ${stat.blocate}`, 4, 26);
+}
+
+/* ------------------------------------------------------------------ 6. bucla de animație
+   requestAnimationFrame rulează ~60 de cadre pe secundă; timpul simulat avansează cu
+   „viteza” × timpul real. Simularea grea (controllerul, modelul) nu se face aici, la fiecare
+   cadru, ci la pasul simulării voastre (de exemplu la fiecare 15 minute simulate). */
+const ceas = s => { const m = Math.floor(s / 60); return `${String(Math.floor(m / 60)).padStart(2, "0")}:${String(m % 60).padStart(2, "0")}`; };
+let last = 0, ultimulPas = -1e9;
+function cadru(ts) {
+  const dt = Math.min(0.1, (ts - last) / 1000); last = ts;
+  if (playing) {
+    simT += dt * +$("#speed").value;
+    if (simT > DURATA) { saltLa(0); serie.length = 0; jurnal("de la capăt"); }
+    aplicaEvenimente();
+    $("#timp").value = simT;
+  }
+  deseneaza();
+  if (simT - ultimulPas >= 60 || simT < ultimulPas) { ultimulPas = simT; grafic(); pasSimulare(simT); }
+  $("#clock").textContent = ceas(simT);
+  requestAnimationFrame(cadru);
+}
+/* AICI, dacă vreți să rulați modelul direct în pagină (portat în JS): un pas al simulării.
+   Controllerul măsoară (stat), decide, iar decizia o scrieți cu jurnal(...) și o arătați pe
+   hartă (de exemplu adăugând în `inchise`). Pentru reluarea unui sim.js nu trebuie nimic aici. */
+function pasSimulare(t) {}
+function jurnal(text) { const d = document.createElement("div"); d.textContent = text; $("#log").prepend(d); }
+
+/* ------------------------------------------------------------------ 7. interacțiunea */
+let drag = null;
+cv.addEventListener("wheel", e => { e.preventDefault(); const r = cv.getBoundingClientRect(), mx = e.clientX - r.left, my = e.clientY - r.top, k = Math.exp(-e.deltaY * 0.0015);
+  view.tx = mx - (mx - view.tx) * k; view.ty = my - (my - view.ty) * k; view.s *= k; }, { passive: false });
+cv.addEventListener("pointerdown", e => { drag = { x: e.clientX, y: e.clientY, tx: view.tx, ty: view.ty }; cv.setPointerCapture(e.pointerId); });
+cv.addEventListener("pointerup", () => drag = null);
+cv.addEventListener("pointermove", e => {
+  const r = cv.getBoundingClientRect(), mx = e.clientX - r.left, my = e.clientY - r.top;
+  if (drag) { view.tx = drag.tx + e.clientX - drag.x; view.ty = drag.ty + e.clientY - drag.y; return; }
+  let best = null, bd = 6;                                   // strada cea mai apropiată de cursor
+  for (const [i, j, l, t, , n] of H.muchii) {
+    const ax = X(P[i][0]), ay = Y(P[i][1]), bx = X(P[j][0]), by = Y(P[j][1]);
+    const dx = bx - ax, dy = by - ay, L2 = dx * dx + dy * dy || 1, u = Math.max(0, Math.min(1, ((mx - ax) * dx + (my - ay) * dy) / L2));
+    const d = Math.hypot(mx - ax - u * dx, my - ay - u * dy);
+    if (d < bd) { bd = d; best = [n, l, t]; }
+  }
+  const tip = $("#tip");
+  if (best) { tip.style.display = "block"; tip.style.left = mx + 12 + "px"; tip.style.top = my + 12 + "px";
+    tip.textContent = `${best[0] || "stradă fără nume"} · ${best[1].toFixed(0)} m · ${(best[1] / best[2] * 3.6).toFixed(0)} km/h`; }
+  else tip.style.display = "none";
+});
+$("#play").onclick = () => { playing = !playing; $("#play").textContent = playing ? "❚❚ Pauză" : "▶ Pornește"; };
+addEventListener("resize", fit);
+$("#timp").max = DURATA; $("#timp").oninput = e => { saltLa(+e.target.value); serie.length = 0; };
+$("#desc").textContent = S.descriere + (lipsa ? ` (${lipsa} vehicule ignorate: noduri care nu sunt în hartă)` : "");
+fit(); jurnal("Apăsați „Pornește”."); requestAnimationFrame(cadru);
+</script>
+</body>
+</html>

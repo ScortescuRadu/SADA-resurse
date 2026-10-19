@@ -1,0 +1,37 @@
+# De adăugat în config/default.yaml (pe lângă ce e deja în kit).
+
+# scripts/build_portfolio.py
+portfolio:                   # scripts/build_portfolio.py (în locul pachetului p2_portofoliu/)
+  center: [45.7537, 21.2257]
+  seed: 22
+  cost_sigma: 0.25           # variația costului față de costul unitar
+  benefit_sigma: 0.30        # variația beneficiului, necaptată de model
+  redundancy: 0.6            # cât din efectul suprapus se pierde când două intervenții acoperă aceeași populație
+  budget_ratio_40: 0.35      # bugetul = 35% din costul total al celor 40 de intervenții
+  budget_ratio_20: 0.40
+  budget_cut: 0.7            # rectificarea bugetară: −30%
+  change_generations: [100, 200, 300]
+  # costuri unitare [EUR] și efecte [ore-persoană echivalente pe an, pe locuitor din zona de influență]:
+  # ipoteze de ordin de mărime, NU valori măsurate; se justifică în raport
+  types:
+    semafoare:   {count: 6, unit_cost: 60000,   radius_m: 300,  effect_h: 1.2}   # pe intersecție; 4 intersecții pe coridor
+    intersectie: {count: 4, unit_cost: 900000,  radius_m: 500,  effect_h: 1.5}
+    trecere:     {count: 7, unit_cost: 70000,   radius_m: 300,  effect_h: 2.0}   # în principal siguranța copiilor (monetizată)
+    zona30:      {count: 4, unit_cost: 250000,  radius_m: 200,  effect_h: 1.0}
+    statie:      {count: 6, unit_cost: 35000,   radius_m: 400,  effect_h: 0.5}
+    bicicleta:   {count: 7, unit_cost: 250000,  radius_m: 400,  effect_h: 1.0}   # pe km
+    microbuz:    {count: 4, unit_cost: 700000,  radius_m: 300,  effect_h: 4.0}   # 2 vehicule + un an de operare
+    park_ride:   {count: 2, unit_cost: 2500000, radius_m: 2500, effect_h: 1.0}   # navetiști: rază mare
+
+# scenariile pe portofoliul din Timișoara (înlocuiesc dev_A_20 / dev_A_40 din kit, sau se adaugă lângă ele).
+# Fișierele de optim se fac cu scripts/solve_optima.py (versiunea de aici: MILP pentru n = 40,
+# iar numele fișierului vine din fișierul de schimbări, ca scenariile să nu se suprascrie).
+scenarios:
+  tm_A_20:
+    instance: data/p2_portofoliu/tm_A_20.json
+    changes: data/p2_portofoliu/changes_tm_A_20.json
+    optima: results/optima_tm_A_20.json
+  tm_A_40:
+    instance: data/p2_portofoliu/tm_A_40.json
+    changes: data/p2_portofoliu/changes_tm_A_40.json
+    optima: results/optima_tm_A_40.json

@@ -1,0 +1,37 @@
+# De adăugat / schimbat în config/default.yaml.
+
+data:
+  graph: data/p3_retea/retea.graphml
+  od_pairs: data/od_pairs.csv
+  group_scenarios: data/p3_retea/scenarii_defect.json
+  importance: data/p3_retea/importanta_muchii.csv   # edge betweenness exact; în kit nu există cheia, citiți-o voi
+
+od:
+  priority_file: data/p3_retea/prioritare.csv       # restul secțiunii od rămâne ca în kit
+
+# numele scenariilor în grup din scenarii_defect.json: coridor_inundatie, traversari_rau, coridor_central
+# (exact ca în config-ul din kit)
+
+osm:
+  # Centrul Timișoarei (Piața Victoriei). Raza de 2500 m dă ~1100 de noduri după unirea
+  # intersecțiilor (fișa cere 500–3000; la 1500 m ieșeau doar 463).
+  center: [45.7537, 21.2257]   # lat, lon
+  dist_m: 2500
+  network_type: drive
+  consolidate_tolerance_m: 15
+  out: data/raw/retea_osm.graphml
+
+dataset:                     # scripts/build_dataset.py (în locul pachetului p3_retea/)
+  m2_per_person: 30          # suprafață desfășurată locuibilă pe locuitor (estimare)
+  river_name: Bega
+  flood_phases_m: [40, 80, 120]   # inundația crește în trei faze: muchii la ≤ 40, 80, 120 m de albie
+  flood_stretch_lon: [21.2257, 21.30]   # tronsonul inundat: aval de Piața Victoriei (estul orașului)
+  crossings_radius_m: 1000        # podurile închise: cele din centru
+  central_axis: [[45.7580, 21.2290], [45.7537, 21.2257], [45.7505, 21.2240]]  # P-ța Unirii, P-ța Victoriei, Catedrala
+  central_buffer_m: 150
+  station: [45.7506, 21.2077]     # Gara Timișoara Nord
+  max_hospitals: 6
+  hospital_min_area_m2: 3000   # amenity=hospital include și cabinete; păstrăm doar spitalele mari
+  pairs_per_hospital: 5
+  seed: 7
+

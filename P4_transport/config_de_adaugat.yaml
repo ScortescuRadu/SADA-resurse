@@ -1,0 +1,33 @@
+# De adăugat / schimbat în config/default.yaml.
+
+gtfs:
+  # liniile pentru care sunt calculate încărcările din data/p4_gtfs/incarcari.csv.
+  # Dacă alegeți alte linii, refaceți data/s0.csv și apoi rulați scripts/build_dataset.py.
+  routes: ["1", "2", "7", "9", "11", "14", "15", "17", "33", "40", "5c", "E1", "E7", "13", "21"]
+
+data:                                    # data/p4_gtfs/ e construit de scripts/build_dataset.py (pachetul nu era disponibil)
+  s0: data/s0.csv                        # produs de scripts/baseline_s0.py
+  loads: data/p4_gtfs/incarcari.csv      # încărcările pe linie și fereastră (model de cerere)
+  capacities: data/p4_gtfs/capacitati.csv
+  weak_zones: data/p4_gtfs/zone_acces_slab.geojson
+  zones: data/p4_gtfs/zone.geojson       # cartierele (OSM place), cu populația
+  population: data/p4_gtfs/populatie_grila.csv   # grila de 200 m cu populația estimată
+  stop_routes: data/p4_gtfs/statii_linii.csv     # stațiile fiecărei linii (toate liniile urbane) și intervalul S0
+
+dataset:                     # scripts/build_dataset.py (în locul pachetului p4_gtfs/)
+  center: [45.7537, 21.2257] # Piața Victoriei
+  dist_m: 6500               # raza zonei pentru populație (orașul Timișoara)
+  cell_m: 200                # grila de populație
+  m2_per_person: 30          # suprafață desfășurată locuibilă pe locuitor (estimare)
+  zone_min_pop: 1500         # cartierele mai mici se ignoră
+  n_weak_zones: 6
+  min_trips_urban: 4         # liniile cu cel puțin 4 curse în fereastră (2 pe sens) intră în acoperire
+  capacities:                # locuri (șezut + în picioare, 4 pers/m²) pe vehicul; ipoteze din fișele tehnice tipice
+    - {mode: tramvai, capacity: 180, note: "Tatra KT4 cuplat / Imperio, ~160-200"}
+    - {mode: troleibuz, capacity: 100, note: "Solaris Trollino 12 m, ~90-110"}
+    - {mode: autobuz, capacity: 100, note: "autobuz standard 12 m, ~90-105 (articulatele ~150)"}
+  target_peak_load: 0.70     # calibrarea modelului de cerere: gradul de încărcare mediu la vârf în S0
+  mean_ride_min: 12          # durata medie a unei călătorii (ipoteză) -> partea din îmbarcări aflată în secțiunea de vârf
+  attractiveness_sigma: 0.25 # variația atractivității liniilor, necaptată de populația rezidențială
+  profile: [0.80, 0.95, 1.10, 1.20, 1.15, 1.00, 0.90, 0.85]   # vârful dimineții, 07:00-09:00
+  seed: 4
