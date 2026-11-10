@@ -1,7 +1,9 @@
 # Resurse suplimentare pentru proiectele SADA
 
-Kiturile de pornire presupun un pachet de date al disciplinei (`p2_portofoliu/`, `p3_retea/`, `p4_gtfs/`) care nu e încă gata. Ca să nu stați după el, am construit date echivalente pe Timișoara, din surse publice: OpenStreetMap și orarul STPT în format GTFS. Le găsiți aici, împreună cu:
-- scripturile care le refac;
+Aici găsiți tot ce vă trebuie ca să porniți proiectul:
+- **kiturile de pornire** ale celor patru teme, în `kituri/`: codul de bază, ghidul pas cu pas, testele și scriptul care vă instalează mediul Python;
+- **datele**: kiturile presupun un pachet de date al disciplinei (`p1_coridor/`, `p2_portofoliu/`, `p3_retea/`, `p4_gtfs/`) care nu e încă gata. Ca să nu stați după el, am construit date echivalente pe Timișoara, din surse publice: OpenStreetMap și orarul STPT în format GTFS;
+- scripturile care refac datele;
 - câteva unelte care v-ar fi luat mult timp și nu se notează;
 - un script care le pune în repo-ul vostru.
 
@@ -16,15 +18,16 @@ SADA_resurse_studenti/
 ├── verifica.py             verifică dacă totul e la locul lui și se încarcă
 ├── descarca.py             reia sursele originale de pe internet (opțional)
 ├── MANIFEST.json           sumele de control ale fișierelor (le folosește verifica.py)
+├── kituri/                 kiturile de pornire, câte unul pe temă (de aici porniți repo-ul echipei)
 ├── comun/                  pentru toate echipele
 │   ├── README.md           statistica pe perechi + greșelile pe care le-am întâlnit
 │   ├── statistica_pereche.py
 │   ├── timisoara/          toate datele despre oraș într-o bază SQLite, cu un modul de citire
 │   └── vizualizare/        hartă cu mașini pe străzile reale, coridorul P1, ghid pe fiecare temă
-├── P1_trafic/              referința SUMO pe coridorul drept
+├── P1_trafic/              datele coridorului, referința SUMO pe coridorul drept
 ├── P2_portofoliu/          portofoliul de intervenții, optimul exact, frontul Pareto exact
 ├── P3_retea/               rețeaua rutieră, scenariile de defect, spitalele, regulile Golly
-└── P4_transport/           încărcările, capacitățile, populația, cartierele, întoarcerea la capăt
+└── P4_transport/           feed-ul GTFS, încărcările, capacitățile, populația, cartierele, întoarcerea la capăt
 ```
 
 Fiecare folder de temă are trei fișiere de citit:
@@ -36,21 +39,44 @@ Fiecare folder de temă are trei fișiere de citit:
 
 Exemplele sunt pentru P3; înlocuiți cu tema voastră (P1, P2, P3 sau P4). Comenzile sunt pentru Linux, macOS sau WSL; pe Windows, în PowerShell, scrieți `python` în loc de `python3`, iar căile cu `\`.
 
-**1. Puneți folderul de resurse lângă repo-ul vostru**, nu în el. De exemplu:
+**1. Faceți repo-ul echipei din kitul temei.** Copiați kitul lângă folderul de resurse, nu în el, și faceți din el un repo Git:
+
+```bash
+cd proiecte
+git clone https://github.com/ScortescuRadu/SADA-resurse SADA_resurse_studenti
+cp -r SADA_resurse_studenti/kituri/P3_toleranta_retea_mobilitate repo_nostru
+cd repo_nostru
+git init && git add -A && git commit -m "Kitul de pornire P3"
+```
+
+Pe Windows, în PowerShell: `Copy-Item -Recurse SADA_resurse_studenti\kituri\P3_toleranta_retea_mobilitate repo_nostru`.
+
+| Tema | Kitul |
+|---|---|
+| P1 | `kituri/P1_trafic_automate_celulare` |
+| P2 | `kituri/P2_algoritm_genetic_portofoliu` |
+| P3 | `kituri/P3_toleranta_retea_mobilitate` |
+| P4 | `kituri/P4_frecventa_transport_public` |
+
+La final aveți:
 
 ```
 proiecte/
 ├── SADA_resurse_studenti/
-└── repo_nostru/          (kitul vostru, cu .venv, config/, src/ ...)
+└── repo_nostru/          (kitul vostru: config/, src/, scripts/, setup/ ...)
 ```
 
-**2. Activați mediul din kit.** Scripturile au nevoie de pachetele din kit (pyyaml, pandas, networkx...).
+**2. Instalați și activați mediul din kit.** Scripturile din resurse folosesc pachetele din kit (pyyaml, pandas, networkx...). E nevoie de Python 3.10 sau mai nou.
 
 ```bash
-cd proiecte/repo_nostru
+cd repo_nostru
+bash setup/setup.sh                # Windows: powershell -ExecutionPolicy Bypass -File setup\setup.ps1
 source .venv/bin/activate          # Windows: .\.venv\Scripts\Activate.ps1
+python examples/toy_mapek.py       # trebuie să ruleze fără erori
 cd ../SADA_resurse_studenti
 ```
+
+Instalarea durează câteva minute și se face o singură dată. După aceea, în fiecare terminal nou, doar activați mediul. Pe macOS, `python3` din sistem e uneori 3.9; atunci rulați `PYTHON=python3.12 bash setup/setup.sh` (sau ce versiune ≥ 3.10 aveți).
 
 **3. Vedeți întâi ce s-ar schimba, fără să scrie nimic:**
 
@@ -126,6 +152,8 @@ Fiecare linie e `[ok]`, `[atenție]` (merge, dar e ceva de făcut, de exemplu op
 | Mesaj | Ce faceți |
 |---|---|
 | `ModuleNotFoundError: No module named 'yaml'` (sau `pandas`, `networkx`) | nu ați activat mediul din kit, pasul 2 |
+| `E nevoie de Python 3.10 sau mai nou` la `setup.sh` | instalați Python 3.10+ și rulați `PYTHON=python3.12 bash setup/setup.sh` |
+| `No such file or directory: setup/setup.sh` | nu sunteți în folderul kitului; pasul 1 |
 | `nu pare un repo de proiect SADA` | calea către repo e greșită; trebuie să fie folderul care conține `config/` |
 | `Repo-ul nu are src/sada/p3/; pare să fie P2` | ați dat altă temă decât a voastră |
 | `Nu am modificat config/default.yaml` | config-ul vostru are o formă pe care scriptul n-o recunoaște sigur; adăugați secțiunile de mână din `config_de_adaugat.yaml` și rulați `verifica.py` |
