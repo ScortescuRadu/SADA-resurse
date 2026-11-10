@@ -1,0 +1,3 @@
+fare_id,price,currency_type,payment_method,transfers,agency_id,transfer_duration
+f1,5,RON,0,,STPT,3600
+f2,5,RON,0,,STPT,3600

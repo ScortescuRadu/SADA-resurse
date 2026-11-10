@@ -8,7 +8,7 @@ Primiți datele care lipseau din pachetul `p4_gtfs/`:
 - populația, cartierele și cele cu acces slab la transport;
 - stațiile tuturor liniilor urbane.
 
-Primiți și o funcție care măsoară din GTFS timpul real de întoarcere la capăt, în locul celor 5 minute presupuse în kit.
+Primiți și feed-ul GTFS pe care sunt calculate datele, ca să nu depindeți de ce versiune se descarcă azi, plus o funcție care măsoară din GTFS timpul real de întoarcere la capăt, în locul celor 5 minute presupuse în kit.
 
 ## Instalare
 
@@ -22,6 +22,7 @@ Ce apare în repo:
 
 | Fișier | La ce folosește |
 |---|---|
+| `data/raw/gtfs/` | feed-ul GTFS STPT/SMTT (versiunea 4.26, valabil 2026-10-01 – 2026-12-31) pe care sunt calculate toate datele de mai jos; kitul îl caută aici |
 | `data/p4_gtfs/incarcari.csv` | pasagerii în secțiunea de vârf: `route_id, window, start, passengers` (15 linii × 8 ferestre, 07:00–09:00) |
 | `data/p4_gtfs/capacitati.csv` | locuri pe vehicul: tramvai 180, troleibuz 100, autobuz 100 |
 | `data/p4_gtfs/populatie_grila.csv` | populația pe o grilă de 200 m: `x_m, y_m` (Stereo 70, ca `stops_xy`), `lat, lon, population, zone` |
@@ -128,4 +129,4 @@ Tot ce e marcat TODO în kit:
 
 **Pot schimba calibrarea cererii?** Da, `dataset.target_peak_load` și celelalte din secțiunea `dataset`. Rulați din nou `build_dataset.py` și spuneți în raport ce ați schimbat.
 
-**Feed-ul GTFS s-a schimbat.** Kitul vine cu versiunea valabilă 2026-10-01 – 2026-12-31. Dacă descărcați alta, ID-urile liniilor pot diferi și încărcările trebuie refăcute.
+**Feed-ul GTFS s-a schimbat.** Resursele vin cu feed-ul pe care sunt calculate încărcările: SMTT, versiunea 4.26, valabil 2026-10-01 – 2026-12-31, în `data/raw/gtfs/`. Dacă descărcați altul (`python scripts/download_gtfs.py` din kit sau `python descarca.py gtfs <dest>` din resurse), ID-urile liniilor pot diferi și încărcările trebuie refăcute cu `build_dataset.py`.

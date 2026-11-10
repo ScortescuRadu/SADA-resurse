@@ -1,0 +1,893 @@
+stop_id,stop_name,stop_lat,stop_lon,location_type,stop_code,stop_url
+1,"Dâmbovița (Ion Barac)",45.74015,21.19611,0,1,https://smtt.ro/statie-transport-public-1
+2,"Dâmbovița (Ion Barac)",45.74012,21.19624,0,2,https://smtt.ro/statie-transport-public-2
+3,"Service (Pădureni)",45.59412,21.21272,0,3,https://smtt.ro/statie-transport-public-3
+4,"Banatul",45.73662,21.19784,0,4,https://smtt.ro/statie-transport-public-4
+5,"Banatul",45.73674,21.19787,0,5,https://smtt.ro/statie-transport-public-5
+6,"Transilvania (Aurora)",45.73393,21.20151,0,6,https://smtt.ro/statie-transport-public-6
+7,"Transilvania (Ana Ipătescu)",45.73361,21.2019,0,7,https://smtt.ro/statie-transport-public-7
+8,"Transilvania (Bd. Dâmbovița)",45.73377,21.20249,0,8,https://smtt.ro/statie-transport-public-8
+9,"Calea Șagului (Bd. Dâmbovița)",45.7326,21.20825,0,9,https://smtt.ro/statie-transport-public-9
+10,"Calea Șagului (Bd. L. Rebreanu)",45.73255,21.20934,0,10,https://smtt.ro/statie-transport-public-10
+11,"Piața Veteranilor (Turist)",45.72858,21.20492,0,11,https://smtt.ro/statie-transport-public-11
+12,"Piața Veteranilor (Turist)",45.72851,21.20484,0,12,https://smtt.ro/statie-transport-public-12
+13,"Shopping City",45.72606,21.20207,0,13,https://smtt.ro/statie-transport-public-13
+14,"Shopping City",45.72613,21.20211,0,14,https://smtt.ro/statie-transport-public-14
+15,"Chișodei (Victor Hugo)",45.72642,21.20892,0,15,https://smtt.ro/statie-transport-public-15
+16,"Chișodei (Victor Hugo)",45.72635,21.20888,0,16,https://smtt.ro/statie-transport-public-16
+17,"Izlaz (Victor Hugo)",45.72534,21.21366,0,17,https://smtt.ro/statie-transport-public-17
+18,"Izlaz (Victor Hugo)",45.72532,21.21406,0,18,https://smtt.ro/statie-transport-public-18
+19,"Emil Zola (Victor Hugo)",45.72456,21.21734,0,19,https://smtt.ro/statie-transport-public-19
+20,"Emil Zola (Victor Hugo)",45.72453,21.21782,0,20,https://smtt.ro/statie-transport-public-20
+21,"Progresul (Aluniș)",45.72384,21.22147,0,21,https://smtt.ro/statie-transport-public-21
+22,"Progresul (Aluniș)",45.72387,21.22176,0,22,https://smtt.ro/statie-transport-public-22
+23,"Ivan Pavlov (Aluniș)",45.72325,21.22599,0,23,https://smtt.ro/statie-transport-public-23
+24,"Aluniș (Ivan Pavlov)",45.72352,21.22634,0,24,https://smtt.ro/statie-transport-public-24
+25,"Mureș (Drubeta)",45.72901,21.22729,0,25,https://smtt.ro/statie-transport-public-25
+26,"Mureș (Drubeta)",45.729,21.22719,0,26,https://smtt.ro/statie-transport-public-26
+27,"Mareșal A. Averescu (Lidia)",45.73186,21.22786,0,27,https://smtt.ro/statie-transport-public-27
+28,"Mareșal A. Averescu (Lidia)",45.73235,21.2277,0,28,https://smtt.ro/statie-transport-public-28
+29,"Liviu Rebreanu (Drubeta)",45.73477,21.2268,0,29,https://smtt.ro/statie-transport-public-29
+30,"Drubeta (Liviu Rebreanu)",45.73496,21.22642,0,30,https://smtt.ro/statie-transport-public-30
+31,"Liviu Rebreanu (Drubeta)",45.73532,21.22649,0,31,https://smtt.ro/statie-transport-public-31
+32,"Drubeta (Liviu Rebreanu)",45.73523,21.22708,0,32,https://smtt.ro/statie-transport-public-32
+33,"Salcâmilor (Liviu Rebreanu)",45.73634,21.23077,0,33,https://smtt.ro/statie-transport-public-33
+34,"Salcâmilor (Liviu Rebreanu)",45.73651,21.2312,0,34,https://smtt.ro/statie-transport-public-34
+35,"Calea Martirilor (Liviu Rebreanu)",45.7385,21.23789,0,35,https://smtt.ro/statie-transport-public-35
+36,"Calea Martirilor (Liviu Rebreanu)",45.73859,21.23857,0,36,https://smtt.ro/statie-transport-public-36
+37,"Spitalul Județean (Liviu Rebreanu)",45.73833,21.24033,0,37,https://smtt.ro/statie-transport-public-37
+38,"Spitalul Județean (Liviu Rebreanu)",45.73839,21.24042,0,38,https://smtt.ro/statie-transport-public-38
+39,"Bulevardul Sudului (Liviu Rebreanu)",45.73722,21.25004,0,39,https://smtt.ro/statie-transport-public-39
+40,"Bulevardul Sudului (Liviu Rebreanu)",45.73711,21.25089,0,40,https://smtt.ro/statie-transport-public-40
+41,"Piața Gheorghe Domășneanu (Liviu Rebreanu - AEM)",45.73356,21.25831,0,41,https://smtt.ro/statie-transport-public-41
+42,"Piața Gheorghe Domășneanu (Liviu Rebreanu - AEM)",45.73361,21.25838,0,42,https://smtt.ro/statie-transport-public-42
+49,"Gheorghe Ranetti (Liviu Rebreanu)",45.7325,21.21304,0,49,https://smtt.ro/statie-transport-public-49
+50,"Gheorghe Ranetti (Liviu Rebreanu)",45.73259,21.2136,0,50,https://smtt.ro/statie-transport-public-50
+51,"C. Brâncoveanu (Liviu Rebreanu)",45.73287,21.21872,0,51,https://smtt.ro/statie-transport-public-51
+52,"C. Brâncoveanu (Liviu Rebreanu)",45.733,21.21953,0,52,https://smtt.ro/statie-transport-public-52
+53,"Memorandumului",45.73865,21.22509,0,53,https://smtt.ro/statie-transport-public-53
+54,"Memorandumului",45.7387,21.22495,0,54,https://smtt.ro/statie-transport-public-54
+55,"Piața N. Bălcescu (Gheorghe Doja)",45.74184,21.22496,0,55,https://smtt.ro/statie-transport-public-55
+56,"Piața N. Bălcescu (Gheorghe Doja)",45.74189,21.22504,0,56,https://smtt.ro/statie-transport-public-56
+57,"Parcul C. Sylva (Parc Doina)",45.74464,21.22204,0,57,https://smtt.ro/statie-transport-public-57
+58,"Parcul C. Sylva (Parc Doina)",45.74441,21.22243,0,58,https://smtt.ro/statie-transport-public-58
+59,"Piața Sfânta Maria (16 Decembrie 1989)",45.74839,21.21859,0,59,https://smtt.ro/statie-transport-public-59
+60,"Piața Sfânta Maria (Gheorghe Doja)",45.74835,21.21914,0,60,https://smtt.ro/statie-transport-public-60
+61,"Piața Sfânta Maria (16 Decembrie 1989)",45.74881,21.21924,0,61,https://smtt.ro/statie-transport-public-61
+62,"Piața A. Mocioni (Sinaia)",45.74631,21.21526,0,62,https://smtt.ro/statie-transport-public-62
+63,"Piața A. Mocioni (Sinaia)",45.74625,21.21528,0,63,https://smtt.ro/statie-transport-public-63
+64,"Bd. Regele Carol I (Dragalina)",45.74523,21.21111,0,64,https://smtt.ro/statie-transport-public-64
+65,"Bd. Regele Carol I",45.74478,21.21101,0,65,https://smtt.ro/statie-transport-public-65
+66,"Bd. Regele Carol I",45.74516,21.21187,0,66,https://smtt.ro/statie-transport-public-66
+67,"Bd. Iuliu Maniu (Carol I)",45.74379,21.20691,0,67,https://smtt.ro/statie-transport-public-67
+68,"Bd. Iuliu Maniu (Preyer)",45.74352,21.20634,0,68,https://smtt.ro/statie-transport-public-68
+69,"Mangalia",45.74282,21.20406,0,69,https://smtt.ro/statie-transport-public-69
+70,"Mangalia",45.7426,21.20374,0,70,https://smtt.ro/statie-transport-public-70
+71,"Crizantemelor",45.74171,21.2012,0,71,https://smtt.ro/statie-transport-public-71
+72,"Crizantemelor",45.74189,21.20156,0,72,https://smtt.ro/statie-transport-public-72
+73,"Gara de Nord",45.75047,21.20709,0,73,https://smtt.ro/statie-transport-public-73
+74,"Gara de Nord",45.7504,21.20717,0,74,https://smtt.ro/statie-transport-public-74
+75,"Piața Crucii",45.74177,21.23219,0,75,https://smtt.ro/statie-transport-public-75
+76,"Piața Crucii",45.742,21.23254,0,76,https://smtt.ro/statie-transport-public-76
+77,"Strada Cluj (1 Decembrie 1918)",45.74359,21.23673,0,77,https://smtt.ro/statie-transport-public-77
+78,"Strada Cluj (1 Decembrie 1918)",45.74382,21.23715,0,78,https://smtt.ro/statie-transport-public-78
+79,"Sala C. Jude (Olimpia)",45.74515,21.24118,0,79,https://smtt.ro/statie-transport-public-79
+80,"Sala C. Jude (Olimpia)",45.7454,21.24164,0,80,https://smtt.ro/statie-transport-public-80
+81,"Deliblata",45.74694,21.24633,0,81,https://smtt.ro/statie-transport-public-81
+82,"Deliblata",45.74717,21.24669,0,82,https://smtt.ro/statie-transport-public-82
+83,"Banatim",45.7488,21.25244,0,83,https://smtt.ro/statie-transport-public-83
+84,"Banatim",45.74879,21.25274,0,84,https://smtt.ro/statie-transport-public-84
+85,"Catedrala Mitropolitană",45.75113,21.22364,0,85,https://smtt.ro/statie-transport-public-85
+86,"Catedrala Mitropolitană",45.75157,21.22345,0,86,https://smtt.ro/statie-transport-public-86
+87,"Spitalul de Copii (Nemoianu)",45.75519,21.2212,0,87,https://smtt.ro/statie-transport-public-87
+88,"Spitalul de Copii (Nemoianu)",45.75508,21.22109,0,88,https://smtt.ro/statie-transport-public-88
+89,"Piața Timișoara 700",45.75628,21.22294,0,89,https://smtt.ro/statie-transport-public-89
+90,"Piața Timișoara 700",45.75636,21.22289,0,90,https://smtt.ro/statie-transport-public-90
+91,"Piața Libertății",45.75603,21.22667,0,91,https://smtt.ro/statie-transport-public-91
+92,"Piața Libertății",45.75599,21.22673,0,92,https://smtt.ro/statie-transport-public-92
+93,"Hotel Continental (Bega)",45.75573,21.23184,0,93,https://smtt.ro/statie-transport-public-93
+94,"Hotel Continental (BNR)",45.75562,21.23396,0,94,https://smtt.ro/statie-transport-public-94
+95,"Prefectura",45.75573,21.23862,0,95,https://smtt.ro/statie-transport-public-95
+96,"Prefectura",45.75565,21.23862,0,96,https://smtt.ro/statie-transport-public-96
+101,"Fabrica de Bere",45.75303,21.25015,0,101,https://smtt.ro/statie-transport-public-101
+102,"Fabrica de Bere",45.75328,21.25013,0,102,https://smtt.ro/statie-transport-public-102
+104,"Prințul Turcesc",45.75722,21.25578,0,104,https://smtt.ro/statie-transport-public-104
+105,"Piața Sarmizegetusa",45.75937,21.25819,0,105,https://smtt.ro/statie-transport-public-105
+106,"Piața Sarmizegetusa",45.75901,21.25781,0,106,https://smtt.ro/statie-transport-public-106
+107,"Lalelelor",45.76233,21.26045,0,107,https://smtt.ro/statie-transport-public-107
+108,"Lalelelor",45.76199,21.26036,0,108,https://smtt.ro/statie-transport-public-108
+109,"Piața V. Economu (Modern)",45.76506,21.2606,0,109,https://smtt.ro/statie-transport-public-109
+110,"Piața V. Economu (Modern)",45.76572,21.26052,0,110,https://smtt.ro/statie-transport-public-110
+111,"Spitalul Victor Babeș",45.76939,21.26026,0,111,https://smtt.ro/statie-transport-public-111
+112,"Spitalul Victor Babeș",45.76941,21.26048,0,112,https://smtt.ro/statie-transport-public-112
+114,"Stația Meteo",45.77186,21.2594,0,114,https://smtt.ro/statie-transport-public-114
+121,"Piața Badea Cârțan",45.76285,21.24743,0,121,https://smtt.ro/statie-transport-public-121
+122,"Piața Badea Cârțan",45.76234,21.24777,0,122,https://smtt.ro/statie-transport-public-122
+123,"Gheorghe Barițiu",45.74906,21.19974,0,123,https://smtt.ro/statie-transport-public-123
+124,"Gheorghe Barițiu",45.74906,21.19941,0,124,https://smtt.ro/statie-transport-public-124
+125,"Pop de Băsești (Gării)",45.74963,21.20198,0,125,https://smtt.ro/statie-transport-public-125
+126,"Pop de Băsești (Gării)",45.74953,21.20206,0,126,https://smtt.ro/statie-transport-public-126
+127,"Gara de Nord",45.75056,21.20797,0,127,https://smtt.ro/statie-transport-public-127
+128,"Gara de Nord",45.7504,21.20811,0,128,https://smtt.ro/statie-transport-public-128
+129,"Pasaj Jiul",45.7519,21.21629,0,129,https://smtt.ro/statie-transport-public-129
+130,"Pasaj Jiul",45.75183,21.21685,0,130,https://smtt.ro/statie-transport-public-130
+131,"Piața Regina Maria (Spitalul de copii)",45.75288,21.22073,0,131,https://smtt.ro/statie-transport-public-131
+132,"Piața Regina Maria (Spitalul de copii)",45.75325,21.22266,0,132,https://smtt.ro/statie-transport-public-132
+133,"Piața Timișoara 700 (Spitalul Militar)",45.75659,21.22482,0,133,https://smtt.ro/statie-transport-public-133
+134,"Piața Timișoara 700 (Paris)",45.75651,21.22319,0,134,https://smtt.ro/statie-transport-public-134
+135,"Piața Mărăști",45.75921,21.22764,0,135,https://smtt.ro/statie-transport-public-135
+136,"Oituz (Punctele cardinale)",45.7589,21.23166,0,136,https://smtt.ro/statie-transport-public-136
+137,"Bastionul Maria Tereza (Take Ionescu)",45.75808,21.23427,0,137,https://smtt.ro/statie-transport-public-137
+138,"Aurel Popovici",45.75905,21.23639,0,138,https://smtt.ro/statie-transport-public-138
+139,"Poliția Jud. Timiș",45.76027,21.24061,0,139,https://smtt.ro/statie-transport-public-139
+140,"Poliția Jud. Timiș",45.76079,21.24149,0,140,https://smtt.ro/statie-transport-public-140
+141,"Piața Badea Cârțan (Multiplexity)",45.76237,21.24628,0,141,https://smtt.ro/statie-transport-public-141
+142,"Piața Badea Cârțan (Simion Bărnuțiu)",45.76265,21.24824,0,142,https://smtt.ro/statie-transport-public-142
+143,"Samuil Micu",45.76351,21.25114,0,143,https://smtt.ro/statie-transport-public-143
+144,"Samuil Micu",45.76353,21.25234,0,144,https://smtt.ro/statie-transport-public-144
+145,"Renașterii",45.76381,21.25529,0,145,https://smtt.ro/statie-transport-public-145
+146,"Renașterii",45.76382,21.25608,0,146,https://smtt.ro/statie-transport-public-146
+147,"Piața V. Economu (Simion Bărnuțiu)",45.76527,21.26004,0,147,https://smtt.ro/statie-transport-public-147
+148,"Piața V. Economu (Calea Dorobanților)",45.76571,21.26116,0,148,https://smtt.ro/statie-transport-public-148
+149,"Arena Aqua (Ștrandul Tineretului)",45.76959,21.26912,0,149,https://smtt.ro/statie-transport-public-149
+150,"Arena Aqua (Bucla)",45.76941,21.2696,0,150,https://smtt.ro/statie-transport-public-150
+152,"Piața Consiliul Europei (Iulius Mall)",45.76546,21.2255,0,152,https://smtt.ro/statie-transport-public-152
+153,"Piața Consiliul Europei (Poligrafie)",45.76317,21.22574,0,153,https://smtt.ro/statie-transport-public-153
+154,"Cimitirul Eroilor (Iulius Mall)",45.76815,21.22659,0,154,https://smtt.ro/statie-transport-public-154
+155,"Cimitirul Eroilor",45.76835,21.22564,0,155,https://smtt.ro/statie-transport-public-155
+156,"Divizia 9 Cavalerie",45.76924,21.2301,0,156,https://smtt.ro/statie-transport-public-156
+157,"Divizia 9 Cavalerie",45.76981,21.23056,0,157,https://smtt.ro/statie-transport-public-157
+158,"Pomiculturii",45.7732,21.23191,0,158,https://smtt.ro/statie-transport-public-158
+159,"Pomiculturii",45.7732,21.23168,0,159,https://smtt.ro/statie-transport-public-159
+160,"Sf. Apostoli Petru și Pavel (Sever Bocu)",45.77661,21.23315,0,160,https://smtt.ro/statie-transport-public-160
+161,"Sf. Apostoli Petru și Pavel (Sever Bocu)",45.77726,21.23371,0,161,https://smtt.ro/statie-transport-public-161
+162,"Ion Ionescu de la Brad",45.77995,21.23458,0,162,https://smtt.ro/statie-transport-public-162
+163,"Ion Ionescu de la Brad",45.78097,21.23517,0,163,https://smtt.ro/statie-transport-public-163
+164,"Băile Călacea",45.94477,21.10474,0,164,https://smtt.ro/statie-transport-public-164
+165,"Parcul Copiilor",45.75147,21.2336,0,165,https://smtt.ro/statie-transport-public-165
+166,"Complexul Studențesc (Ion Vidu)",45.74807,21.23527,0,166,https://smtt.ro/statie-transport-public-166
+167,"Strada Cluj (Arieș)",45.74324,21.23722,0,167,https://smtt.ro/statie-transport-public-167
+168,"Calea Martirilor (Florărie)",45.73816,21.23808,0,168,https://smtt.ro/statie-transport-public-168
+169,"Martir Ioan Stanciu",45.73469,21.2377,0,169,https://smtt.ro/statie-transport-public-169
+170,"Mareșal C. Prezan (Lidia)",45.73153,21.2383,0,170,https://smtt.ro/statie-transport-public-170
+171,"Girație Bulevardul Sudului",45.73194,21.24749,0,171,https://smtt.ro/statie-transport-public-171
+172,"Parc Bulevardul Sudului",45.73442,21.24893,0,172,https://smtt.ro/statie-transport-public-172
+173,"Spitalul Județean (Arieș)",45.73873,21.24071,0,173,https://smtt.ro/statie-transport-public-173
+174,"Casa Tineretului",45.74169,21.23922,0,174,https://smtt.ro/statie-transport-public-174
+175,"Sala C. Jude (Ripensia)",45.74615,21.24081,0,175,https://smtt.ro/statie-transport-public-175
+176,"Complexul Studențesc (BRD)",45.74897,21.23717,0,176,https://smtt.ro/statie-transport-public-176
+177,"Parcul Copiilor",45.75217,21.23331,0,177,https://smtt.ro/statie-transport-public-177
+178,"Băile Călacea",45.94472,21.10464,0,178,https://smtt.ro/statie-transport-public-178
+179,"Piața Huniade",45.75285,21.22785,0,179,https://smtt.ro/statie-transport-public-179
+180,"Pod Mihai Viteazu (Catedrala Mitropolitană)",45.74933,21.22554,0,180,https://smtt.ro/statie-transport-public-180
+181,"Facultatea de Electrotehnică",45.74772,21.22628,0,181,https://smtt.ro/statie-transport-public-181
+182,"Universitatea de Vest",45.74796,21.23159,0,182,https://smtt.ro/statie-transport-public-182
+183,"Spitalul Județean (Casa Austria)",45.73803,21.2422,0,183,https://smtt.ro/statie-transport-public-183
+184,"Bulevardul Sudului",45.73673,21.25008,0,184,https://smtt.ro/statie-transport-public-184
+185,"Parc Bulevardul Sudului",45.73403,21.24847,0,185,https://smtt.ro/statie-transport-public-185
+186,"Girație Bulevardul Sudului",45.73222,21.24741,0,186,https://smtt.ro/statie-transport-public-186
+187,"Mareșal C. Prezan (Calea Martirilor)",45.73202,21.23763,0,187,https://smtt.ro/statie-transport-public-187
+188,"Martir Ioan Stanciu",45.734124,21.237878,0,188,https://smtt.ro/statie-transport-public-188
+189,"Calea Martirilor (Liviu Rebreanu)",45.73893,21.23841,0,189,https://smtt.ro/statie-transport-public-189
+190,"Pasaj Michelangelo",45.74882,21.2349,0,190,https://smtt.ro/statie-transport-public-190
+191,"Universitatea de Vest",45.748,21.23066,0,191,https://smtt.ro/statie-transport-public-191
+192,"Pod Mihai Viteazu (Fac. Electrotehnică)",45.74828,21.22563,0,192,https://smtt.ro/statie-transport-public-192
+193,"Bd. Ion C.Brătianu",45.75331,21.22902,0,193,https://smtt.ro/statie-transport-public-193
+194,"Piața Timișoara 700 (A. Müller Guttenbrunn)",45.75808,21.22413,0,194,https://smtt.ro/statie-transport-public-194
+195,"Bd. Circumvalațiunii (Gheorghe Lazăr)",45.7605,21.21751,0,195,https://smtt.ro/statie-transport-public-195
+196,"Timiș",45.76216,21.21317,0,196,https://smtt.ro/statie-transport-public-196
+197,"Bd. Cetății (Cloșca)",45.76333,21.20986,0,197,https://smtt.ro/statie-transport-public-197
+198,"Piața Avram Iancu",45.76442,21.20582,0,198,https://smtt.ro/statie-transport-public-198
+199,"Vuk Karadjici",45.7654,21.20206,0,199,https://smtt.ro/statie-transport-public-199
+200,"Grigore Alexandrescu (Mehala)",45.76651,21.19444,0,200,https://smtt.ro/statie-transport-public-200
+201,"Piața de Gros",45.76596,21.19192,0,201,https://smtt.ro/statie-transport-public-201
+202,"Pasaj C.F. (Ovidiu Balea)",45.76366,21.18134,0,202,https://smtt.ro/statie-transport-public-202
+203,"Piața de Gros",45.76578,21.19174,0,203,https://smtt.ro/statie-transport-public-203
+204,"Grigore Alexandrescu (Mehala)",45.7665,21.19647,0,204,https://smtt.ro/statie-transport-public-204
+205,"Vuk Karadjici",45.76505,21.20291,0,205,https://smtt.ro/statie-transport-public-205
+206,"Piața Avram Iancu",45.76433,21.2057,0,206,https://smtt.ro/statie-transport-public-206
+207,"Bulevardul Cetății (Gheorghe Lazăr)",45.76274,21.21134,0,207,https://smtt.ro/statie-transport-public-207
+208,"Timiș",45.76176,21.2138,0,208,https://smtt.ro/statie-transport-public-208
+209,"Bd. Circumvalațiunii (Gheorghe Lazăr)",45.75962,21.21918,0,209,https://smtt.ro/statie-transport-public-209
+210,"Piața Timișoara 700 (A. Müller Guttenbrunn)",45.75792,21.2243,0,210,https://smtt.ro/statie-transport-public-210
+211,"Remus Răduleț",45.77078,21.22302,0,211,https://smtt.ro/statie-transport-public-211
+212,"Liege (Calea Aradului)",45.77615,21.22121,0,212,https://smtt.ro/statie-transport-public-212
+213,"U.T.T.",45.77896,21.22044,0,213,https://smtt.ro/statie-transport-public-213
+214,"Universitatea de Științele Vieții",45.78312,21.21935,0,214,https://smtt.ro/statie-transport-public-214
+215,"Universitatea de Științele Vieții",45.78346,21.21887,0,215,https://smtt.ro/statie-transport-public-215
+216,"U.T.T.",45.77814,21.22039,0,216,https://smtt.ro/statie-transport-public-216
+217,"Liege (Calea Aradului)",45.77426,21.22148,0,217,https://smtt.ro/statie-transport-public-217
+218,"Miresei (Calea Aradului)",45.76962,21.22327,0,218,https://smtt.ro/statie-transport-public-218
+219,"Bulevardul Sudului (Liviu Rebreanu)",45.73738,21.24973,0,219,https://smtt.ro/statie-transport-public-219
+220,"Liege (Piața Verde)",45.7747,21.2209,0,220,https://smtt.ro/statie-transport-public-220
+221,"Calea Torontalului (Liege)",45.77226,21.21662,0,221,https://smtt.ro/statie-transport-public-221
+222,"Miresei (Calea Torontalului)",45.76846,21.22057,0,222,https://smtt.ro/statie-transport-public-222
+223,"Piața Mărăști (Oituz)",45.75937,21.22896,0,223,https://smtt.ro/statie-transport-public-223
+224,"Moticica (Calea Lugojului)",45.77116,21.27639,0,224,https://smtt.ro/statie-transport-public-224
+225,"Romtrans (Calea Lugojului)",45.77235,21.28349,0,225,https://smtt.ro/statie-transport-public-225
+226,"Banat Car (Calea Lugojului)",45.77376,21.29237,0,226,https://smtt.ro/statie-transport-public-226
+227,"Calea Lugojului (Ghiroda)",45.77463,21.30129,0,227,https://smtt.ro/statie-transport-public-227
+228,"Primărie (Ghiroda)",45.77029,21.30269,0,228,https://smtt.ro/statie-transport-public-228
+229,"Ialomiței (Ghiroda)",45.76619,21.30399,0,229,https://smtt.ro/statie-transport-public-229
+230,"Jiul (Ghiroda)",45.7654,21.29974,0,230,https://smtt.ro/statie-transport-public-230
+231,"Câmpului (Ghiroda)",45.76469,21.29579,0,231,https://smtt.ro/statie-transport-public-231
+232,"Cruce (Ghiroda)",45.76431,21.29422,0,232,https://smtt.ro/statie-transport-public-232
+233,"Bastion (Piața Ionel I. C. Brătianu)",45.75766,21.23302,0,233,https://smtt.ro/statie-transport-public-233
+234,"Moldovei (Ghiroda)",45.7636,21.28734,0,234,https://smtt.ro/statie-transport-public-234
+235,"Prieteniei",45.76366,21.28537,0,235,https://smtt.ro/statie-transport-public-235
+236,"Spartacus",45.76376,21.28098,0,236,https://smtt.ro/statie-transport-public-236
+237,"Bobâlna",45.76386,21.27604,0,237,https://smtt.ro/statie-transport-public-237
+238,"Cometei",45.7638,21.27019,0,238,https://smtt.ro/statie-transport-public-238
+239,"Turda",45.765,21.26725,0,239,https://smtt.ro/statie-transport-public-239
+240,"Arena Aqua (Ștrandului)",45.76705,21.26865,0,240,https://smtt.ro/statie-transport-public-240
+241,"Camping (Calea Lugojului)",45.76944,21.26737,0,241,https://smtt.ro/statie-transport-public-241
+242,"Kaufland (Dumbrăvița)",45.78643,21.23702,0,242,https://smtt.ro/statie-transport-public-242
+243,"Fropin (Dumbrăvița)",45.79269,21.23942,0,243,https://smtt.ro/statie-transport-public-243
+245,"N. Bălcescu (Dumbrăvița)",45.79864,21.24476,0,245,https://smtt.ro/statie-transport-public-245
+246,"Franyó Zóltán (Dumbrăvița)",45.80249,21.24991,0,246,https://smtt.ro/statie-transport-public-246
+247,"Attila József (Dumbrăvița)",45.80494,21.25294,0,247,https://smtt.ro/statie-transport-public-247
+248,"Girație (Dumbrăvița)",45.80729,21.2557,0,248,https://smtt.ro/statie-transport-public-248
+249,"Belvedere (Dumbrăvița)",45.81285,21.26196,0,249,https://smtt.ro/statie-transport-public-249
+250,"Girație (Dumbrăvița)",45.80768,21.25591,0,250,https://smtt.ro/statie-transport-public-250
+251,"Attila József (Dumbrăvița)",45.80466,21.25236,0,251,https://smtt.ro/statie-transport-public-251
+252,"Franyó Zóltán (Dumbrăvița)",45.80162,21.2485,0,252,https://smtt.ro/statie-transport-public-252
+253,"N. Bălcescu (Dumbrăvița)",45.79711,21.24231,0,253,https://smtt.ro/statie-transport-public-253
+255,"Fropin (Dumbrăvița)",45.79194,21.23883,0,255,https://smtt.ro/statie-transport-public-255
+256,"Kaufland (Dumbrăvița)",45.78626,21.23679,0,256,https://smtt.ro/statie-transport-public-256
+257,"Ardealul",45.73896,21.18525,0,257,https://smtt.ro/statie-transport-public-257
+258,"Constantin Brâncoveanu",45.7426,21.19593,0,258,https://smtt.ro/statie-transport-public-258
+259,"Ștefan cel Mare",45.74712,21.20912,0,259,https://smtt.ro/statie-transport-public-259
+260,"Sfânta Maria",45.74981,21.22032,0,260,https://smtt.ro/statie-transport-public-260
+261,"Catedrala Mitropolitană",45.74866,21.22517,0,261,https://smtt.ro/statie-transport-public-261
+262,"Vasile Pârvan",45.75039,21.23521,0,262,https://smtt.ro/statie-transport-public-262
+263,"Corneliu Coposu",45.75668,21.24112,0,263,https://smtt.ro/statie-transport-public-263
+264,"Dacia",45.76045,21.24905,0,264,https://smtt.ro/statie-transport-public-264
+265,"Mihai Viteazul",45.76021,21.25837,0,265,https://smtt.ro/statie-transport-public-265
+266,"Pod Calea Șagului",45.72249,21.20061,0,266,https://smtt.ro/statie-transport-public-266
+267,"Shopping City (Calea Șagului)",45.72489,21.20257,0,267,https://smtt.ro/statie-transport-public-267
+268,"Piața Veteranilor (Calea Șagului)",45.7287,21.20608,0,268,https://smtt.ro/statie-transport-public-268
+269,"Calea Șagului (Bd. L. Rebreanu)",45.7331,21.20901,0,269,https://smtt.ro/statie-transport-public-269
+273,"Gheorghe Lazăr (Circumvalațiunii)",45.76037,21.21869,0,273,https://smtt.ro/statie-transport-public-273
+274,"Circumvalațiunii (Burebista)",45.76317,21.22123,0,274,https://smtt.ro/statie-transport-public-274
+275,"Piața Consiliul Europei (Calea Torontalului)",45.76501,21.22443,0,275,https://smtt.ro/statie-transport-public-275
+276,"Miresei (Calea Torontalului)",45.76937,21.21998,0,276,https://smtt.ro/statie-transport-public-276
+277,"Calea Torontalului (Liege)",45.7729,21.21631,0,277,https://smtt.ro/statie-transport-public-277
+278,"VOX",45.77567,21.21343,0,278,https://smtt.ro/statie-transport-public-278
+279,"Grigore Alexandrescu (Calea Torontalului)",45.77733,21.21159,0,279,https://smtt.ro/statie-transport-public-279
+280,"Girație Calea Aradului",45.78564,21.21836,0,280,https://smtt.ro/statie-transport-public-280
+281,"Tristan Tzara",45.79022,21.22284,0,281,https://smtt.ro/statie-transport-public-281
+282,"Tristan Tzara",45.79009,21.22248,0,282,https://smtt.ro/statie-transport-public-282
+284,"Grigore Alexandrescu (Calea Torontalului)",45.77729,21.21132,0,284,https://smtt.ro/statie-transport-public-284
+285,"VOX",45.77559,21.21318,0,285,https://smtt.ro/statie-transport-public-285
+286,"Piața Consiliul Europei (Calea Torontalului)",45.7648,21.22433,0,286,https://smtt.ro/statie-transport-public-286
+287,"Circumvalațiunii (Burebista)",45.76339,21.22125,0,287,https://smtt.ro/statie-transport-public-287
+288,"Gheorghe Lazăr (Circumvalațiunii)",45.75959,21.21804,0,288,https://smtt.ro/statie-transport-public-288
+291,"Piața Iuliu Maniu (Calea Șagului)",45.73855,21.20969,0,291,https://smtt.ro/statie-transport-public-291
+292,"Calea Șagului (Bd. Dâmbovița)",45.7321,21.2083,0,292,https://smtt.ro/statie-transport-public-292
+293,"Piața Veteranilor (Calea Șagului)",45.727708,21.204501,0,293,https://smtt.ro/statie-transport-public-293
+294,"Shopping City (Calea Șagului)",45.72473,21.2019,0,294,https://smtt.ro/statie-transport-public-294
+295,"Pod Calea Șagului",45.72163,21.19953,0,295,https://smtt.ro/statie-transport-public-295
+296,"Aumovio (Continental)",45.73621,21.26542,0,296,https://smtt.ro/statie-transport-public-296
+297,"Piața Gheorghe Domășneanu (AEM)",45.73286,21.25829,0,297,https://smtt.ro/statie-transport-public-297
+298,"Venus",45.73073,21.25505,0,298,https://smtt.ro/statie-transport-public-298
+299,"Hector (Bastion)",45.75646,21.23392,0,299,https://smtt.ro/statie-transport-public-299
+300,"Piața Consiliul Europei (Calea Aradului)",45.76614,21.22538,0,300,https://smtt.ro/statie-transport-public-300
+301,"Miresei (Calea Aradului)",45.76934,21.22368,0,301,https://smtt.ro/statie-transport-public-301
+302,"Sf. Apostoli Petru și Pavel",45.77663,21.23393,0,302,https://smtt.ro/statie-transport-public-302
+303,"Holdelor",45.7747,21.24037,0,303,https://smtt.ro/statie-transport-public-303
+304,"Stuparilor",45.77302,21.24553,0,304,https://smtt.ro/statie-transport-public-304
+305,"Gara de Est (A. Demetriade)",45.76745,21.24437,0,305,https://smtt.ro/statie-transport-public-305
+306,"Dedeman (Divizia 9 Cavalerie)",45.76859,21.23517,0,306,https://smtt.ro/statie-transport-public-306
+307,"Hotel Continental",45.75495,21.23315,0,307,https://smtt.ro/statie-transport-public-307
+308,"Venus",45.73035,21.25383,0,308,https://smtt.ro/statie-transport-public-308
+309,"Electrotimiș (Calea Buziașului)",45.73223,21.26056,0,309,https://smtt.ro/statie-transport-public-309
+310,"Ciarda Roșie (Siemens)",45.72946,21.26983,0,310,https://smtt.ro/statie-transport-public-310
+311,"Elbromplast",45.73327,21.26978,0,311,https://smtt.ro/statie-transport-public-311
+314,"Polonă (Pasaj Freidorf)",45.72193,21.163574,0,314,https://smtt.ro/statie-transport-public-314
+315,"Răscoala din 1907",45.72085,21.17113,0,315,https://smtt.ro/statie-transport-public-315
+316,"Constantin Nottara",45.72413,21.17614,0,316,https://smtt.ro/statie-transport-public-316
+317,"Podgoriei",45.72561,21.17841,0,317,https://smtt.ro/statie-transport-public-317
+318,"Liceul Auto (Ardealului)",45.7282,21.18077,0,318,https://smtt.ro/statie-transport-public-318
+319,"Canton C.F.R.",45.73172,21.18116,0,319,https://smtt.ro/statie-transport-public-319
+320,"Păcii (Ardealului)",45.73425,21.18514,0,320,https://smtt.ro/statie-transport-public-320
+321,"Opre Gogu (Ardealului)",45.73617,21.18818,0,321,https://smtt.ro/statie-transport-public-321
+322,"Dâmbovița (Bucla)",45.73951,21.19586,0,322,https://smtt.ro/statie-transport-public-322
+323,"Dâmbovița (Banatul)",45.73701,21.19848,0,323,https://smtt.ro/statie-transport-public-323
+324,"Transilvania (Budai Deleanu)",45.73799,21.20307,0,324,https://smtt.ro/statie-transport-public-324
+325,"Piața Regina Maria (Parc)",45.7526,21.2214,0,325,https://smtt.ro/statie-transport-public-325
+326,"Catedrala Mitropolitană",45.75085,21.22493,0,326,https://smtt.ro/statie-transport-public-326
+327,"Mureș (Calea Martirilor)",45.72736,21.23699,0,327,https://smtt.ro/statie-transport-public-327
+328,"Apicultorilor",45.72119,21.23677,0,328,https://smtt.ro/statie-transport-public-328
+329,"Mureș (Calea Martirilor)",45.72895,21.23733,0,329,https://smtt.ro/statie-transport-public-329
+330,"Pod Mihai Viteazu (Splaiul Tudor Vladimirescu)",45.74807,21.22521,0,330,https://smtt.ro/statie-transport-public-330
+331,"Biserica Piaristă",45.75205,21.22283,0,331,https://smtt.ro/statie-transport-public-331
+332,"Piața Iuliu Maniu (Budai Deleanu)",45.73905,21.20894,0,332,https://smtt.ro/statie-transport-public-332
+333,"Crizantemelor (Budai Deleanu)",45.73811,21.20305,0,333,https://smtt.ro/statie-transport-public-333
+334,"Banatul (Bd. Dâmbovița)",45.73728,21.19764,0,334,https://smtt.ro/statie-transport-public-334
+335,"Dâmbovița (Bucla)",45.73974,21.19606,0,335,https://smtt.ro/statie-transport-public-335
+336,"Baba Novac",45.73796,21.19076,0,336,https://smtt.ro/statie-transport-public-336
+337,"Opre Gogu (Ardealului)",45.73604,21.1878,0,337,https://smtt.ro/statie-transport-public-337
+338,"Păcii (Ardealului)",45.73419,21.18488,0,338,https://smtt.ro/statie-transport-public-338
+339,"Canton C.F.R.",45.7318,21.18111,0,339,https://smtt.ro/statie-transport-public-339
+340,"Liceul Auto (Ardealului)",45.72788,21.18061,0,340,https://smtt.ro/statie-transport-public-340
+341,"Podgoriei",45.72568,21.17829,0,341,https://smtt.ro/statie-transport-public-341
+342,"Constantin Nottara",45.72409,21.17582,0,342,https://smtt.ro/statie-transport-public-342
+343,"Răscoala din 1907",45.72124,21.17149,0,343,https://smtt.ro/statie-transport-public-343
+344,"Polonă (Pasaj Freidorf)",45.72112,21.16481,0,344,https://smtt.ro/statie-transport-public-344
+346,"Comtim (Smithfield)",45.71874,21.14898,0,346,https://smtt.ro/statie-transport-public-346
+347,"Fabrica de Zahăr",45.72079,21.15736,0,347,https://smtt.ro/statie-transport-public-347
+348,"Liceul Auto (N. Andreescu)",45.72708,21.18119,0,348,https://smtt.ro/statie-transport-public-348
+349,"V. Simionescu (N. Andreescu)",45.72888,21.1847,0,349,https://smtt.ro/statie-transport-public-349
+350,"Păcii (N. Andreescu)",45.73149,21.18861,0,350,https://smtt.ro/statie-transport-public-350
+351,"Opre Gogu (N. Andreescu)",45.73359,21.19184,0,351,https://smtt.ro/statie-transport-public-351
+352,"Piața Iuliu Maniu (16 Decembrie 1989)",45.73965,21.21043,0,352,https://smtt.ro/statie-transport-public-352
+353,"C. Brâncoveanu (16 Decembrie 1989)",45.74336,21.21335,0,353,https://smtt.ro/statie-transport-public-353
+354,"Piața A. Mocioni (16 Decembrie 1989 - Sinaia)",45.74637,21.21629,0,354,https://smtt.ro/statie-transport-public-354
+355,"Traian Grozăvescu (Poșta Mare)",45.75463,21.23366,0,355,https://smtt.ro/statie-transport-public-355
+356,"Piața A. Mocioni (Sinaia - 16 Decembrie 1989)",45.7454,21.21503,0,356,https://smtt.ro/statie-transport-public-356
+357,"C. Brâncoveanu (16 Decembrie 1989)",45.74231,21.21215,0,357,https://smtt.ro/statie-transport-public-357
+358,"Dâmbovița (Banatul)",45.73694,21.19744,0,358,https://smtt.ro/statie-transport-public-358
+359,"Opre Gogu (N. Andreescu)",45.73359,21.19164,0,359,https://smtt.ro/statie-transport-public-359
+360,"Păcii (N. Andreescu)",45.73153,21.18853,0,360,https://smtt.ro/statie-transport-public-360
+361,"V. Simionescu (N. Andreescu)",45.72904,21.18466,0,361,https://smtt.ro/statie-transport-public-361
+362,"Liceul Auto (N. Andreescu)",45.72721,21.1811,0,362,https://smtt.ro/statie-transport-public-362
+363,"Fabrica de Zahăr",45.72087,21.15732,0,363,https://smtt.ro/statie-transport-public-363
+364,"Izlaz",45.72074,21.2029,0,364,https://smtt.ro/statie-transport-public-364
+365,"Bujorilor",45.72316,21.20686,0,365,https://smtt.ro/statie-transport-public-365
+366,"C. Brâncoveanu (C. Porumbescu)",45.7387,21.21681,0,366,https://smtt.ro/statie-transport-public-366
+367,"Corbului (C. Porumbescu)",45.73989,21.22128,0,367,https://smtt.ro/statie-transport-public-367
+368,"Piața N. Bălcescu (Mihai Viteazu)",45.74238,21.22609,0,368,https://smtt.ro/statie-transport-public-368
+369,"Facultatea de Mecanică",45.74504,21.22571,0,369,https://smtt.ro/statie-transport-public-369
+370,"Pasaj Michelangelo (BRD)",45.74942,21.23692,0,370,https://smtt.ro/statie-transport-public-370
+371,"J. H. Pestalozzi",45.75404,21.24109,0,371,https://smtt.ro/statie-transport-public-371
+372,"Liceul J. L. Calderon",45.75426,21.24334,0,372,https://smtt.ro/statie-transport-public-372
+373,"Iepurelui",45.75467,21.25097,0,373,https://smtt.ro/statie-transport-public-373
+374,"Andrei Șaguna",45.75739,21.25613,0,374,https://smtt.ro/statie-transport-public-374
+375,"Iosif Vulcan",45.75899,21.25839,0,375,https://smtt.ro/statie-transport-public-375
+376,"Uzina de Apă",45.75681,21.26342,0,376,https://smtt.ro/statie-transport-public-376
+377,"Căprioarei",45.75364,21.26342,0,377,https://smtt.ro/statie-transport-public-377
+378,"Levănțica",45.75147,21.26319,0,378,https://smtt.ro/statie-transport-public-378
+379,"Apateu",45.74733,21.26283,0,379,https://smtt.ro/statie-transport-public-379
+380,"Azur",45.74453,21.26649,0,380,https://smtt.ro/statie-transport-public-380
+381,"Plastique Forme",45.74456,21.2701,0,381,https://smtt.ro/statie-transport-public-381
+382,"Drumul Boilor",45.74526,21.27966,0,382,https://smtt.ro/statie-transport-public-382
+383,"T. Demetrescu",45.7475,21.27989,0,383,https://smtt.ro/statie-transport-public-383
+384,"Albăstrelelor",45.75407,21.27629,0,384,https://smtt.ro/statie-transport-public-384
+385,"Jókai Mór",45.753525,21.279847,0,385,https://smtt.ro/statie-transport-public-385
+386,"Martir C. Popescu",45.75168,21.28285,0,386,https://smtt.ro/statie-transport-public-386
+387,"Școala Generală Plopi",45.75008,21.27976,0,387,https://smtt.ro/statie-transport-public-387
+388,"T. Demetrescu",45.7475,21.2798,0,388,https://smtt.ro/statie-transport-public-388
+389,"Drumul Boilor",45.74531,21.27914,0,389,https://smtt.ro/statie-transport-public-389
+390,"Plastique Forme",45.74464,21.27005,0,390,https://smtt.ro/statie-transport-public-390
+391,"Apateu",45.74672,21.26288,0,391,https://smtt.ro/statie-transport-public-391
+392,"Levănțica",45.75146,21.26332,0,392,https://smtt.ro/statie-transport-public-392
+393,"Căprioarei",45.75323,21.26351,0,393,https://smtt.ro/statie-transport-public-393
+394,"Uzina de Apă",45.75706,21.26306,0,394,https://smtt.ro/statie-transport-public-394
+395,"Iosif Vulcan",45.75895,21.25868,0,395,https://smtt.ro/statie-transport-public-395
+396,"Baba Dochia",45.75544,21.25368,0,396,https://smtt.ro/statie-transport-public-396
+397,"Iepurelui",45.75492,21.25048,0,397,https://smtt.ro/statie-transport-public-397
+398,"Liceul J. L. Calderon",45.75439,21.24305,0,398,https://smtt.ro/statie-transport-public-398
+399,"Corneliu Coposu",45.75353,21.2397,0,399,https://smtt.ro/statie-transport-public-399
+400,"Bd. Mihai Viteazu",45.74758,21.22527,0,400,https://smtt.ro/statie-transport-public-400
+401,"Facultatea de Mecanică",45.7449,21.22544,0,401,https://smtt.ro/statie-transport-public-401
+402,"Piața N. Bălcescu",45.74191,21.22539,0,402,https://smtt.ro/statie-transport-public-402
+403,"Corbului (C. Porumbescu)",45.73945,21.21954,0,403,https://smtt.ro/statie-transport-public-403
+405,"DN 6 (Ghiroda)",45.77531,21.30204,0,405,https://smtt.ro/statie-transport-public-405
+406,"Jumbo",45.78495,21.3115,0,406,https://smtt.ro/statie-transport-public-406
+407,"Jumbo",45.7848,21.31141,0,407,https://smtt.ro/statie-transport-public-407
+408,"VGP Park",45.78878,21.3227,0,408,https://smtt.ro/statie-transport-public-408
+409,"Hella",45.79046,21.31844,0,409,https://smtt.ro/statie-transport-public-409
+410,"Cartier Aeroport",45.79518,21.32496,0,410,https://smtt.ro/statie-transport-public-410
+411,"Cartier Aeroport",45.79524,21.32499,0,411,https://smtt.ro/statie-transport-public-411
+412,"U. M. Aeroport",45.79829,21.33054,0,412,https://smtt.ro/statie-transport-public-412
+413,"U. M. Aeroport",45.79822,21.33026,0,413,https://smtt.ro/statie-transport-public-413
+414,"Swoboda",45.79566,21.31999,0,414,https://smtt.ro/statie-transport-public-414
+415,"Swoboda",45.79558,21.31986,0,415,https://smtt.ro/statie-transport-public-415
+416,"Aeroportul Internațional (TSR)",45.81003,21.31976,0,416,https://smtt.ro/statie-transport-public-416
+417,"Dura",45.79833,21.3193,0,417,https://smtt.ro/statie-transport-public-417
+418,"Traian Grozăvescu (Poșta Mare)",45.75473,21.23365,0,418,https://smtt.ro/statie-transport-public-418
+419,"Popa Șapcă",45.76039,21.23279,0,419,https://smtt.ro/statie-transport-public-419
+420,"Iulius Mall (Bd. Antenei)",45.76616,21.23104,0,420,https://smtt.ro/statie-transport-public-420
+421,"Divizia 9 Cavalerie (Kapa)",45.76899,21.23247,0,421,https://smtt.ro/statie-transport-public-421
+422,"Dedeman (Divizia 9 Cavalerie)",45.76804,21.23667,0,422,https://smtt.ro/statie-transport-public-422
+423,"Gara de Est (A. Demetriade)",45.76753,21.2447,0,423,https://smtt.ro/statie-transport-public-423
+424,"Stuparilor",45.77304,21.2458,0,424,https://smtt.ro/statie-transport-public-424
+425,"Holdelor",45.77543,21.23846,0,425,https://smtt.ro/statie-transport-public-425
+426,"Iulius Mall (Bd. Antenei)",45.76554,21.23113,0,426,https://smtt.ro/statie-transport-public-426
+427,"Popa Șapcă",45.76054,21.23261,0,427,https://smtt.ro/statie-transport-public-427
+428,"Metro II (Torontalului)",45.79379,21.18612,0,428,https://smtt.ro/statie-transport-public-428
+429,"P.I.T.T.",45.79514,21.17565,0,429,https://smtt.ro/statie-transport-public-429
+430,"Scalini",45.78385,21.20296,0,430,https://smtt.ro/statie-transport-public-430
+431,"Dura",45.798505,21.32007,0,431,https://smtt.ro/statie-transport-public-431
+432,"Principală (Moșnița Nouă)",45.71857,21.32641,0,432,https://smtt.ro/statie-transport-public-432
+433,"DN 6 (Ghiroda)",45.775226,21.300349,0,433,https://smtt.ro/statie-transport-public-433
+434,"Circumvalațiunii (Brediceanu)",45.75667,21.21742,0,434,https://smtt.ro/statie-transport-public-434
+435,"Mendeleev",45.75697,21.21399,0,435,https://smtt.ro/statie-transport-public-435
+440,"Madona",45.75553,21.1921,0,440,https://smtt.ro/statie-transport-public-440
+441,"Guttenbrunn (Ronaț)",45.75243,21.18995,0,441,https://smtt.ro/statie-transport-public-441
+453,"Madona",45.7553,21.19192,0,453,https://smtt.ro/statie-transport-public-453
+458,"Mendeleev",45.75701,21.21341,0,458,https://smtt.ro/statie-transport-public-458
+459,"Circumvalațiunii (Brediceanu)",45.75668,21.21655,0,459,https://smtt.ro/statie-transport-public-459
+466,"Magnoliei",45.72719,21.27624,0,466,https://smtt.ro/statie-transport-public-466
+467,"Ciarda Roșie (Calea Buziașului)",45.729351,21.268827,0,467,https://smtt.ro/statie-transport-public-467
+472,"Gara de Est (M. Kogălniceanu)",45.76622,21.24502,0,472,https://smtt.ro/statie-transport-public-472
+477,"Ciarda Roșie (Calea Buziașului)",45.72871,21.27042,0,477,https://smtt.ro/statie-transport-public-477
+478,"C. Brâncoveanu",45.74234,21.2132,0,478,https://smtt.ro/statie-transport-public-478
+479,"C. Porumbescu (C. Brâncoveanu)",45.73828,21.21603,0,479,https://smtt.ro/statie-transport-public-479
+480,"Liviu Rebreanu (C. Brâncoveanu)",45.73232,21.21892,0,480,https://smtt.ro/statie-transport-public-480
+481,"Mureș (C. Brâncoveanu)",45.72878,21.2186,0,481,https://smtt.ro/statie-transport-public-481
+482,"Victor Hugo (Emil Zola)",45.72431,21.21734,0,482,https://smtt.ro/statie-transport-public-482
+483,"Herculane",45.72188,21.21525,0,483,https://smtt.ro/statie-transport-public-483
+484,"Chișodei",45.72,21.21201,0,484,https://smtt.ro/statie-transport-public-484
+486,"P. Hațeganu",45.71775,21.21324,0,486,https://smtt.ro/statie-transport-public-486
+487,"Prefatim",45.71423,21.21224,0,487,https://smtt.ro/statie-transport-public-487
+488,"Bujorilor",45.71915,21.20745,0,488,https://smtt.ro/statie-transport-public-488
+489,"Eternității",45.71828,21.2039,0,489,https://smtt.ro/statie-transport-public-489
+490,"Gara de Sud",45.71633,21.20294,0,490,https://smtt.ro/statie-transport-public-490
+491,"Eternității",45.71819,21.20392,0,491,https://smtt.ro/statie-transport-public-491
+492,"Bujorilor (Emil Zola)",45.71913,21.20757,0,492,https://smtt.ro/statie-transport-public-492
+493,"Prefatim",45.71419,21.21236,0,493,https://smtt.ro/statie-transport-public-493
+494,"P. Hațeganu",45.7176,21.21342,0,494,https://smtt.ro/statie-transport-public-494
+495,"Chișodei (Emil Zola)",45.72031,21.21233,0,495,https://smtt.ro/statie-transport-public-495
+496,"Herculane",45.72173,21.21518,0,496,https://smtt.ro/statie-transport-public-496
+497,"Victor Hugo (Emil Zola)",45.72481,21.21774,0,497,https://smtt.ro/statie-transport-public-497
+498,"Mureș (C. Brâncoveanu)",45.72992,21.21881,0,498,https://smtt.ro/statie-transport-public-498
+499,"Liviu Rebreanu (C. Brâncoveanu)",45.73371,21.21911,0,499,https://smtt.ro/statie-transport-public-499
+500,"C. Porumbescu (C. Brâncoveanu)",45.73919,21.21561,0,500,https://smtt.ro/statie-transport-public-500
+501,"Liceul Silvic",45.77651,21.26866,0,501,https://smtt.ro/statie-transport-public-501
+503,"Telegrafului",45.7638,21.24735,0,503,https://smtt.ro/statie-transport-public-503
+504,"Poliția Locală",45.77028,21.25253,0,504,https://smtt.ro/statie-transport-public-504
+505,"U.M.T.",45.771601,21.255107,0,505,https://smtt.ro/statie-transport-public-505
+506,"Cvartal UMT",45.77557,21.26306,0,506,https://smtt.ro/statie-transport-public-506
+507,"Cvartal UMT",45.77555,21.26287,0,507,https://smtt.ro/statie-transport-public-507
+508,"U.M.T.",45.771851,21.255412,0,508,https://smtt.ro/statie-transport-public-508
+509,"Poliția Locală",45.77005,21.25193,0,509,https://smtt.ro/statie-transport-public-509
+510,"Rudolf Walter",45.75475,21.26823,0,510,https://smtt.ro/statie-transport-public-510
+511,"Albăstrelelor (Canalul Bega)",45.75443,21.27652,0,511,https://smtt.ro/statie-transport-public-511
+512,"Parcului",45.74773,21.28513,0,512,https://smtt.ro/statie-transport-public-512
+514,"Calistrat Hogaș",45.75074,21.28349,0,514,https://smtt.ro/statie-transport-public-514
+515,"Rudolf Walter",45.75481,21.26829,0,515,https://smtt.ro/statie-transport-public-515
+516,"Mătăsarilor",45.76346,21.26231,0,516,https://smtt.ro/statie-transport-public-516
+517,"Uzinei (Mătăsarilor)",45.76046,21.26035,0,517,https://smtt.ro/statie-transport-public-517
+518,"Garofiței (Pod Uzinei)",45.75888,21.26436,0,518,https://smtt.ro/statie-transport-public-518
+519,"Rozelor",45.75686,21.27263,0,519,https://smtt.ro/statie-transport-public-519
+520,"Vălișoara",45.75623,21.27597,0,520,https://smtt.ro/statie-transport-public-520
+521,"Ismail",45.75995,21.27927,0,521,https://smtt.ro/statie-transport-public-521
+522,"Uzinei (Parc)",45.76021,21.25973,0,522,https://smtt.ro/statie-transport-public-522
+523,"Bobâlna",45.76379,21.27638,0,523,https://smtt.ro/statie-transport-public-523
+524,"Cărăbușului",45.76369,21.28096,0,524,https://smtt.ro/statie-transport-public-524
+525,"Prieteniei",45.76359,21.28614,0,525,https://smtt.ro/statie-transport-public-525
+526,"Moldovei (Ghiroda)",45.76354,21.28772,0,526,https://smtt.ro/statie-transport-public-526
+527,"Luncani",45.75723,21.27881,0,527,https://smtt.ro/statie-transport-public-527
+528,"Țițeica",45.75989,21.27698,0,528,https://smtt.ro/statie-transport-public-528
+529,"Vălișoara",45.756,21.27549,0,529,https://smtt.ro/statie-transport-public-529
+530,"Rozelor",45.75692,21.27272,0,530,https://smtt.ro/statie-transport-public-530
+531,"Garofiței (Pod Uzinei)",45.7591,21.26374,0,531,https://smtt.ro/statie-transport-public-531
+532,"Uzinei (Parc)",45.76007,21.26042,0,532,https://smtt.ro/statie-transport-public-532
+533,"Câmpului (Ghiroda)",45.7634,21.29359,0,533,https://smtt.ro/statie-transport-public-533
+534,"Shopping City (Parcare)",45.72595,21.20031,0,534,https://smtt.ro/statie-transport-public-534
+535,"B.A.T.M.",45.71803,21.19645,0,535,https://smtt.ro/statie-transport-public-535
+536,"Gara de Est",45.76636,21.2446,0,536,https://smtt.ro/statie-transport-public-536
+537,"C.E.T. Timișoara Sud",45.70912,21.1938,0,537,https://smtt.ro/statie-transport-public-537
+538,"Auchan (Calea Șagului)",45.70326,21.18952,0,538,https://smtt.ro/statie-transport-public-538
+539,"Leroy Merlin",45.70346,21.18412,0,539,https://smtt.ro/statie-transport-public-539
+540,"Metro I (Calea Șagului)",45.70123,21.17953,0,540,https://smtt.ro/statie-transport-public-540
+542,"Incontro (Intrare)",45.69904,21.18206,0,542,https://smtt.ro/statie-transport-public-542
+543,"Incontro",45.69805,21.18692,0,543,https://smtt.ro/statie-transport-public-543
+544,"Incontro (Ieșire)",45.69925,21.18164,0,544,https://smtt.ro/statie-transport-public-544
+545,"Incontro (DN 59)",45.699909,21.181844,0,545,https://smtt.ro/statie-transport-public-545
+546,"Auchan (DN 59)",45.7064,21.18717,0,546,https://smtt.ro/statie-transport-public-546
+547,"Ovidiu Cotruș",45.71352,21.1931,0,547,https://smtt.ro/statie-transport-public-547
+548,"B.A.T.M.",45.718,21.19674,0,548,https://smtt.ro/statie-transport-public-548
+549,"Leroy Merlin",45.70311,21.18438,0,549,https://smtt.ro/statie-transport-public-549
+550,"C. Brâncoveanu",45.74233,21.21345,0,550,https://smtt.ro/statie-transport-public-550
+551,"Linar",45.71554,21.19444,0,551,https://smtt.ro/statie-transport-public-551
+552,"Ovidiu Cotruș",45.7127033,21.1920384,0,552,https://smtt.ro/statie-transport-public-552
+553,"Depozit Profi (Șag)",45.6732348,21.1721863,0,553,https://smtt.ro/statie-transport-public-553
+554,"Teren de fotbal (Șag)",45.651918,21.174172,0,554,https://smtt.ro/statie-transport-public-554
+555,"Smithfield (Pădureni)",45.5936194,21.1934197,0,555,https://smtt.ro/statie-transport-public-555
+556,"Teren de fotbal (Pădureni)",45.59284,21.20797,0,556,https://smtt.ro/statie-transport-public-556
+557,"Primărie (Pădureni)",45.5976544,21.218123,0,557,https://smtt.ro/statie-transport-public-557
+558,"Parc (Pădureni)",45.6039598,21.2099288,0,558,https://smtt.ro/statie-transport-public-558
+559,"Purice (Pădureni)",45.6080073,21.2070911,0,559,https://smtt.ro/statie-transport-public-559
+560,"Teren de fotbal (Șag)",45.652222,21.174389,0,560,https://smtt.ro/statie-transport-public-560
+561,"Banatim (Garaj STPT)",45.7479139,21.2534413,0,561,https://smtt.ro/statie-transport-public-561
+562,"Prefectura",45.7557193,21.236857,0,562,https://smtt.ro/statie-transport-public-562
+563,"Căminul cultural (Biled)",45.8872059,20.9590446,0,563,https://smtt.ro/statie-transport-public-563
+564,"Biserica Romano Catolică (Șandra)",45.9254929,20.8912872,0,564,https://smtt.ro/statie-transport-public-564
+565,"Biserica Romano Catolică (Uihei)",45.9120424,20.8605166,0,565,https://smtt.ro/statie-transport-public-565
+566,"Biserica Romano Catolică (Șandra)",45.9250674,20.8915273,0,566,https://smtt.ro/statie-transport-public-566
+567,"Căminul cultural (Biled)",45.8871262,20.9588771,0,567,https://smtt.ro/statie-transport-public-567
+568,"Prefectura (N. Filipescu)",45.7569762,21.238034,0,568,https://smtt.ro/statie-transport-public-568
+569,"Comtim (Smithfield)",45.7188533,21.1489792,0,569,https://smtt.ro/statie-transport-public-569
+570,"Intrare (Utvin)",45.7163018,21.1365766,0,570,https://smtt.ro/statie-transport-public-570
+571,"Centru (Utvin)",45.715259,21.1249819,0,571,https://smtt.ro/statie-transport-public-571
+572,"Baltă (Utvin)",45.7127088,21.1172284,0,572,https://smtt.ro/statie-transport-public-572
+573,"Pod (Sânmihaiul Român)",45.7063363,21.0917044,0,573,https://smtt.ro/statie-transport-public-573
+574,"Biserica Romano Catolică (Sânmihaiul Român)",45.6992906,21.0903721,0,574,https://smtt.ro/statie-transport-public-574
+575,"Benzinărie (Sânmihaiul Român)",45.6970679,21.0833534,0,575,https://smtt.ro/statie-transport-public-575
+576,"Biserica Romano Catolică (Sânmihaiul Român)",45.6992373,21.0903942,0,576,https://smtt.ro/statie-transport-public-576
+577,"Primărie (Sânmihaiul Român)",45.7078154,21.0903656,0,577,https://smtt.ro/statie-transport-public-577
+578,"Livadă (Sânmihaiul Român)",45.7051752,21.0814036,0,578,https://smtt.ro/statie-transport-public-578
+579,"Ștrand termal (Sânmihaiul German)",45.710351,21.0385682,0,579,https://smtt.ro/statie-transport-public-579
+580,"Școală (Sânmihaiul German)",45.7104963,21.0300254,0,580,https://smtt.ro/statie-transport-public-580
+581,"Ieșire Răuți (Sânmihaiul German)",45.7106285,21.0216913,0,581,https://smtt.ro/statie-transport-public-581
+582,"Ieșire Bobda (Sânmihaiul German)",45.712966,21.0223221,0,582,https://smtt.ro/statie-transport-public-582
+583,"Școală (Sânmihaiul German)",45.7109546,21.0302534,0,583,https://smtt.ro/statie-transport-public-583
+584,"Ștrand termal (Sânmihaiul German)",45.7102605,21.0385624,0,584,https://smtt.ro/statie-transport-public-584
+585,"Livadă (Sânmihaiul Român)",45.7051005,21.0814156,0,585,https://smtt.ro/statie-transport-public-585
+586,"Pod (Sânmihaiul Român)",45.7062649,21.0917243,0,586,https://smtt.ro/statie-transport-public-586
+587,"Baltă (Utvin)",45.7125887,21.1171606,0,587,https://smtt.ro/statie-transport-public-587
+588,"Centru (Utvin)",45.7151906,21.1250094,0,588,https://smtt.ro/statie-transport-public-588
+589,"Ieșire (Utvin)",45.7162173,21.1361684,0,589,https://smtt.ro/statie-transport-public-589
+590,"Praga (Dumbrăvița)",45.795975,21.211413,0,590,https://smtt.ro/statie-transport-public-590
+591,"București (Dumbrăvița)",45.799057,21.208767,0,591,https://smtt.ro/statie-transport-public-591
+592,"Fervenția II (Dumbrăvița)",45.801311,21.211022,0,592,https://smtt.ro/statie-transport-public-592
+593,"Gabriel Liiceanu (Dumbrăvița)",45.803769,21.214097,0,593,https://smtt.ro/statie-transport-public-593
+594,"Ion Creangă (Dumbrăvița)",45.806351,21.218599,0,594,https://smtt.ro/statie-transport-public-594
+595,"Mihail Sadoveanu (Dumbrăvița)",45.808352,21.221252,0,595,https://smtt.ro/statie-transport-public-595
+596,"Simfoniei (Dumbrăvița)",45.811745,21.2242,0,596,https://smtt.ro/statie-transport-public-596
+597,"Petre Țuțea (Dumbrăvița)",45.810463,21.228399,0,597,https://smtt.ro/statie-transport-public-597
+598,"Liviu Rebreanu (Dumbrăvița)",45.807872,21.235577,0,598,https://smtt.ro/statie-transport-public-598
+599,"Crișurilor (Dumbrăvița)",45.806662,21.237695,0,599,https://smtt.ro/statie-transport-public-599
+600,"Ion Luca Caragiale (Dumbrăvița)",45.80382,21.236184,0,600,https://smtt.ro/statie-transport-public-600
+601,"Bistrița (Dumbrăvița)",45.8008444,21.2346269,0,601,https://smtt.ro/statie-transport-public-601
+602,"Hans C. Andersen (Dumbrăvița)",45.802654,21.228995,0,602,https://smtt.ro/statie-transport-public-602
+603,"Moților (Dumbrăvița)",45.800229,21.224237,0,603,https://smtt.ro/statie-transport-public-603
+604,"Arieșeni (Dumbrăvița)",45.797268,21.222295,0,604,https://smtt.ro/statie-transport-public-604
+605,"N. Grigorescu (Dumbrăvița)",45.794657,21.229434,0,605,https://smtt.ro/statie-transport-public-605
+606,"Tudor Vladimirescu (Dumbrăvița)",45.793274,21.235316,0,606,https://smtt.ro/statie-transport-public-606
+607,"Țarcului (Dumbrăvița)",45.799615,21.239947,0,607,https://smtt.ro/statie-transport-public-607
+608,"Parcul Central (Dumbrăvița)",45.802801,21.246808,0,608,https://smtt.ro/statie-transport-public-608
+609,"Țarcului (Dumbrăvița)",45.799083,21.239434,0,609,https://smtt.ro/statie-transport-public-609
+610,"Tudor Vladimirescu (Dumbrăvița)",45.793427,21.235279,0,610,https://smtt.ro/statie-transport-public-610
+611,"N. Grigorescu (Dumbrăvița)",45.794673,21.229578,0,611,https://smtt.ro/statie-transport-public-611
+612,"Arieșeni (Dumbrăvița)",45.797302,21.222384,0,612,https://smtt.ro/statie-transport-public-612
+613,"Moților (Dumbrăvița)",45.800116,21.224275,0,613,https://smtt.ro/statie-transport-public-613
+614,"Hans C. Andersen (Dumbrăvița)",45.802011,21.227228,0,614,https://smtt.ro/statie-transport-public-614
+615,"Bistrița (Dumbrăvița)",45.80103,21.234942,0,615,https://smtt.ro/statie-transport-public-615
+616,"Ion Luca Caragiale (Dumbrăvița)",45.803816,21.236394,0,616,https://smtt.ro/statie-transport-public-616
+617,"Crișurilor (Dumbrăvița)",45.806834,21.237898,0,617,https://smtt.ro/statie-transport-public-617
+618,"Liviu Rebreanu (Dumbrăvița)",45.807756,21.236157,0,618,https://smtt.ro/statie-transport-public-618
+619,"Petre Țuțea (Dumbrăvița)",45.810394,21.2289,0,619,https://smtt.ro/statie-transport-public-619
+620,"Simfoniei (Dumbrăvița)",45.811706,21.224692,0,620,https://smtt.ro/statie-transport-public-620
+621,"Mihail Sadoveanu (Dumbrăvița)",45.80858,21.221281,0,621,https://smtt.ro/statie-transport-public-621
+622,"Ion Creangă (Dumbrăvița)",45.806348,21.218747,0,622,https://smtt.ro/statie-transport-public-622
+623,"Gabriel Liiceanu (Dumbrăvița)",45.804124,21.214298,0,623,https://smtt.ro/statie-transport-public-623
+624,"Fervenția II (Dumbrăvița)",45.801274,21.211397,0,624,https://smtt.ro/statie-transport-public-624
+625,"București (Dumbrăvița)",45.799187,21.208661,0,625,https://smtt.ro/statie-transport-public-625
+626,"Praga (Dumbrăvița)",45.79595,21.21128,0,626,https://smtt.ro/statie-transport-public-626
+635,"Prvighetoarea (Remetea Mare)",45.778696,21.365983,0,635,https://smtt.ro/statie-transport-public-635
+636,"Primărie (Remetea Mare)",45.779292,21.374037,0,636,https://smtt.ro/statie-transport-public-636
+637,"Poliție (Remetea Mare)",45.7796755,21.3794427,0,637,https://smtt.ro/statie-transport-public-637
+638,"Strada III (Remetea Mare)",45.783114,21.380586,0,638,https://smtt.ro/statie-transport-public-638
+639,"Cruce (Ianova)",45.836608,21.414967,0,639,https://smtt.ro/statie-transport-public-639
+640,"Centru (Ianova)",45.8387,21.41888,0,640,https://smtt.ro/statie-transport-public-640
+641,"Cruce (Ianova)",45.836706,21.414928,0,641,https://smtt.ro/statie-transport-public-641
+642,"Strada III (Remetea Mare)",45.783106,21.380424,0,642,https://smtt.ro/statie-transport-public-642
+643,"Strada I a (Remetea Mare)",45.78063,21.38073,0,643,https://smtt.ro/statie-transport-public-643
+644,"Primărie (Remetea Mare)",45.779546,21.375536,0,644,https://smtt.ro/statie-transport-public-644
+645,"Privighetoarea (Remetea Mare)",45.778751,21.364968,0,645,https://smtt.ro/statie-transport-public-645
+646,"Incontro (DN 59)",45.6988582,21.1806361,0,646,https://smtt.ro/statie-transport-public-646
+648,"Primărie (Jebel)",45.5658106,21.2119865,0,648,https://smtt.ro/statie-transport-public-648
+649,"Intrare (Foeni)",45.5030614,20.8766625,0,649,https://smtt.ro/statie-transport-public-649
+650,"Primărie (Foeni)",45.5002111,20.87215,0,650,https://smtt.ro/statie-transport-public-650
+651,"Ieșire Cruceni (Foeni)",45.4939838,20.8706752,0,651,https://smtt.ro/statie-transport-public-651
+652,"Centru (Cruceni)",45.4752742,20.8801029,0,652,https://smtt.ro/statie-transport-public-652
+653,"Capăt (Cruceni)",45.47201,20.88224,0,653,https://smtt.ro/statie-transport-public-653
+654,"Centru (Cruceni)",45.475341,20.8801493,0,654,https://smtt.ro/statie-transport-public-654
+655,"Ieșire Cruceni (Foeni)",45.4940928,20.8706394,0,655,https://smtt.ro/statie-transport-public-655
+656,"Primărie (Foeni)",45.5001599,20.8722442,0,656,https://smtt.ro/statie-transport-public-656
+657,"Intrare (Foeni)",45.5029971,20.8767521,0,657,https://smtt.ro/statie-transport-public-657
+659,"Capăt (Jebel)",45.5531829,21.2217297,0,659,https://smtt.ro/statie-transport-public-659
+660,"Centru (Jebel)",45.563469,21.2155089,0,660,https://smtt.ro/statie-transport-public-660
+661,"Rus Savitar (Dudeștii Noi)",45.8291029,21.1074635,0,661,https://smtt.ro/statie-transport-public-661
+662,"Grădiniță (Covaci)",45.8341708,21.2303603,0,662,https://smtt.ro/statie-transport-public-662
+663,"Cometei",45.7637649,21.270043,0,663,https://smtt.ro/statie-transport-public-663
+664,"Primăverii (Ghiroda)",45.7632427,21.299824,0,664,https://smtt.ro/statie-transport-public-664
+665,"Girație Pod Bega (Ghiroda)",45.7622362,21.3060791,0,665,https://smtt.ro/statie-transport-public-665
+666,"Primăverii (Ghiroda)",45.7633119,21.2997951,0,666,https://smtt.ro/statie-transport-public-666
+667,"Câmpului (Ghiroda)",45.7634397,21.2940769,0,667,https://smtt.ro/statie-transport-public-667
+668,"Europa (Săcălaz)",45.7619343,21.130343,0,668,https://smtt.ro/statie-transport-public-668
+669,"Moara (Săcălaz)",45.7609465,21.1184284,0,669,https://smtt.ro/statie-transport-public-669
+670,"Dispensar (Săcălaz)",45.7603632,21.1112876,0,670,https://smtt.ro/statie-transport-public-670
+671,"Liliacului (Săcălaz)",45.7598613,21.1057943,0,671,https://smtt.ro/statie-transport-public-671
+672,"Baltă (Săcălaz)",45.7524239,21.0976123,0,672,https://smtt.ro/statie-transport-public-672
+673,"Vest (Săcălaz)",45.7521982,21.0881493,0,673,https://smtt.ro/statie-transport-public-673
+674,"Comtur (Beregsăul Mare)",45.759014,21.026162,0,674,https://smtt.ro/statie-transport-public-674
+675,"Biserica Ortodoxă (Beregsăul Mare)",45.7602965,21.0191157,0,675,https://smtt.ro/statie-transport-public-675
+676,"Vest Tract (Beregsăul Mare)",45.7656375,21.0195432,0,676,https://smtt.ro/statie-transport-public-676
+677,"Căminul Cultural (Beregsăul Mic)",45.7515367,20.9753679,0,677,https://smtt.ro/statie-transport-public-677
+678,"Capăt (Beregsăul Mic)",45.7487603,20.9667014,0,678,https://smtt.ro/statie-transport-public-678
+679,"Căminul Cultural (Beregsăul Mic)",45.751554,20.975446,0,679,https://smtt.ro/statie-transport-public-679
+680,"Vest Tract (Beregsăul Mare)",45.7655462,21.0194647,0,680,https://smtt.ro/statie-transport-public-680
+681,"Profi Loco (Beregsăul Mare)",45.7591704,21.0223031,0,681,https://smtt.ro/statie-transport-public-681
+682,"Strada a VI a (Beregsăul Mare)",45.7587826,21.0305088,0,682,https://smtt.ro/statie-transport-public-682
+683,"Class (Săcălaz)",45.753387,21.0808711,0,683,https://smtt.ro/statie-transport-public-683
+684,"Baltă (Săcălaz)",45.7523553,21.0977744,0,684,https://smtt.ro/statie-transport-public-684
+685,"Liliacului (Săcălaz)",45.7598023,21.1058798,0,685,https://smtt.ro/statie-transport-public-685
+686,"Biserica Romano Catolică (Săcălaz)",45.760345,21.1125907,0,686,https://smtt.ro/statie-transport-public-686
+687,"Moara (Săcălaz)",45.7608615,21.1184648,0,687,https://smtt.ro/statie-transport-public-687
+688,"Europa (Săcălaz)",45.7618694,21.1303787,0,688,https://smtt.ro/statie-transport-public-688
+690,"Ialomiței (Ghiroda)",45.7662044,21.3041255,0,690,https://smtt.ro/statie-transport-public-690
+691,"Primărie (Ghiroda)",45.7707519,21.3027119,0,691,https://smtt.ro/statie-transport-public-691
+692,"Sinaia (Ghiroda)",45.7715892,21.3076028,0,692,https://smtt.ro/statie-transport-public-692
+693,"Bușteni (Ghiroda)",45.7733605,21.3073527,0,693,https://smtt.ro/statie-transport-public-693
+694,"Semenic (Ghiroda)",45.7757351,21.3067125,0,694,https://smtt.ro/statie-transport-public-694
+695,"Aleea Pădurea Verde",45.7740514,21.2693631,0,695,https://smtt.ro/statie-transport-public-695
+696,"Macilor (Giarmata Vii)",45.7818323,21.2790334,0,696,https://smtt.ro/statie-transport-public-696
+697,"Viticultorilor (Giarmata Vii)",45.7947953,21.2883555,0,697,https://smtt.ro/statie-transport-public-697
+698,"Parcului Nr. 124 (Giarmata Vii)",45.8002809,21.2915623,0,698,https://smtt.ro/statie-transport-public-698
+699,"Parcului Nr. 160 (Giarmata Vii)",45.8020039,21.2889558,0,699,https://smtt.ro/statie-transport-public-699
+700,"Parcului Nr. 200 (Giarmata Vii)",45.8039772,21.2858811,0,700,https://smtt.ro/statie-transport-public-700
+701,"Albatrosului I (Giarmata Vii)",45.8054188,21.2864447,0,701,https://smtt.ro/statie-transport-public-701
+702,"Albatrosului II (Giarmata Vii)",45.8074793,21.2876636,0,702,https://smtt.ro/statie-transport-public-702
+703,"Teilor (Giarmata Vii)",45.8094317,21.288803,0,703,https://smtt.ro/statie-transport-public-703
+704,"Teilor Nr. 183 (Giarmata Vii)",45.8074017,21.2922201,0,704,https://smtt.ro/statie-transport-public-704
+705,"Teilor Nr. 153 (Giarmata Vii)",45.8047242,21.2962496,0,705,https://smtt.ro/statie-transport-public-705
+706,"Complex (Giarmata Vii)",45.7995951,21.2983315,0,706,https://smtt.ro/statie-transport-public-706
+707,"Biserica (Giarmata Vii)",45.7973791,21.3017567,0,707,https://smtt.ro/statie-transport-public-707
+708,"Garofiței (Giarmata Vii)",45.7993499,21.304466,0,708,https://smtt.ro/statie-transport-public-708
+709,"Cimitir (Giarmata Vii)",45.7980846,21.3063628,0,709,https://smtt.ro/statie-transport-public-709
+710,"Cimitir (Giarmata Vii)",45.7981999,21.306289,0,710,https://smtt.ro/statie-transport-public-710
+711,"Garofiței (Giarmata Vii)",45.799166,21.3043757,0,711,https://smtt.ro/statie-transport-public-711
+712,"Stadion (Giarmata Vii)",45.8020147,21.2946717,0,712,https://smtt.ro/statie-transport-public-712
+713,"Aleea Pădurea Verde",45.7742911,21.2688282,0,713,https://smtt.ro/statie-transport-public-713
+714,"Centru (Orțișoara)",45.9648496,21.2006723,0,714,https://smtt.ro/statie-transport-public-714
+715,"Căminul Cultural (Seceani)",45.9770295,21.3195954,0,715,https://smtt.ro/statie-transport-public-715
+716,"Centru (Orțișoara)",45.9650475,21.2006337,0,716,https://smtt.ro/statie-transport-public-716
+719,"Bujorilor (Sânandrei)",45.848052,21.1724452,0,719,https://smtt.ro/statie-transport-public-719
+720,"Frola (Sânandrei)",45.853518,21.1690889,0,720,https://smtt.ro/statie-transport-public-720
+721,"Centru (Sânandrei)",45.8555205,21.1689429,0,721,https://smtt.ro/statie-transport-public-721
+722,"Măslinului (Sânandrei)",45.8606049,21.1679911,0,722,https://smtt.ro/statie-transport-public-722
+723,"Profi Loco (Carani)",45.9105093,21.1642905,0,723,https://smtt.ro/statie-transport-public-723
+724,"Darson (Carani)",45.9120043,21.1550591,0,724,https://smtt.ro/statie-transport-public-724
+725,"Profi Loco (Carani)",45.9104852,21.1641543,0,725,https://smtt.ro/statie-transport-public-725
+726,"Măslinului (Sânandrei)",45.860562,21.1678264,0,726,https://smtt.ro/statie-transport-public-726
+727,"Centru (Sânandrei)",45.8555093,21.1686125,0,727,https://smtt.ro/statie-transport-public-727
+728,"Frola (Sânandrei)",45.853494,21.1689324,0,728,https://smtt.ro/statie-transport-public-728
+729,"Lalelelor (Sânandrei)",45.8480608,21.172251,0,729,https://smtt.ro/statie-transport-public-729
+730,"Bodoni (Cerneteaz)",45.8411278,21.2643699,0,730,https://smtt.ro/statie-transport-public-730
+731,"Privighetorii (Cerneteaz)",45.8462468,21.2686428,0,731,https://smtt.ro/statie-transport-public-731
+732,"Arteza (Cerneteaz)",45.848176,21.2616178,0,732,https://smtt.ro/statie-transport-public-732
+733,"Cămin Cultural (Cerneteaz)",45.8426437,21.258439,0,733,https://smtt.ro/statie-transport-public-733
+734,"Industriilor (Giarmata)",45.8381333,21.2926024,0,734,https://smtt.ro/statie-transport-public-734
+735,"Virgil Economu (Giarmata)",45.8377832,21.2973121,0,735,https://smtt.ro/statie-transport-public-735
+736,"Centru (Giarmata)",45.8373026,21.3107509,0,736,https://smtt.ro/statie-transport-public-736
+737,"Bătrână (Giarmata)",45.8431183,21.313912,0,737,https://smtt.ro/statie-transport-public-737
+738,"Calea Bencecului (Giarmata)",45.8496604,21.3152083,0,738,https://smtt.ro/statie-transport-public-738
+739,"Girație Calea Bencecului (Giarmata)",45.848506,21.3197619,0,739,https://smtt.ro/statie-transport-public-739
+740,"Biserica Romano Catolică (Giarmata)",45.8421233,21.3173154,0,740,https://smtt.ro/statie-transport-public-740
+741,"Căminul Cultural (Giarmata)",45.8365776,21.3115624,0,741,https://smtt.ro/statie-transport-public-741
+742,"Voievod Nicolae / Salcie (Giarmata)",45.83782,21.29305,0,742,https://smtt.ro/statie-transport-public-742
+743,"Frigoglass (Parța)",45.6311727,21.1873211,0,743,https://smtt.ro/statie-transport-public-743
+744,"Biserica Penticostală (Parța)",45.6305429,21.1411164,0,744,https://smtt.ro/statie-transport-public-744
+745,"Pod (Parța)",45.6321998,21.1395825,0,745,https://smtt.ro/statie-transport-public-745
+746,"Primăria (Parța)",45.6274243,21.1376567,0,746,https://smtt.ro/statie-transport-public-746
+747,"Căminul Cultural (Parța)",45.6252804,21.1343176,0,747,https://smtt.ro/statie-transport-public-747
+748,"Cartierul Nou / Park (Parța)",45.6224716,21.125445,0,748,https://smtt.ro/statie-transport-public-748
+749,"Drumul Mare (Parța)",45.6246467,21.1425778,0,749,https://smtt.ro/statie-transport-public-749
+750,"Gară (Parța)",45.6443454,21.131338,0,750,https://smtt.ro/statie-transport-public-750
+751,"Munteni (Parța)",45.63738,21.13481,0,751,https://smtt.ro/statie-transport-public-751
+752,"Cartierul Nou / Park (Parța)",45.6224816,21.1255289,0,752,https://smtt.ro/statie-transport-public-752
+753,"Căminul Cultural (Parța)",45.625136,21.1338855,0,753,https://smtt.ro/statie-transport-public-753
+754,"Primăria (Parța)",45.6279422,21.1376366,0,754,https://smtt.ro/statie-transport-public-754
+755,"Pod (Parța)",45.6321524,21.1397556,0,755,https://smtt.ro/statie-transport-public-755
+756,"Biserica Penticostală (Parța)",45.6302221,21.1411305,0,756,https://smtt.ro/statie-transport-public-756
+757,"Frigoglass (Parța)",45.6310936,21.1874036,0,757,https://smtt.ro/statie-transport-public-757
+758,"Gară (Parța)",45.6444786,21.1313721,0,758,https://smtt.ro/statie-transport-public-758
+759,"Centru (Carani)",45.9106877,21.1639984,0,759,https://smtt.ro/statie-transport-public-759
+760,"Centru (Bărăteaz)",45.9693211,21.0922388,0,760,https://smtt.ro/statie-transport-public-760
+761,"Primărie (Satchinez)",45.9429584,21.0359316,0,761,https://smtt.ro/statie-transport-public-761
+762,"Biserica Romano Catolică (Satchinez)",45.9384891,21.0435309,0,762,https://smtt.ro/statie-transport-public-762
+763,"Centru (Hodoni)",45.9026748,21.0840435,0,763,https://smtt.ro/statie-transport-public-763
+764,"Biserica Romano Catolică (Satchinez)",45.9388738,21.0435072,0,764,https://smtt.ro/statie-transport-public-764
+765,"Primărie (Satchinez)",45.9428629,21.0359709,0,765,https://smtt.ro/statie-transport-public-765
+767,"Centru (Carani)",45.9106206,21.1636902,0,767,https://smtt.ro/statie-transport-public-767
+768,"Strada XXIV (Șag)",45.65348,21.1843855,0,768,https://smtt.ro/statie-transport-public-768
+769,"Strada XXVII (Șag)",45.6546838,21.1908846,0,769,https://smtt.ro/statie-transport-public-769
+770,"Strada XX (Șag)",45.6555862,21.1956513,0,770,https://smtt.ro/statie-transport-public-770
+771,"Primărie (Șag)",45.6521726,21.1647644,0,771,https://smtt.ro/statie-transport-public-771
+772,"Intersecție str. a V a cu str. a II a (Șag)",45.652471,21.15835,0,772,https://smtt.ro/statie-transport-public-772
+773,"Intersecție str. a IV a cu str. a CXI a (Șag)",45.6493917,21.1533916,0,773,https://smtt.ro/statie-transport-public-773
+774,"Intersecție str. a IV a cu str. a II a (Șag)",45.6527484,21.1582803,0,774,https://smtt.ro/statie-transport-public-774
+775,"Primărie (Șag)",45.6520729,21.1647488,0,775,https://smtt.ro/statie-transport-public-775
+776,"Magnoliei",45.727189,21.275627,0,776,https://smtt.ro/statie-transport-public-776
+777,"Sofia (Moșnița Nouă)",45.723721,21.2946217,0,777,https://smtt.ro/statie-transport-public-777
+778,"Berlin 1 (Moșnița Nouă)",45.7227116,21.3003937,0,778,https://smtt.ro/statie-transport-public-778
+779,"Căliman (Moșnița Nouă)",45.7209373,21.3108678,0,779,https://smtt.ro/statie-transport-public-779
+780,"Poștei (Moșnița Nouă)",45.7196453,21.3183884,0,780,https://smtt.ro/statie-transport-public-780
+781,"Parc (Moșnița Nouă)",45.718827,21.323026,0,781,https://smtt.ro/statie-transport-public-781
+782,"Agricultorilor (Moșnița Nouă)",45.7211235,21.3279968,0,782,https://smtt.ro/statie-transport-public-782
+783,"Serena (Moșnița Nouă)",45.7247853,21.3303733,0,783,https://smtt.ro/statie-transport-public-783
+784,"Căminul Cultural (Moșnița Veche)",45.733519,21.333839,0,784,https://smtt.ro/statie-transport-public-784
+785,"Aurel Cozma (Moșnița Veche)",45.7366706,21.3319356,0,785,https://smtt.ro/statie-transport-public-785
+786,"Tineret (Moșnița Veche)",45.738061,21.329915,0,786,https://smtt.ro/statie-transport-public-786
+787,"Berlin (Moșnița Nouă)",45.7232182,21.3001526,0,787,https://smtt.ro/statie-transport-public-787
+788,"Florența (Moșnița Nouă)",45.7253104,21.3007793,0,788,https://smtt.ro/statie-transport-public-788
+789,"Viena (Moșnița Nouă)",45.7285845,21.301937,0,789,https://smtt.ro/statie-transport-public-789
+790,"Concordiei (Moșnița Nouă)",45.7314699,21.3062982,0,790,https://smtt.ro/statie-transport-public-790
+791,"Armoniei (Moșnița Veche)",45.7322756,21.3092746,0,791,https://smtt.ro/statie-transport-public-791
+792,"Arlechino (Moșnița Veche)",45.7330432,21.3124155,0,792,https://smtt.ro/statie-transport-public-792
+793,"Muntenia (Moșnița Veche)",45.7345447,21.3179381,0,793,https://smtt.ro/statie-transport-public-793
+794,"Intrare (Moșnița Veche)",45.7361909,21.3238524,0,794,https://smtt.ro/statie-transport-public-794
+795,"Tineret (Moșnița Veche)",45.7381211,21.33022,0,795,https://smtt.ro/statie-transport-public-795
+798,"Grădinița Calea Urseni",45.7185589,21.2675629,0,798,https://smtt.ro/statie-transport-public-798
+799,"Intrare Rudicica",45.7156666,21.2722275,0,799,https://smtt.ro/statie-transport-public-799
+800,"Cebza (Urseni)",45.6987951,21.2912267,0,800,https://smtt.ro/statie-transport-public-800
+801,"Nucilor (Moșnița Nouă)",45.7154682,21.3245884,0,801,https://smtt.ro/statie-transport-public-801
+802,"Ferma 5 (Moșnița Nouă)",45.709079,21.320491,0,802,https://smtt.ro/statie-transport-public-802
+803,"Mistrețului (Urseni)",45.7008859,21.3154057,0,803,https://smtt.ro/statie-transport-public-803
+804,"Intrare (Urseni)",45.6964387,21.3104364,0,804,https://smtt.ro/statie-transport-public-804
+805,"Centru (Urseni)",45.6947095,21.3063702,0,805,https://smtt.ro/statie-transport-public-805
+806,"Grădiniță (Urseni)",45.6924711,21.3078988,0,806,https://smtt.ro/statie-transport-public-806
+807,"Buclă (Urseni)",45.6905486,21.3028928,0,807,https://smtt.ro/statie-transport-public-807
+808,"Câmpului (Moșnița Nouă)",45.7173425,21.3314604,0,808,https://smtt.ro/statie-transport-public-808
+809,"IAS (Moșnița Nouă)",45.715491,21.342265,0,809,https://smtt.ro/statie-transport-public-809
+810,"Armonia (Albina)",45.7119754,21.3617992,0,810,https://smtt.ro/statie-transport-public-810
+811,"DJ 592 (Albina)",45.7105903,21.3693241,0,811,https://smtt.ro/statie-transport-public-811
+812,"Căminul Cultural (Albina)",45.7144584,21.37304,0,812,https://smtt.ro/statie-transport-public-812
+813,"Capăt (Urseni)",45.6929941,21.3012132,0,813,https://smtt.ro/statie-transport-public-813
+814,"Capăt (Urseni)",45.6929689,21.3010821,0,814,https://smtt.ro/statie-transport-public-814
+815,"Buclă (Urseni)",45.6906479,21.3028366,0,815,https://smtt.ro/statie-transport-public-815
+816,"Grădiniță (Urseni)",45.6924541,21.3077733,0,816,https://smtt.ro/statie-transport-public-816
+817,"Centru (Urseni)",45.694719,21.3062397,0,817,https://smtt.ro/statie-transport-public-817
+818,"Intrare (Urseni)",45.6965044,21.3104046,0,818,https://smtt.ro/statie-transport-public-818
+819,"Mistrețului (Urseni)",45.700891,21.315246,0,819,https://smtt.ro/statie-transport-public-819
+820,"Ferma 5 (Moșnița Nouă)",45.70907,21.320417,0,820,https://smtt.ro/statie-transport-public-820
+821,"Nucilor (Moșnița Nouă)",45.7154738,21.3244053,0,821,https://smtt.ro/statie-transport-public-821
+822,"Principală (Moșnița Nouă)",45.71813,21.32685,0,822,https://smtt.ro/statie-transport-public-822
+823,"Parc (Moșnița Nouă)",45.7190172,21.3226946,0,823,https://smtt.ro/statie-transport-public-823
+824,"Poștei (Moșnița Nouă)",45.719943,21.317783,0,824,https://smtt.ro/statie-transport-public-824
+825,"Căliman (Moșnița Nouă)",45.721268,21.309981,0,825,https://smtt.ro/statie-transport-public-825
+826,"Berlin 1 (Moșnița Nouă)",45.723071,21.299353,0,826,https://smtt.ro/statie-transport-public-826
+827,"Sofia (Moșnița Nouă)",45.724054,21.293722,0,827,https://smtt.ro/statie-transport-public-827
+828,"Piața Gheorghe Domășneanu (Auchan)",45.7330091,21.2603629,0,828,https://smtt.ro/statie-transport-public-828
+829,"Cebza (Urseni)",45.6988782,21.2911467,0,829,https://smtt.ro/statie-transport-public-829
+830,"Intrare Rudicica",45.7157853,21.2721404,0,830,https://smtt.ro/statie-transport-public-830
+831,"Grădinița Calea Urseni",45.7186459,21.267651,0,831,https://smtt.ro/statie-transport-public-831
+834,"Aurel Cozma (Moșnița Veche)",45.736614,21.331864,0,834,https://smtt.ro/statie-transport-public-834
+835,"Căminul Cultural (Moșnița Veche)",45.7329583,21.3340479,0,835,https://smtt.ro/statie-transport-public-835
+836,"Serena (Moșnița Nouă)",45.724811,21.330176,0,836,https://smtt.ro/statie-transport-public-836
+837,"Agricultorilor (Moșnița Nouă)",45.720882,21.327755,0,837,https://smtt.ro/statie-transport-public-837
+838,"Intrare (Moșnița Veche)",45.7362702,21.3238015,0,838,https://smtt.ro/statie-transport-public-838
+839,"Muntenia (Moșnița Veche)",45.7346151,21.3179085,0,839,https://smtt.ro/statie-transport-public-839
+840,"Arlechino (Moșnița Veche)",45.733105,21.311855,0,840,https://smtt.ro/statie-transport-public-840
+841,"Armoniei (Moșnița Veche)",45.732459,21.3091745,0,841,https://smtt.ro/statie-transport-public-841
+842,"Concordiei (Moșnița Nouă)",45.7316236,21.3062097,0,842,https://smtt.ro/statie-transport-public-842
+843,"Viena (Moșnița Nouă)",45.7282553,21.3017149,0,843,https://smtt.ro/statie-transport-public-843
+844,"Florența (Moșnița Nouă)",45.725284,21.3006842,0,844,https://smtt.ro/statie-transport-public-844
+846,"DJ 592 (Albina)",45.7107237,21.3694675,0,846,https://smtt.ro/statie-transport-public-846
+847,"Armonia (Albina)",45.712139,21.3616859,0,847,https://smtt.ro/statie-transport-public-847
+848,"IAS (Moșnița Nouă)",45.715655,21.341852,0,848,https://smtt.ro/statie-transport-public-848
+849,"Câmpului (Moșnița Nouă)",45.717646,21.330616,0,849,https://smtt.ro/statie-transport-public-849
+850,"Principală (Moșnița Nouă)",45.718532,21.325611,0,850,https://smtt.ro/statie-transport-public-850
+851,"Principală (Moșnița Nouă)",45.718075,21.3259874,0,851,https://smtt.ro/statie-transport-public-851
+852,"Primărie (Jebel)",45.5658796,21.2120431,0,852,https://smtt.ro/statie-transport-public-852
+853,"SMA (Cornești)",45.91435,21.22951,0,853,https://smtt.ro/statie-transport-public-853
+854,"Cămin (Cornești)",45.9107,21.22339,0,854,https://smtt.ro/statie-transport-public-854
+855,"Grădiniță (Călacea)",45.9527661,21.1468795,0,855,https://smtt.ro/statie-transport-public-855
+856,"SMA (Orțișoara)",45.96084,21.19615,0,856,https://smtt.ro/statie-transport-public-856
+857,"Biserica Romano Catolică (Becicherecul Mic)",45.8319535,21.0489793,0,857,https://smtt.ro/statie-transport-public-857
+858,"Primărie (Becicherecul Mic)",45.8342574,21.0499552,0,858,https://smtt.ro/statie-transport-public-858
+859,"Calea Dudeștii Noi (Becicherecul Mic)",45.835687,21.0564869,0,859,https://smtt.ro/statie-transport-public-859
+860,"Primărie (Dudeștii Noi)",45.8384593,21.097858,0,860,https://smtt.ro/statie-transport-public-860
+861,"Căminul Cultural (Dudeștii Noi)",45.8362483,21.1033195,0,861,https://smtt.ro/statie-transport-public-861
+863,"SMA (Orțișoara)",45.96075,21.19608,0,863,https://smtt.ro/statie-transport-public-863
+864,"Girație Sudului",45.73113,21.24805,0,864,https://smtt.ro/statie-transport-public-864
+865,"Kilometrul 13 (Sânandrei)",45.86964,21.20322,0,865,https://smtt.ro/statie-transport-public-865
+866,"Kilometrul 13 (Sânandrei)",45.86965,21.20305,0,866,https://smtt.ro/statie-transport-public-866
+869,"Macilor",45.75868,21.20339,0,869,https://smtt.ro/statie-transport-public-869
+870,"Alexandru Lăpușneanu",45.75855,21.19972,0,870,https://smtt.ro/statie-transport-public-870
+871,"Grigore Alexandrescu",45.75774,21.19606,0,871,https://smtt.ro/statie-transport-public-871
+876,"Alexandru Lăpușneanu",45.75845,21.19976,0,876,https://smtt.ro/statie-transport-public-876
+877,"Macilor",45.75859,21.20328,0,877,https://smtt.ro/statie-transport-public-877
+879,"Balta Verde",45.75763,21.20967,0,879,https://smtt.ro/statie-transport-public-879
+880,"Campeador",45.79099,21.193636,0,880,https://smtt.ro/statie-transport-public-880
+881,"Izlaz (Ghiroda)",45.80365,21.29793,0,881,https://smtt.ro/statie-transport-public-881
+882,"Carpenului (Ghiroda)",45.80146,21.30121,0,882,https://smtt.ro/statie-transport-public-882
+883,"CT Park (Ghiroda)",45.78025,21.33471,0,883,https://smtt.ro/statie-transport-public-883
+884,"Calea Timișoarei (Dudeștii Noi)",45.83897,21.10086,0,884,https://smtt.ro/statie-transport-public-884
+890,"Dâmbovița",45.7397,21.19599,0,890,https://smtt.ro/statie-transport-public-890
+896,"Calea Torontalului (Ciocanul)",45.7692,21.21962,0,896,https://smtt.ro/statie-transport-public-896
+897,"Matei Basarab (Cetății)",45.76796,21.21701,0,897,https://smtt.ro/statie-transport-public-897
+898,"Amforei (Cetății)",45.76554,21.21314,0,898,https://smtt.ro/statie-transport-public-898
+899,"Gheorghe Lazăr (Cetății)",45.76328,21.2108,0,899,https://smtt.ro/statie-transport-public-899
+900,"Balta Verde (Cetății)",45.75829,21.20939,0,900,https://smtt.ro/statie-transport-public-900
+901,"Nemoianu (Brediceanu)",45.75614,21.22114,0,901,https://smtt.ro/statie-transport-public-901
+902,"Nemoianu (Brediceanu)",45.75614,21.22126,0,902,https://smtt.ro/statie-transport-public-902
+903,"Balta Verde (Cetății)",45.75772,21.21006,0,903,https://smtt.ro/statie-transport-public-903
+904,"Gheorghe Lazăr (Cetății)",45.76255,21.21048,0,904,https://smtt.ro/statie-transport-public-904
+905,"Amforei (Cetății)",45.76524,21.2129,0,905,https://smtt.ro/statie-transport-public-905
+906,"Matei Basarab (Cetății)",45.76761,21.21653,0,906,https://smtt.ro/statie-transport-public-906
+907,"Calea Torontalului (Ciocanul)",45.76925,21.21973,0,907,https://smtt.ro/statie-transport-public-907
+908,"IKEA Timișoara",45.7926,21.20982,0,908,https://smtt.ro/statie-transport-public-908
+909,"Strada Morii (Giarmata)",45.83775,21.30104,0,909,https://smtt.ro/statie-transport-public-909
+912,"Uzina de Apă (Muzeul Apei)",45.72491,21.25632,0,912,https://smtt.ro/statie-transport-public-912
+913,"Calea Urseni (Pepinieră)",45.72185,21.26247,0,913,https://smtt.ro/statie-transport-public-913
+914,"Gară (Parța)",45.64452,21.13066,0,914,https://smtt.ro/statie-transport-public-914
+915,"Gară (Parța)",45.64443,21.13066,0,915,https://smtt.ro/statie-transport-public-915
+916,"Calea Urseni (Pepinieră)",45.72189,21.26254,0,916,https://smtt.ro/statie-transport-public-916
+917,"Uzina de Apă (Muzeul Apei)",45.72502,21.25629,0,917,https://smtt.ro/statie-transport-public-917
+918,"Denya Forest (Constructorilor)",45.77931,21.24774,0,918,https://smtt.ro/statie-transport-public-918
+920,"Muzeul Satului (Măcin)",45.777604,21.263663,0,920,https://smtt.ro/statie-transport-public-920
+921,"Muzeul Satului (Măcin)",45.778197,21.262934,0,921,https://smtt.ro/statie-transport-public-921
+922,"Taborului",45.75199,21.18997,0,922,https://smtt.ro/statie-transport-public-922
+933,"Balta Verde",45.75811,21.20871,0,933,https://smtt.ro/statie-transport-public-933
+934,"Aeroport (Terminal Schengen)",45.80931,21.32136,0,934,https://smtt.ro/statie-transport-public-934
+937,"Albăstrelelor (Tata Oancea)",45.75017,21.27847,0,937,https://smtt.ro/statie-transport-public-937
+941,"Banatim (Cimitir Buziașului)",45.74839,21.25338,0,941,https://smtt.ro/statie-transport-public-941
+942,"Bătania",45.74532,21.25454,0,942,https://smtt.ro/statie-transport-public-942
+943,"Fabrica de Detergenți",45.74131,21.2561,0,943,https://smtt.ro/statie-transport-public-943
+944,"Mecatim",45.73872,21.25709,0,944,https://smtt.ro/statie-transport-public-944
+945,"AEM (Dräxlmaier)",45.73404,21.25889,0,945,https://smtt.ro/statie-transport-public-945
+946,"AEM (Dräxlmaier)",45.73405,21.25894,0,946,https://smtt.ro/statie-transport-public-946
+947,"Mecatim",45.73943,21.25687,0,947,https://smtt.ro/statie-transport-public-947
+948,"Fabrica de Detergenți",45.74175,21.25599,0,948,https://smtt.ro/statie-transport-public-948
+949,"Bătania",45.74588,21.25441,0,949,https://smtt.ro/statie-transport-public-949
+950,"Banatim (Cimitir Buziașului)",45.7484,21.25345,0,950,https://smtt.ro/statie-transport-public-950
+951,"Amethyst (Dumbrăvița)",45.81113,21.25974,0,951,https://smtt.ro/statie-transport-public-951
+952,"PECO (Remetea Mare)",45.78332,21.39038,0,952,https://smtt.ro/statie-transport-public-952
+953,"Teren de sport (Ianova)",45.84511,21.42108,0,953,https://smtt.ro/statie-transport-public-953
+954,"Liceul Electrotimiș",45.73049,21.26434,0,954,https://smtt.ro/statie-transport-public-954
+955,"Liceul Electrotimiș",45.73094,21.26542,0,955,https://smtt.ro/statie-transport-public-955
+959,"Colegiul Național Bănățean",45.74433,21.21203,0,959,https://smtt.ro/statie-transport-public-959
+966,"Sorocului (Beregsăul Mare)",45.7587302,21.0326463,0,966,https://smtt.ro/statie-transport-public-966
+979,"Centru (Ianova)",45.83871,21.41872,0,979,https://smtt.ro/statie-transport-public-979
+980,"Intrare (Beregsăul Mic)",45.75514,20.97473,0,980,https://smtt.ro/statie-transport-public-980
+981,"Intrare (Beregsăul Mic)",45.75514,20.97482,0,981,https://smtt.ro/statie-transport-public-981
+985,"Gara de Nord (Dragalina)",45.75015,21.20768,0,985,https://smtt.ro/statie-transport-public-985
+987,"B. Braun Medical (Sânandrei)",45.8336,21.18123,0,987,https://smtt.ro/statie-transport-public-987
+988,"B. Braun Medical (Sânandrei)",45.83249,21.18164,0,988,https://smtt.ro/statie-transport-public-988
+990,"Stadion",45.75342,21.20731,0,990,https://smtt.ro/statie-transport-public-990
+992,"Dunărea",45.75255,21.20133,0,992,https://smtt.ro/statie-transport-public-992
+994,"Intrare (Ianova)",45.83275,21.41286,0,994,https://smtt.ro/statie-transport-public-994
+995,"Intrare (Ianova)",45.83271,21.41275,0,995,https://smtt.ro/statie-transport-public-995
+998,"Nera",45.75254,21.21401,0,998,https://smtt.ro/statie-transport-public-998
+999,"Regele Carol I (Tinereții)",45.74494,21.2109,0,999,https://smtt.ro/statie-transport-public-999
+1000,"City of Mara (Lidl)",45.75474,21.21643,0,1000,https://smtt.ro/statie-transport-public-1000
+1001,"Alexandru Lăpușneanu",45.75828,21.19961,0,1001,https://smtt.ro/statie-transport-public-1001
+1002,"Veronica Micle",45.75553,21.19977,0,1002,https://smtt.ro/statie-transport-public-1002
+1003,"Bârzava",45.75423,21.19864,0,1003,https://smtt.ro/statie-transport-public-1003
+1004,"Ronaț (Bogdăneștilor)",45.75087,21.18988,0,1004,https://smtt.ro/statie-transport-public-1004
+1005,"Grigore Alexandrescu",45.7577,21.19642,0,1005,https://smtt.ro/statie-transport-public-1005
+1006,"Spitalul Municipal (Parcul Botanic)",45.75856,21.22585,0,1006,https://smtt.ro/statie-transport-public-1006
+1007,"Râmeț (Urseni)",45.70122,21.28797,0,1007,https://smtt.ro/statie-transport-public-1007
+1008,"Râmeț (Urseni)",45.70106,21.28805,0,1008,https://smtt.ro/statie-transport-public-1008
+1009,"Hornbach (Buziașului)",45.725691,21.283014,0,1009,https://smtt.ro/statie-transport-public-1009
+1010,"Hornbach (Buziașului)",45.72585,21.28328,0,1010,https://smtt.ro/statie-transport-public-1010
+1018,"Neptun - Vântului (Giroc)",45.71132,21.24097,0,1018,https://smtt.ro/statie-transport-public-1018
+1019,"Neptun - Parcului (Giroc)",45.71071,21.24737,0,1019,https://smtt.ro/statie-transport-public-1019
+1024,"Naturii (Giroc)",45.702283,21.232687,0,1024,https://smtt.ro/statie-transport-public-1024
+1025,"Semenic - Căminul Cultural (Giroc)",45.70005,21.23373,0,1025,https://smtt.ro/statie-transport-public-1025
+1026,"Muncitorilor (Giroc)",45.69755,21.23515,0,1026,https://smtt.ro/statie-transport-public-1026
+1027,"Dunărea (Giroc)",45.694458,21.236765,0,1027,https://smtt.ro/statie-transport-public-1027
+1028,"Câmpului (Giroc)",45.689758,21.239256,0,1028,https://smtt.ro/statie-transport-public-1028
+1029,"Goya (Giroc)",45.686958,21.240664,0,1029,https://smtt.ro/statie-transport-public-1029
+1030,"Câmpului (Giroc)",45.68964,21.23945,0,1030,https://smtt.ro/statie-transport-public-1030
+1031,"Dunărea (Giroc)",45.694331,21.236984,0,1031,https://smtt.ro/statie-transport-public-1031
+1032,"Muncitorilor (Giroc)",45.69743,21.23534,0,1032,https://smtt.ro/statie-transport-public-1032
+1033,"Semenic - Primarie (Giroc)",45.70069,21.23363,0,1033,https://smtt.ro/statie-transport-public-1033
+1034,"Garii - Penny (Giroc)",45.707077,21.233839,0,1034,https://smtt.ro/statie-transport-public-1034
+1035,"Cometei (Giroc)",45.70645,21.23908,0,1035,https://smtt.ro/statie-transport-public-1035
+1038,"Izlaz (Chișoda)",45.709051,21.212626,0,1038,https://smtt.ro/statie-transport-public-1038
+1039,"Nicolae Firu (Chișoda)",45.703016,21.212249,0,1039,https://smtt.ro/statie-transport-public-1039
+1040,"Primăverii (Chișoda)",45.70226,21.21763,0,1040,https://smtt.ro/statie-transport-public-1040
+1041,"Primăverii (Chișoda)",45.70232,21.21763,0,1041,https://smtt.ro/statie-transport-public-1041
+1042,"Nicolae Firu (Chișoda)",45.702966,21.212361,0,1042,https://smtt.ro/statie-transport-public-1042
+1043,"Izlaz (Chișoda)",45.708618,21.212709,0,1043,https://smtt.ro/statie-transport-public-1043
+1044,"Calistrat Hogaș",45.75072,21.28341,0,1044,https://smtt.ro/statie-transport-public-1044
+1045,"Parcului",45.74764,21.28512,0,1045,https://smtt.ro/statie-transport-public-1045
+1046,"Stația Meteorologică",45.77182,21.25943,0,1046,https://smtt.ro/statie-transport-public-1046
+1048,"Zefirului (Giroc)",45.718057,21.238496,0,1048,https://smtt.ro/statie-transport-public-1048
+1049,"Zefirului (Giroc)",45.718105,21.238509,0,1049,https://smtt.ro/statie-transport-public-1049
+1050,"Egalității (Giroc)",45.714667,21.240304,0,1050,https://smtt.ro/statie-transport-public-1050
+1051,"Egalității (Giroc)",45.714652,21.240387,0,1051,https://smtt.ro/statie-transport-public-1051
+1052,"Neptun - Vântului (Giroc)",45.711424,21.240681,0,1052,https://smtt.ro/statie-transport-public-1052
+1053,"Cometei (Giroc)",45.706662,21.239146,0,1053,https://smtt.ro/statie-transport-public-1053
+1054,"Industriilor (Giarmata)",45.838209,21.292632,0,1054,https://smtt.ro/statie-transport-public-1054
+1055,"Grigore Alexandrescu",45.778583,21.216251,0,1055,https://smtt.ro/statie-transport-public-1055
+1056,"Grigore Alexandrescu",45.778718,21.216331,0,1056,https://smtt.ro/statie-transport-public-1056
+1057,"Gării - Penny (Giroc)",45.707218,21.234291,0,1057,https://smtt.ro/statie-transport-public-1057
+1058,"Magazin Profi (Șag)",45.655917,21.173833,0,1058,https://smtt.ro/statie-transport-public-1058
+1059,"Magazin Profi (Șag)",45.656444,21.173501,0,1059,https://smtt.ro/statie-transport-public-1059

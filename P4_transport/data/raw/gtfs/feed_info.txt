@@ -1,0 +1,2 @@
+feed_publisher_name,feed_publisher_url,feed_lang,default_lang,feed_start_date,feed_end_date,feed_version,feed_contact_email,feed_contact_url
+SMTT,https://smtt.ro,ro,,20261001,20261231,4.26,relatii.publice@smtt.ro,https://smtt.ro
