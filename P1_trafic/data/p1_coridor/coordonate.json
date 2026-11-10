@@ -1,0 +1,17 @@
+{
+  "bbox_osm": [
+    21.2,
+    45.74,
+    21.26,
+    45.77
+  ],
+  "bbox_ordine": "lon_min, lat_min, lon_max, lat_max (ca osm.bbox din config)",
+  "zona": "centrul Timișoarei, extrasul din care se construiește data/sumo/coridor.net.xml",
+  "coridor_automat": {
+    "lungime_m": 4000,
+    "benzi": 2,
+    "tronson_m": 400,
+    "celula_m": 7.5,
+    "nota": "coridorul automatului și al referinței SUMO e drept (scripts/sumo_coridor_drept.py); rețeaua OSM e pentru context"
+  }
+}

@@ -2,9 +2,9 @@
 
 ## Pe scurt
 
-Primiți un script care rulează în SUMO același coridor ca automatul vostru: drept, aceeași lungime, aceleași benzi și tronsoane, aceleași scenarii din config. E referința cerută de fișă (GHID.md, pasul 7), gata de folosit, ca să vă puteți concentra pe automat și pe controller.
-
-Nu e nevoie de date noi: P1 nu depinde de pachetul disciplinei pentru coridor.
+Primiți două lucruri:
+- **datele coridorului**, adică folderul `data/p1_coridor/` pe care kitul îl așteaptă din pachetul disciplinei: extrasul OpenStreetMap, coordonatele și un profil de flux orar;
+- **un script care rulează în SUMO același coridor ca automatul vostru**: drept, aceeași lungime, aceleași benzi și tronsoane, aceleași scenarii din config. E referința cerută de fișă (GHID.md, pasul 7), gata de folosit, ca să vă puteți concentra pe automat și pe controller.
 
 ## Instalare
 
@@ -18,6 +18,9 @@ Ce apare în repo:
 
 | Fișier | La ce folosește |
 |---|---|
+| `data/p1_coridor/coridor.osm` | extrasul OpenStreetMap din `osm.bbox` (centrul Timișoarei), din care se face `data/sumo/coridor.net.xml` |
+| `data/p1_coridor/coordonate.json` | dreptunghiul extrasului și dimensiunile coridorului automatului |
+| `data/p1_coridor/profil_flux.csv` | debitul pe oră, 05:00–12:00, cu vârf de dimineață (`hour, veh_per_hour`); e un **model**, nu o numărătoare |
 | `scripts/sumo_coridor_drept.py` | construiește coridorul în SUMO și rulează scenariile |
 | `src/sada/statistica_pereche.py` | comparații pereche pe seed (vedeți `comun/README.md`) |
 | `data/timisoara/` | baza cu datele despre oraș (opțională pentru voi; vedeți `comun/timisoara/README.md`) |
