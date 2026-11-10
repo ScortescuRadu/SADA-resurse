@@ -1,0 +1,12 @@
+# Versiuni minime. După ce proiectul merge: pip freeze > requirements.lock.txt
+numpy>=1.24
+scipy>=1.10
+pandas>=2.0
+matplotlib>=3.7
+pyyaml>=6.0
+tqdm>=4.65
+pytest>=7.0
+networkx>=3.1
+osmnx>=2.0        # doar pentru descărcarea și desenarea rețelei din OpenStreetMap
+ipykernel>=6.0       # pentru notebooks/ în VS Code; pentru JupyterLab: pip install jupyterlab
+nbformat>=5.0

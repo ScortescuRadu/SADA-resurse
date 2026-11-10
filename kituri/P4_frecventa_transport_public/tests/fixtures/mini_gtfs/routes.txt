@@ -1,0 +1,4 @@
+route_id,agency_id,route_short_name,route_type
+R1,A,1,0
+R2,A,E2,3
+R3,A,14,11

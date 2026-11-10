@@ -1,0 +1,13 @@
+# Versiuni minime. După ce proiectul merge: pip freeze > requirements.lock.txt
+numpy>=1.24
+scipy>=1.10
+pandas>=2.0
+matplotlib>=3.7
+pyyaml>=6.0
+tqdm>=4.65
+pytest>=7.0
+pyproj>=3.5          # proiecția coordonatelor în metri (acoperirea de 400 m)
+deap>=1.4            # opțional, pentru operatorii algoritmului genetic
+gtfs-kit>=10.0       # opțional; codul din kit citește GTFS direct cu pandas
+ipykernel>=6.0       # pentru notebooks/ în VS Code; pentru JupyterLab: pip install jupyterlab
+nbformat>=5.0

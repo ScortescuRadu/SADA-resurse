@@ -1,0 +1,182 @@
+{
+ "name": "dev_C_20",
+ "kind": "binary",
+ "branch": "C",
+ "units": {
+  "cost": "EUR",
+  "km": "km de pistă"
+ },
+ "budget": 2757000.0,
+ "items": [
+  {
+   "id": "Z01F1",
+   "label": "zona 1, faza 1",
+   "km": 3.2,
+   "cost": 435000.0,
+   "benefit": 169.6,
+   "equity": 25.4
+  },
+  {
+   "id": "Z01F2",
+   "label": "zona 1, faza 2",
+   "km": 2.5,
+   "cost": 270000.0,
+   "benefit": 30.4,
+   "equity": 4.1,
+   "requires": "Z01F1"
+  },
+  {
+   "id": "Z02F1",
+   "label": "zona 2, faza 1",
+   "km": 3.5,
+   "cost": 355000.0,
+   "benefit": 195.2,
+   "equity": 10.7
+  },
+  {
+   "id": "Z02F2",
+   "label": "zona 2, faza 2",
+   "km": 0.7,
+   "cost": 72000.0,
+   "benefit": 12.4,
+   "equity": 0.7,
+   "requires": "Z02F1"
+  },
+  {
+   "id": "Z03F1",
+   "label": "zona 3, faza 1",
+   "km": 2.0,
+   "cost": 288000.0,
+   "benefit": 73.1,
+   "equity": 9.9
+  },
+  {
+   "id": "Z03F2",
+   "label": "zona 3, faza 2",
+   "km": 4.0,
+   "cost": 389000.0,
+   "benefit": 83.5,
+   "equity": 39.5,
+   "requires": "Z03F1"
+  },
+  {
+   "id": "Z04F1",
+   "label": "zona 4, faza 1",
+   "km": 2.2,
+   "cost": 280000.0,
+   "benefit": 92.1,
+   "equity": 2.5
+  },
+  {
+   "id": "Z04F2",
+   "label": "zona 4, faza 2",
+   "km": 3.0,
+   "cost": 459000.0,
+   "benefit": 85.6,
+   "equity": 17.6,
+   "requires": "Z04F1"
+  },
+  {
+   "id": "Z05F1",
+   "label": "zona 5, faza 1",
+   "km": 1.7,
+   "cost": 228000.0,
+   "benefit": 98.2,
+   "equity": 16.6
+  },
+  {
+   "id": "Z05F2",
+   "label": "zona 5, faza 2",
+   "km": 1.5,
+   "cost": 232000.0,
+   "benefit": 36.9,
+   "equity": 13.1,
+   "requires": "Z05F1"
+  },
+  {
+   "id": "Z06F1",
+   "label": "zona 6, faza 1",
+   "km": 1.1,
+   "cost": 174000.0,
+   "benefit": 55.2,
+   "equity": 1.8
+  },
+  {
+   "id": "Z06F2",
+   "label": "zona 6, faza 2",
+   "km": 2.4,
+   "cost": 213000.0,
+   "benefit": 58.8,
+   "equity": 14.3,
+   "requires": "Z06F1"
+  },
+  {
+   "id": "Z07F1",
+   "label": "zona 7, faza 1",
+   "km": 2.5,
+   "cost": 369000.0,
+   "benefit": 127.0,
+   "equity": 2.3
+  },
+  {
+   "id": "Z07F2",
+   "label": "zona 7, faza 2",
+   "km": 3.2,
+   "cost": 395000.0,
+   "benefit": 44.1,
+   "equity": 11.1,
+   "requires": "Z07F1"
+  },
+  {
+   "id": "Z08F1",
+   "label": "zona 8, faza 1",
+   "km": 2.3,
+   "cost": 342000.0,
+   "benefit": 127.1,
+   "equity": 2.3
+  },
+  {
+   "id": "Z08F2",
+   "label": "zona 8, faza 2",
+   "km": 2.0,
+   "cost": 295000.0,
+   "benefit": 44.1,
+   "equity": 17.1,
+   "requires": "Z08F1"
+  },
+  {
+   "id": "Z09F1",
+   "label": "zona 9, faza 1",
+   "km": 2.6,
+   "cost": 254000.0,
+   "benefit": 104.3,
+   "equity": 13.4
+  },
+  {
+   "id": "Z09F2",
+   "label": "zona 9, faza 2",
+   "km": 3.6,
+   "cost": 390000.0,
+   "benefit": 52.9,
+   "equity": 27.0,
+   "requires": "Z09F1"
+  },
+  {
+   "id": "Z10F1",
+   "label": "zona 10, faza 1",
+   "km": 2.0,
+   "cost": 237000.0,
+   "benefit": 118.1,
+   "equity": 13.5
+  },
+  {
+   "id": "Z10F2",
+   "label": "zona 10, faza 2",
+   "km": 2.9,
+   "cost": 449000.0,
+   "benefit": 70.5,
+   "equity": 27.7,
+   "requires": "Z10F1"
+  }
+ ]
+}

@@ -1,0 +1,54 @@
+# Configurația implicită pentru P2. Valorile sunt puncte de pornire; justificați-le în raport.
+
+experiment:
+  runner: "sada.p2.experiments:run_one"
+  base_seed: 2000
+  n_runs: 30                 # minimum cerut în fișă pentru P2
+
+ga:
+  pop_size: 80
+  generations: 400
+  tournament_k: 3
+  p_crossover: 0.9
+  p_mut: null                # null = 1/n
+  elitism: 2
+
+controller:
+  n_sentinels: 5
+  stagnation_generations: 30     # fără îmbunătățire -> „stagnare”
+  hypermutation_factor: 5        # p_mut × factor după o schimbare detectată
+  hypermutation_generations: 10
+  immigrants_frac: 0.2
+  restart_frac: 0.5              # repornire parțială: cât din populație se reinițializează
+
+scenarios:
+  # Instanțe SINTETICE de dezvoltare (scripts/prepare_data.py). Înlocuiți cu cele din pachet.
+  dev_A_20:
+    instance: data/dev/dev_A_20.json
+    changes: data/dev/changes_dev_A_20.json
+    optima: results/optima_dev_A_20.json
+  dev_A_40:
+    instance: data/dev/dev_A_40.json
+    changes: data/dev/changes_dev_A_40.json
+    optima: null                 # n = 40: fără optim exact; vedeți GHID.md, pasul 7
+
+variants:
+  greedy:        {method: greedy}
+  aleator:       {method: random}
+  ag_static:     {method: ga, response: none}
+  ag_hipermut:   {method: ga, response: hypermutation}
+  ag_imigranti:  {method: ga, response: immigrants}
+
+report:                    # pentru scripts/report_numbers.py
+  baseline: ag_static
+  adaptive: [ag_hipermut, ag_imigranti]
+
+figures:
+  metrics:
+    - {name: final_ratio, label: "Valoare finală / optim", unit: "", decimals: 3, better: higher}
+    - {name: recovery_gen_mean, label: "Generații până la 95% din noul optim", unit: "generații", better: lower}
+    - {name: evaluations, label: "Evaluări ale funcției obiectiv", unit: "", decimals: 0, better: lower}
+
+env:
+  required_modules: [deap, pymoo]
+  expected_files: [data/p2_portofoliu, data/dev/dev_A_20.json]

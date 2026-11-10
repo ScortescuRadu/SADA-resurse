@@ -1,0 +1,120 @@
+{
+ "name": "dev_B_12",
+ "kind": "integer",
+ "branch": "B",
+ "units": {
+  "x": "ore-vehicul în fereastra de vârf",
+  "benefit": "pasageri-ore (sintetic)"
+ },
+ "budget": 227,
+ "items": [
+  {
+   "id": "L01",
+   "label": "linia 1 (tramvai)",
+   "lower": 8,
+   "upper": 23,
+   "benefit": 395.0,
+   "saturation": 16.3,
+   "equity": 0.22
+  },
+  {
+   "id": "L02",
+   "label": "linia 2 (troleibuz)",
+   "lower": 9,
+   "upper": 31,
+   "benefit": 801.0,
+   "saturation": 19.4,
+   "equity": 0.09
+  },
+  {
+   "id": "L03",
+   "label": "linia 3 (autobuz)",
+   "lower": 9,
+   "upper": 23,
+   "benefit": 862.0,
+   "saturation": 10.0,
+   "equity": 0.13
+  },
+  {
+   "id": "L04",
+   "label": "linia 4 (tramvai)",
+   "lower": 7,
+   "upper": 34,
+   "benefit": 931.0,
+   "saturation": 8.3,
+   "equity": 0.1
+  },
+  {
+   "id": "L05",
+   "label": "linia 5 (troleibuz)",
+   "lower": 8,
+   "upper": 34,
+   "benefit": 770.0,
+   "saturation": 18.9,
+   "equity": 0.52
+  },
+  {
+   "id": "L06",
+   "label": "linia 6 (autobuz)",
+   "lower": 6,
+   "upper": 20,
+   "benefit": 334.0,
+   "saturation": 11.3,
+   "equity": 0.68
+  },
+  {
+   "id": "L07",
+   "label": "linia 7 (tramvai)",
+   "lower": 7,
+   "upper": 17,
+   "benefit": 595.0,
+   "saturation": 11.1,
+   "equity": 0.67
+  },
+  {
+   "id": "L08",
+   "label": "linia 8 (troleibuz)",
+   "lower": 8,
+   "upper": 21,
+   "benefit": 1076.0,
+   "saturation": 9.9,
+   "equity": 0.83
+  },
+  {
+   "id": "L09",
+   "label": "linia 9 (autobuz)",
+   "lower": 4,
+   "upper": 30,
+   "benefit": 1085.0,
+   "saturation": 8.9,
+   "equity": 0.84
+  },
+  {
+   "id": "L10",
+   "label": "linia 10 (tramvai)",
+   "lower": 4,
+   "upper": 18,
+   "benefit": 599.0,
+   "saturation": 7.7,
+   "equity": 0.48
+  },
+  {
+   "id": "L11",
+   "label": "linia 11 (troleibuz)",
+   "lower": 8,
+   "upper": 19,
+   "benefit": 1157.0,
+   "saturation": 5.2,
+   "equity": 0.5
+  },
+  {
+   "id": "L12",
+   "label": "linia 12 (autobuz)",
+   "lower": 7,
+   "upper": 33,
+   "benefit": 333.0,
+   "saturation": 14.0,
+   "equity": 0.53
+  }
+ ]
+}

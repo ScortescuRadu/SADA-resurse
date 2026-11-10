@@ -1,0 +1,97 @@
+{
+ "name": "dev_A_12",
+ "kind": "binary",
+ "branch": "A",
+ "units": {
+  "cost": "EUR",
+  "benefit": "unități de beneficiu (sintetic)",
+  "equity": "unități (sintetic)"
+ },
+ "budget": 1735000.0,
+ "items": [
+  {
+   "id": "S01",
+   "label": "bandă de biciclete #1",
+   "cost": 159000.0,
+   "benefit": 257.2,
+   "equity": 157.8
+  },
+  {
+   "id": "S02",
+   "label": "reglarea semafoarelor #2",
+   "cost": 364000.0,
+   "benefit": 656.8,
+   "equity": 203.9
+  },
+  {
+   "id": "S03",
+   "label": "reorganizarea intersecției #3",
+   "cost": 66000.0,
+   "benefit": 94.0,
+   "equity": 19.1
+  },
+  {
+   "id": "S04",
+   "label": "trecere de pietoni semaforizată #4",
+   "cost": 916000.0,
+   "benefit": 1760.0,
+   "equity": 504.1
+  },
+  {
+   "id": "S05",
+   "label": "stație de autobuz accesibilă #5",
+   "cost": 500000.0,
+   "benefit": 658.7,
+   "equity": 292.6
+  },
+  {
+   "id": "S06",
+   "label": "zonă 30 #6",
+   "cost": 237000.0,
+   "benefit": 270.7,
+   "equity": 48.1
+  },
+  {
+   "id": "S07",
+   "label": "parcare de transfer #7",
+   "cost": 234000.0,
+   "benefit": 244.4,
+   "equity": 98.7
+  },
+  {
+   "id": "S08",
+   "label": "pistă pietonală #8",
+   "cost": 383000.0,
+   "benefit": 368.5,
+   "equity": 62.0
+  },
+  {
+   "id": "S09",
+   "label": "bandă de biciclete #9",
+   "cost": 242000.0,
+   "benefit": 348.8,
+   "equity": 194.3
+  },
+  {
+   "id": "S10",
+   "label": "reglarea semafoarelor #10",
+   "cost": 250000.0,
+   "benefit": 322.4,
+   "equity": 169.5
+  },
+  {
+   "id": "S11",
+   "label": "reorganizarea intersecției #11",
+   "cost": 534000.0,
+   "benefit": 887.0,
+   "equity": 370.4
+  },
+  {
+   "id": "S12",
+   "label": "trecere de pietoni semaforizată #12",
+   "cost": 453000.0,
+   "benefit": 281.1,
+   "equity": 157.4
+  }
+ ]
+}

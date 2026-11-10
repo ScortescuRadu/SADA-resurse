@@ -1,0 +1,29 @@
+# mediu
+.venv/
+__pycache__/
+*.pyc
+*.egg-info/
+.ipynb_checkpoints/
+.pytest_cache/
+
+# ieșiri generate (se refac cu scripts/run_all.py și scripts/make_figures.py)
+results/*
+!results/.gitkeep
+
+# date brute mari (se descarcă cu scripturile din scripts/)
+data/raw/*
+!data/raw/.gitkeep
+
+# fișiere de sistem
+.DS_Store
+Thumbs.db
+
+# LaTeX
+raport/latex/*.aux
+raport/latex/*.bbl
+raport/latex/*.blg
+raport/latex/*.log
+raport/latex/*.out
+raport/latex/*.fls
+raport/latex/*.fdb_latexmk
+raport/latex/main.pdf

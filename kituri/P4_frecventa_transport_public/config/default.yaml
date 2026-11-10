@@ -1,0 +1,54 @@
+# Configurația implicită pentru P4. Valorile marcate „exemplu” se revăd și se justifică în raport.
+
+experiment:
+  runner: "sada.p4.experiments:run_one"
+  base_seed: 4000
+  n_runs: 20
+
+gtfs:
+  mdb_id: mdb-2868           # feed-ul din Mobility Database indicat în fișă
+  dir: data/raw/gtfs         # unde se dezarhivează (sau folderul din pachet)
+  date: "2026-10-14"         # o zi lucrătoare din perioada de valabilitate a feed-ului
+  window: ["07:00:00", "09:00:00"]
+  routes: []                 # 10-15 linii, după route_short_name; cel puțin tramvai, troleibuz, autobuz
+  layover_min: 5             # timp de întoarcere la capăt pe cursă (ipoteză, exemplu)
+
+data:
+  s0: data/s0.csv                        # produs de scripts/baseline_s0.py
+  loads: data/p4_gtfs/incarcari.csv      # încărcările pe linie și fereastră (din pachet; numele poate diferi)
+  capacities: data/p4_gtfs/capacitati.csv
+  weak_zones: data/p4_gtfs/zone_acces_slab.geojson
+  population: data/common/zone.geojson
+
+controller:
+  window_min: 15
+  overload: 0.85             # peste 85% încărcare -> supraaglomerat
+  underuse: 0.30             # sub 30% -> subutilizat
+  max_headway_min: 20        # niciun interval peste atât (exemplu)
+  coverage_radius_m: 400
+  coverage_headway_min: 20
+
+scenarios:
+  s0_normal:        {}
+  inchidere_linie:  {line_closure: {route: "TODO", from: "07:30:00"}}
+  cerere_zona_20:   {demand_increase: {zone: "TODO", factor: 1.2, from: "07:45:00"}}
+
+variants:
+  orar_fix:   {controller: fixed}
+  regula:     {controller: rule}
+  alg_genetic: {controller: ga}
+
+report:                    # pentru scripts/report_numbers.py
+  baseline: orar_fix
+  adaptive: [regula, alg_genetic]
+
+figures:
+  metrics:
+    - {name: overcrowded_trip_pct, label: "Curse cu încărcare peste 100%", unit: "%", better: lower}
+    - {name: mean_wait_min, label: "Timp mediu de așteptare", unit: "min", decimals: 2, better: lower}
+    - {name: vehicle_hours, label: "Ore-vehicul consumate", unit: "h", better: lower}
+    - {name: coverage_pct, label: "Populație acoperită (400 m, ≤20 min)", unit: "%", better: higher}
+
+env:
+  required_modules: [pyproj]
+  expected_files: [data/raw/gtfs/stops.txt, data/p4_gtfs, data/s0.csv]

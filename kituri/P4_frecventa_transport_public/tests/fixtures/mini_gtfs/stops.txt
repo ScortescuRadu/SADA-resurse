@@ -1,0 +1,4 @@
+stop_id,stop_name,stop_lat,stop_lon
+S1,Capăt Nord,45.7600,21.2200
+S2,Centru,45.7537,21.2257
+S3,Capăt Sud,45.7450,21.2300

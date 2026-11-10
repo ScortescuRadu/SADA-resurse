@@ -1,0 +1,69 @@
+# Configurația implicită pentru P1. Toate valorile numerice marcate „exemplu”
+# trebuie revăzute și justificate în raport.
+
+experiment:
+  runner: "sada.p1.experiments:run_one"   # funcția care simulează o rulare
+  base_seed: 1000
+  n_runs: 20                              # minimum cerut în fișă
+
+model:
+  cell_m: 7.5          # lungimea unei celule [m]
+  dt_s: 1.0            # durata unui pas [s]
+  vmax: 2              # celule/pas -> 15 m/s = 54 km/h
+  p: 0.3               # probabilitatea de încetinire aleatoare (exemplu)
+  p0: 0.6              # VDR: probabilitatea pentru vehicule oprite (exemplu)
+  lanes: 2
+  length_m: 4000       # coridor de 3-5 km
+  segment_m: 400       # tronsoane de 200-500 m
+  warmup_s: 600        # perioada de încălzire, exclusă din metrici
+  duration_s: 3600
+
+controller:
+  window_s: 60         # bucla rulează la fiecare 30-60 s simulate
+  # praguri de densitate [veh/km/bandă]; alegeți-le din diagrama fundamentală
+  enter_dense: null    # TODO
+  exit_dense: null     # TODO (mai mic decât enter_dense -> histerezis)
+  enter_jam: null      # TODO
+  exit_jam: null       # TODO
+
+scenarios:             # exemple; înlocuiți debitele cu profilul din pachet
+  cerere_scazuta:  {inflow_veh_h: 600}
+  cerere_medie:    {inflow_veh_h: 1200}
+  cerere_ridicata: {inflow_veh_h: 1800}
+  incident:
+    inflow_veh_h: 1200
+    incident: {lane: 0, position_m: 2000, start_s: 1800, duration_s: 120}
+
+variants:
+  fix_nasch:  {controller: fixed, rule: nasch}
+  fix_vdr:    {controller: fixed, rule: vdr}
+  fix_sts:    {controller: fixed, rule: sts}
+  adaptiv:    {controller: adaptive}
+
+report:                    # pentru scripts/report_numbers.py
+  baseline: fix_nasch
+  adaptive: [adaptiv]
+
+figures:
+  metrics:
+    - {name: travel_time_mean, label: "Timp mediu de parcurs", unit: "s", better: lower}
+    - {name: throughput, label: "Debit la ieșire", unit: "veh/h", decimals: 0, better: higher}
+    - {name: recovery_time, label: "Timp de revenire", unit: "s", better: lower}
+
+osm:
+  # EXEMPLU (zona centrală a Timișoarei). Înlocuiți cu coordonatele coridorului
+  # din pachetul de date (p1_coridor/). Ordinea: [lon_min, lat_min, lon_max, lat_max]
+  bbox: [21.200, 45.740, 21.260, 45.770]
+  out: data/raw/coridor.osm
+
+sumo:
+  net: data/sumo/coridor.net.xml
+  flows: data/sumo/flows.rou.xml
+  # ID-urile muchiilor de început și sfârșit ale coridorului (le găsiți în netedit)
+  from_edge: "TODO"
+  to_edge: "TODO"
+
+env:
+  required_modules: [traci, sumolib]
+  required_binaries: [sumo, netconvert]
+  expected_files: [data/p1_coridor, data/sumo/coridor.net.xml]

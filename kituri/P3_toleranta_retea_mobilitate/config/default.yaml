@@ -1,0 +1,59 @@
+# Configurația implicită pentru P3. Valorile marcate „exemplu” se revăd și se justifică în raport.
+
+experiment:
+  runner: "sada.p3.experiments:run_one"
+  base_seed: 3000
+  n_runs: 20
+
+data:
+  graph: data/p3_retea/retea.graphml        # înlocuiți cu numele fișierului din pachet
+  od_pairs: data/od_pairs.csv               # produs de scripts/prepare_od.py
+  group_scenarios: data/p3_retea/scenarii_defect.json   # sinteza scenariilor de defect în grup
+
+od:
+  n_pairs: 300               # 200-500
+  seed: 42
+  population_attr: population
+  weight: length             # sau travel_time
+  priority_file: null        # CSV cu origin,destination pentru spital, nod de transport
+
+failures:
+  max_frac: 0.10             # până la 10% din muchii
+  steps: 10                  # eliminare progresivă în 10 trepte
+  importance_k: 500          # eșantionare pentru edge betweenness
+  recompute_importance: false
+
+scenarios:
+  aleator:      {failure: random}
+  tintit:       {failure: targeted}
+  inundatie:    {failure: group, group: coridor_inundatie}
+  rauri:        {failure: group, group: traversari_rau}
+  central:      {failure: group, group: coridor_central}
+
+variants:
+  fara_recuperare: {levels: none}
+  doar_nivel2:     {levels: level2}
+  nivele_1_3:      {levels: all}
+
+report:                    # pentru scripts/report_numbers.py
+  baseline: fara_recuperare
+  adaptive: [doar_nivel2, nivele_1_3]
+
+figures:
+  metrics:
+    - {name: od_connected_pct, label: "Perechi OD conectate", unit: "%", better: higher}
+    - {name: cost_increase_pct, label: "Creșterea costului mediu", unit: "%", better: lower}
+    - {name: backup_routes_used, label: "Rute de rezervă folosite", unit: "", decimals: 0, better: higher}
+    - {name: recovery_steps, label: "Timp de recuperare", unit: "pași", better: lower}
+
+osm:
+  # EXEMPLU (centrul Timișoarei). Doar pentru scripts/download_graph.py.
+  center: [45.7537, 21.2257]   # lat, lon
+  dist_m: 1500
+  network_type: drive
+  consolidate_tolerance_m: 15
+  out: data/raw/retea_osm.graphml
+
+env:
+  required_modules: [networkx, osmnx]
+  expected_files: [data/p3_retea, data/od_pairs.csv]

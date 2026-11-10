@@ -1,0 +1,112 @@
+# Verificările rulate de scripts/milestone_check.py. Le puteți extinde.
+M1:
+  title: Tema și echipa (săptămâna 3)
+  doc: milestones/M1_sapt3_tema.md
+  checks:
+  - name: pachetul sada e instalat
+    type: command
+    args:
+    - -c
+    - import sada
+    hint: rulați setup/setup.sh sau setup\setup.ps1 și activați .venv
+  - name: testele comune trec
+    type: pytest
+    args:
+    - tests/test_common.py
+    hint: vedeți docs/GIT_SI_MEDIU.md, secțiunea Probleme frecvente
+  - name: exemplul MAPE-K rulat
+    type: file
+    path: results/toy/toy_trace.pdf
+    hint: python examples/toy_mapek.py
+  - name: depozit Git inițializat
+    type: file
+    path: .git
+    hint: git init (docs/GIT_SI_MEDIU.md)
+M2:
+  title: Nota de proiectare (săptămâna 5)
+  doc: milestones/M2_sapt5_nota_proiectare.md
+  checks:
+  - name: graful din pachet copiat
+    type: nonempty_dir
+    hint: DATE.md
+    path: data/p3_retea
+  - name: perechile OD fixate
+    type: file
+    hint: python scripts/prepare_od.py
+    path: data/od_pairs.csv
+  - name: rutele de rezervă (testul din test_p3.py)
+    type: pytest
+    hint: GHID.md, pasul 3
+    args:
+    - tests/test_p3.py
+  - name: defectele implementate
+    type: pytest
+    hint: GHID.md, pasul 5
+    args:
+    - tests/test_m3_prototip.py::test_random_failures
+    - tests/test_m3_prototip.py::test_targeted_failures_follow_importance
+M3:
+  title: Prototipul (săptămâna 9)
+  doc: milestones/M3_sapt9_prototip.md
+  checks:
+  - name: testele de acceptanță ale prototipului trec
+    type: pytest
+    args:
+    - tests/test_m3_prototip.py
+    hint: implementați piesele marcate TODO (GHID.md); testele sărite contează ca nefăcute
+  - name: demonstrația a produs jurnalul
+    type: nonempty_dir
+    path: results/logs
+    hint: python scripts/demo_prototip.py
+M4:
+  title: Varianta de lucru a raportului (săptămâna 12)
+  doc: milestones/M4_sapt12_raport_lucru.md
+  checks:
+  - name: toate testele trec, fără sărite
+    type: pytest
+    args: []
+    hint: pytest -q -rs arată ce e sărit și de ce
+  - name: rezultatele complete există
+    type: file
+    path: results/results.csv
+    hint: python scripts/run_all.py
+  - name: tabelul pentru raport există
+    type: file
+    path: results/tables/summary.tex
+    hint: python scripts/make_figures.py
+  - name: comparațiile statistice există
+    type: file
+    path: results/tables/comparisons.md
+    hint: python scripts/report_numbers.py
+  - name: referința și variantele adaptive alese
+    type: config_set
+    key: report.adaptive
+    hint: completați report în config/default.yaml
+  - name: DATA.md completat
+    type: text_absent
+    path: data/DATA.md
+    pattern: exemplu\.csv
+    hint: înlocuiți rândul de exemplu cu fișierele reale
+M5:
+  title: Predarea (săptămâna 14)
+  doc: milestones/M5_sapt14_predare.md
+  checks:
+  - name: versiunile înghețate
+    type: file
+    path: requirements.lock.txt
+    hint: pip freeze > requirements.lock.txt
+  - name: toate testele trec, fără sărite
+    type: pytest
+    args: []
+    hint: pytest -q -rs
+  - name: raportul PDF există în depozit
+    type: file
+    path: raport/raport.pdf
+    hint: copiați PDF-ul final ca raport/raport.pdf
+  - name: verificarea pe copie curată
+    type: command
+    args:
+    - scripts/verify_submission.py
+    - --fast
+    timeout: 900
+    hint: rulați scriptul direct ca să vedeți problemele

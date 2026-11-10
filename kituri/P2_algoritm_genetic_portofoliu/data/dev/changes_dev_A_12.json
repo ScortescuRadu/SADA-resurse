@@ -1,0 +1,21 @@
+{
+ "instance": "dev_A_12",
+ "changes": [
+  {
+   "generation": 100,
+   "type": "budget_scale",
+   "factor": 0.7
+  },
+  {
+   "generation": 200,
+   "type": "remove_item",
+   "id": "S04"
+  },
+  {
+   "generation": 300,
+   "type": "weights",
+   "w_benefit": 0.5,
+   "w_equity": 0.5
+  }
+ ]
+}
